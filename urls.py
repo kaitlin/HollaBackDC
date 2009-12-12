@@ -4,9 +4,11 @@ from django.views.generic.simple import direct_to_template, redirect_to
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('',
-    url(r'^$', 'myproject.sms.views.index', name='index'),
-    url(r'^post/', include('myproject.sms.urls')),
+urlpatterns = patterns('myproject',
+    url(r'^$', 'hbdc.views.index', name='index'),
+
+    #url(r'^$', 'myproject.sms.views.index', name='index'),
+    #url(r'^post/', include('myproject.sms.urls')),
     # Example:
     # (r'^myproject/', include('myproject.foo.urls')),
 

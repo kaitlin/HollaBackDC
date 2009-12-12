@@ -1,25 +1,8 @@
-<html>
+{% extends "includes/frame.html" %}
 
-<head>
-</head>
-
-<body>
-{% if texts %}
-    <table>
-	<tr>
-	<th>Phone Number</th>
-	<th>Message</th>
-	<th>Timestamp</th>
-	</tr>
-    {% for t in texts %}
-	<tr>
-	<td>{{t.phone_number}}</td>
-	<td>{{t.message}}</td>
-	<td>{{t.timestamp}}</td>
-	</tr>
-    {% endfor %}
-{% endif %}
-
-</body>
-</html>
-
+{%block body%}
+<h3>Blog Post Header</h3>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ornare magna massa, semper ullamcorper sapien. Praesent dignissim mauris ut velit facilisis eu sagittis risus gravida. Mauris eleifend rutrum massa, sit amet luctus eros cursus at. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec pharetra suscipit velit ac accumsan. Pellentesque lacinia auctor lorem eget vehicula. Maecenas lacus nulla, vestibulum ut sodales in, sagittis sed erat. Maecenas pellentesque ligula eu est mattis aliquam. Integer nec libero et ipsum placerat vulputate sit amet sit amet tortor. Proin convallis neque nec risus ultrices in hendrerit urna ullamcorper. Cras a neque sit amet justo ornare blandit in id dui. Morbi semper, urna vel iaculis tincidunt, lectus magna imperdiet lorem, ac euismod tellus lectus in augue. Cras ut accumsan metus. Maecenas vulputate euismod turpis, et dapibus ipsum feugiat sit amet. Phasellus fringilla faucibus turpis. Morbi eu sapien ante. Mauris vel facilisis justo. Cras non ante sit amet purus posuere sollicitudin at vulputate tellus. Donec ante nunc, vestibulum et dignissim vel, mollis interdum arcu.
+    </p>
+{% endblock %}
