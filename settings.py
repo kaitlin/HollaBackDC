@@ -79,5 +79,6 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
-    'myproject.sms'
+    'myproject.sms',
+    'myproject.hbdc',
 )
