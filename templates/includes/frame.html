@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="/media/css/base.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<!--if[IE]><div id="ie"><![endif]-->
+
+<div class="container">
+
+    <div class="header">
+
+        <span class="empire">
+
+            <a href="/faq">faq</a>
+
+            <span class="sep">|</span>
+
+            <a href="/privacy" alt="privacy policy">privacy policy</a>
+
+            <input type="text" id="searchbox" /><input class="glass" value="" type="image" src="i/search.png" />
+
+        </span>
+
+        <h1>Holla Back DC!</h1>
+
+    </div>
+
+    <div class="content">
+
+        <div class="nav">
+
+            <ul>
+
+                <li class="first"><a href="/about" alt="about HollaBackDC!">about</a></li>
+
+                <li><a href="/blog" alt="blog">blog</a></li>
+
+                <li><a href="/programs" alt="programs">programs</a></li>
+
+                <li><a href="/resources" alt="resources">resources</a></li>
+
+                <li><a href="/events" alt="events">events</a></li>
+
+                <li><a class="last" href="/join" alt="get involved!">get involved</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="content-body">
+            {% block body %}
+
+            {% endblock %}
+          
+
+        </div>
+        {% include "includes/sidebar.html" %}
+    </div>
+    <div class="footer">
+
+        <div class="footer-top"></div>
+
+        <div class="footer-header">
+
+            <ul>
+
+                <li class="join">JOIN</li>
+
+                <li class="connect">CONNECT</li>
+
+                <li class="contact">CONTACT</li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <form id="mailinglist">
+
+            <span class="join-mailing">
+
+                    
+
+                    <input type="text" name="name" /><br />
+
+                    <input type="text" name="email" />
+
+            </span>
+
+            <span><a href="/join-mailing-list"><img src="/media/i/mail_search.png" alt="join the hollaback dc mailing list" /></a></span>
+
+            </form>
+
+            <span>
+
+                    
+
+            </span>
+
+            <span class="address">
+
+                    123 Main st<br />
+
+                    Suite 203<br />
+
+                    Washington, D.C. 20036
+
+            </span>
+
+            
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
