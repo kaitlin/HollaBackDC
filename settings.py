@@ -115,7 +115,6 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
-    'hbdc',
     'cms',
     'cms.plugins.text',
     'cms.plugins.picture',
