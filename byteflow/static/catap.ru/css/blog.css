@@ -1,0 +1,469 @@
+/* created by Sucha in Mar 2007 */
+
+/* initial section */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    background-color: #9ec5c9;
+}
+
+
+/* body section */
+
+body {
+    color: black;
+    width: 100%;
+    height: 100%;
+    margin-bottom: .5em;
+    background-color: transparent;
+}
+
+p {
+    margin-top: .9em;
+    margin-bottom: .9em;
+}
+
+
+/* sidebar section */
+
+#sidebar {
+    width: 15%;
+    float: left;
+    position: absolute;
+    margin-left: 81.5%;
+    margin-top: 6%;
+    text-align: left;
+}
+
+#sidebar p.header {
+    color: #526568;
+    margin-top: 2em;
+    margin-bottom: .7em;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#sidebar li {
+    margin: 0;
+    padding: 0;
+}
+
+#searchform {
+    text-align: left;
+    margin-top: 7%;
+}
+
+#searchtext {
+    color: #657677;
+    background-color: transparent;
+    border: 1px solid #5a5a5a;
+    width: 75%;
+}
+
+
+/* text section */
+
+#text {
+    width: 70%;
+    float: left;
+    position: absolute;
+    overflow: hidden;
+    margin-top: .5em;
+    margin-bottom: 0;
+    margin-left: 2.7%;
+    padding-left: 2.5em;
+    padding-right: 2em;
+    padding-bottom: .5em;
+}
+
+#text,
+.text {
+    background-color: #efefef;
+}
+
+#foot {
+    color: #63787b;
+    margin-top: 2.3em;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 85%;
+    text-align: center;
+    position: relative;
+    clear: both;
+}
+.example,
+.verse {
+    margin-top: 1em; 
+    margin-bottom: 1em;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: .5em;
+    font-size: 90%;
+    overflow: auto;
+    white-space: pre;         /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line;   /* CSS 2.1/3 */
+
+    white-space: -moz-pre-wrap; /* Mozilla */
+    white-space: -hp-pre-wrap;   /* HP printers */
+    white-space: -o-pre-wrap;     /* Opera 7 */
+    white-space: -pre-wrap;       /* Opera 4-6 */
+}
+
+.example {
+    color: black;
+    background-color: #fffff0;
+    border: 1px solid #5a5a5a;
+    font-family: monospace;
+}
+
+.verse {
+    font-family: sans-serif;
+}
+
+
+/* headline section */
+
+h1 {
+    color: #63787b;
+    text-align: center;
+    margin-top: .4in;
+    margin-bottom: .2in;
+    padding-bottom: .6em;
+    font-size: 1.7em;
+    font-weight: bold;
+    font-family: "Bookman Old Style", serif;
+}
+
+h2 {
+    color: #6d88cd;
+    margin-top: 5.6em;
+    margin-bottom: 1.5em;
+    font-size: .9em;
+}
+
+h3 {
+    color: #135680;
+    margin-top: .7em;
+    margin-bottom: .7em;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+h4 {
+    color: silver;
+    margin-top: 1em;
+    font-size: .9em;
+    font-weight: normal;
+}
+
+h5 {
+    color: #616d72;
+    margin-top: 1em;
+    margin-bottom: .8em;
+    padding-left: 3px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+
+/* links and img*/
+
+a { 
+    color: #0061c4;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+h2 a {
+    color: #6d88cd;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+h2 a:hover {
+    color: #6d88cd;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+h4 a {
+    color: #53afba;
+    color: silver;
+    text-align: right;
+}
+
+h4 a:hover {
+    background-color: transparent;
+}
+
+img {
+    border: 0;
+    background-color: transparent;
+}
+
+
+/* list and pre-content and menu */
+
+ul {
+    margin-left: 1.5em;
+    list-style-type: disc;
+}
+
+ol {
+    margin-left: 2em;;
+}
+
+li {  
+    margin-bottom: 3px; 
+}
+
+dl.contents { 
+    margin-top: 0;
+}
+
+dt.contents { 
+    margin-bottom: 0;
+}
+
+dt {
+    font-weight: bold; 
+    padding: 3px;
+}
+
+dd {
+    margin: 0;
+}
+
+span {
+    margin-top: 0; 
+}
+
+
+/* blogs calendar */
+
+.calendar * {
+    border: 0;
+}
+
+.calendar {
+    margin: 0;
+    padding: 0;
+    margin-top: .5em;
+    empty-cells: show;
+    font-size: 13px;
+}
+
+.calendar caption {
+    color: #526568;
+    text-align: left;
+    font-size: 13px;
+}
+
+.calendar td {
+    color: #526568;
+    padding: 2px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.calendar th {
+    color: #63787b;
+    font-size: 12px;
+}
+
+.calendar a {
+    font-weight: bold;
+}
+
+
+/* tables */
+
+table {
+    width: auto;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    border-collapse: collapse;
+    empty-cells: show;
+    table-layout: auto;
+    font-size: 90%;
+    font-family: "Luxi Serif", Verdana, helvetica, sans-serif;
+}
+
+thead {
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+th, tr, td {
+    border: 1px solid gray;
+    padding: 2px;
+    padding-left: 5px;
+}
+
+
+
+/* rss_feeds */ 
+
+a#atom_feeds,
+a#rss_feeds,
+a#rss20_feeds { 
+    color: #ff3f3f;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a#atom_feeds:hover,
+a#rss_feeds:hover,
+a#rss20_feeds:hober { 
+    color: white;
+    font-weight: bold;
+    background-color: #ff3f3f;
+    text-decoration: none;
+}
+
+hr { display: none; } /* Footnote */
+
+.bookmarks { 
+  display: inline;   
+}
+
+/* Source tag , more to see "emacs-wiki-srctag.el" */
+
+pre.source {
+    color: black;
+    background-color: #f4fffe;
+    border: 1px solid #5a5a5a;
+    font-family: "Courier New", monospace;
+    white-space: pre;
+}
+
+blockquote {
+    margin-left: 80px;
+    text-align: justify;             
+}
+
+.author { 
+    text-align: right;
+    font-weight: bold;
+}
+
+blockquote,
+.author {
+    margin-right: 0px;
+    color: #aa4000
+}
+
+
+.builtin           { color: #7580d5; }
+.comment           { color: #a02200; }
+.doc               { color: #a02200; }
+.constant          { color: #894591; }
+.function-name     { color: #1f5087; }
+.keyword           { color: #159190; font-weight: bold;}
+.preprocessor      { color: #489bdc; }
+.string            { color: #9a4b43; }
+.type              { color: #158715; }
+.variable-name     { color: #967f00; }
+.comment-delimiter { color: #a02200; }
+
+/* Tag cloud **************/
+
+.tag-1 { font-size: 70%; }
+.tag-2 { font-size: 85%; }
+.tag-3 { font-size: 100%; }
+.tag-4 { font-size: 115%; }
+.tag-5 { font-size: 130%; }
+
+#login-form, #openid-form {
+   float: right;
+   margin-top: -0.5em;
+   display: none;
+}
+
+p.form-help, form.delete {
+   display: inline;
+}
+
+/* Comment Form */
+
+.form-help {
+   font-size: 0.8em;
+   margin-left: 0.5em;
+}
+
+form table {
+   width: 100%;
+}
+
+#comment-form th {
+   width: 1px;
+}
+
+input, textarea {
+   border: 1px solid #aaa;
+   padding: 2px;
+}
+
+#id_name, #id_email, #id_site {
+   width: 25em;
+   margin: 0 1% 0 0;
+}
+
+#id_body {
+   height: 15em;
+   width: 100%;
+}
+
+.message {
+   border: 1px solid #F00;
+   margin-top: 1em;
+}
+
+.comment-link {
+   float: right;
+   display: none;
+}
+
+.edit-comment {
+   display: none;
+}
+
+.cancel-edit {
+   display: none;
+}
+
+.edit-submit {
+   display: none;
+}
+
+.delete-comment {
+}
+
+.comment-edit-area {
+   width: 100%;
+   height: 10em;
+}

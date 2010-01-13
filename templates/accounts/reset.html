@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block title %}Password reset{% endblock %}
+
+{% block content %}
+<h1>{% trans "Password reset" %}</h1>
+{% if success %}
+<p>{{ success }}</p>
+{% else %}
+<p>{{ error }}</p>
+<p>{% trans "Please enter your email." %}</p>
+<form action="." method="POST">
+  <p><input type="text" name="email" /></p>
+  <p><input type="submit" value="{% trans "Reset password" %}" /></p>
+</form>
+{% endif %}
+{% endblock %}  

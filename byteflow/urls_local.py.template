@@ -1,0 +1,16 @@
+# -*- mode: python -*-
+# URL overriding facility. If you want to override any url, copy this file to
+# urls_local.py and add your urls
+
+# If you will want to remove them completely (by deleting file, not
+# commenting) - don't forget to delete urls_local.pyc!
+
+from django.conf.urls.defaults import *
+
+urlpatterns = patterns(
+    '',
+    # example of URL override usage
+    url('^$', 'django.views.generic.simple.redirect_to', {'url': '/about/'},
+        name='redirect_to_about'),
+)
+

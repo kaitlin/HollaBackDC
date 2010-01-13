@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block title %}openid_complete{% endblock %}
+
+{% block content %}
+	<h1>{% trans "Your OpenID is verified! " %}
+
+	<h2>{% trans "Associate your OpenID" %}</h2>
+
+	<div class="left">
+		{{ form1.errors }}
+		<h3>{% trans "A new account" %}</h3>
+		<form name="fregister" action="{{ action }}" method="POST">
+			<div><label for "id_name">{% trans "Screen name" %}</label>{{ form1.name }}</div>
+			<div><label for "id_email">{% trans "Email" %}</label>{{ form1.email }}</div>
+			<div><input type="submit" name="bnewaccount" value="Create new account"></div>
+		</form>
+	</div>
+	<div class="right">
+		{{ form2.errors }}
+		<h3>{% trans "Associate with exisiting account" %}</h3>
+		<form name="fverify" action="{{ action }}" method="POST">
+			<div><label for "id_email">{% trans "Email" %}</label>{{ form2.email }}</div>
+			<div><label for "id_passwordl">{% trans "Password" %}</label>{{ form2.password }}</div>
+			<div><input type="submit" name="bverify" value="Associate"></div>
+		</form>
+	</div>
+
+{% endblock %}

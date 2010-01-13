@@ -1,0 +1,5 @@
+{% load i18n %}
+{{ text|safe }}
+<p style="border: 1px black solid; padding: 5px;">
+{% trans "This is crossposted entry." %} {{ blog_link|safe }}
+</p>

@@ -1,0 +1,289 @@
+/* Layout Stylesheet */
+body {
+   background: #CCCCCC;
+   color: #545454;
+   font-family: Verdana, sans-serif;
+   font-size: small;
+   margin: 0;
+   padding: 0;
+}
+
+#page {
+   background-color: #FFFFFF;
+   border: 1px solid #808080;
+   padding: 1em 2em 1em 2em;
+   margin: 0 auto; /* So firefox centers this properly. */
+   text-align: left;
+   width: 62em;
+}
+
+#header {
+}
+
+#bar {
+   border:dashed #545454;
+   border-width:1px 0 1px 0;
+   position: relative;
+}
+
+#bar-left {
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+
+/*#sidebar {
+   float:right;
+   width:20%;
+}*/
+
+#content {
+/*   width:79%; */
+   background:#ffffff;
+   color: #333333;
+}
+
+#footer {
+   height:25px;
+   border:dashed black;
+   border-width:1px 0 0 0;
+   margin:0;
+   text-align: center;
+}
+
+#login-form, #openid-form {
+   float: right;
+   margin-top: -0.5em;
+   display: none;
+}
+
+#email, #password {
+   width: 10em;
+}
+
+#openid_url {
+   width: 20em;
+   background: url("../img/openid-icon.gif") no-repeat;
+   background-position: 0 50%;
+   padding-left: 16px;
+}
+
+#login-shortcuts {
+   float: right;
+}
+
+p.form-help, form.delete {
+   display: inline;
+}
+
+/* Styles */
+
+h1, h2, h3 {
+   font-family: Helvetica, sans-serif;
+}
+
+img {
+   border: 0;
+}
+
+.metadata {
+   font-size: .8em;
+   clear: left;
+   background-color: #F5F5F5; /* WhiteSmoke */
+   padding: .2em;
+   border-top: 1px dashed #808080;
+   border-bottom: 1px dashed #808080;
+}
+
+.text {
+   clear: both;
+}
+
+.small {
+   font-size: 80%;
+}
+
+code {
+   font-family: monospace;
+   font-size: 110%;
+   color: #007F00;
+}
+
+.errorlist {
+   color: red;
+   font-weight: bold;
+}
+
+#search-form { display: inline;; }
+.search-results .highlighted { font-style: italic; }
+
+/* centered spinner */
+#ajaxload {
+   display: none;
+   position:absolute;
+   z-index:1000;
+   top:50%;
+   left:50%;
+}
+
+/* Links */
+
+a {
+   color: #00008B;
+   text-decoration: underline;
+}
+
+a:hover {
+   background: #DDDDDD;
+   text-decoration: underline;
+}
+
+.control-link {
+   float: right;
+}
+
+a.comment-link, a.edit-comment, a.cancel-edit {
+   display: none;
+}
+
+.selected { /* is not link, but doesn't matter */
+   font-weight: bold;
+}
+
+/* Navigation */
+
+ul#navigation {
+   list-style-type: none;
+   margin: 0;
+   padding: 1.0em 0 2.0em 0;
+}
+
+ul#navigation .left {
+   float: left;
+   text-align: left;
+}
+
+ul#navigation .right {
+   float: right;
+   text-align: right;
+}
+
+/* Comments */
+
+.blogcomment, .pingback {
+   clear: left;
+   padding: .2em;
+}
+
+.blogcomment .text, .pingback .text {
+   padding-top: .01em;
+}
+
+.odd {
+   background-color: #F5F5F5; /* WhiteSmoke */
+}
+
+.author, .pingback-title {
+   float: left;
+   font-weight: bold;
+}
+
+.comment-time, .pingback-time {
+   float: right;
+}
+
+blockquote {
+   border-left:5px solid #DDDDDD;
+   margin-left:1em;
+   padding-left:1em;
+}
+
+.comment-edit-area {
+   width: 100%;
+   height: 10em;
+}
+
+.edit-submit {
+   display: none;
+}
+
+.pingback-location {
+   color: #999;
+}
+
+.read-more {
+   text-align: right;
+}
+
+/* Comment Form */
+
+.form-help {
+   font-size: 0.8em;
+   margin-left: 0.5em;
+}
+
+form table {
+   width: 100%;
+}
+
+#comment-form th {
+   width: 1px;
+}
+
+input, textarea {
+   border: 1px solid #aaa;
+   padding: 2px;
+}
+
+#id_name, #id_email, #id_site {
+   width: 25em;
+   margin: 0 1% 0 0;
+}
+
+#id_body {
+   height: 15em;
+   width: 100%;
+}
+
+.message {
+   border: 1px solid #F00;
+   margin-top: 1em;
+}
+
+/* Footnotes */
+div.footnote p {
+   display: inline;
+}
+
+/* Bookmarks */
+
+.bookmarks {
+   font-size: 0.8em;
+   margin-top: 1em;
+}
+
+.bookmarks a:hover {
+   background: none;
+}
+
+/* avatar image */
+.avatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 4px;
+    border: 1px #000 solid;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.textblock {
+    border: 1px #000 solid;
+}
+
+/* Tag cloud **************/
+
+.tag-1 { font-size: 70%; }
+.tag-2 { font-size: 85%; }
+.tag-3 { font-size: 100%; }
+.tag-4 { font-size: 115%; }
+.tag-5 { font-size: 130%; }

@@ -1,0 +1,113 @@
+# -*- mode: python; coding: utf-8; -*-
+
+DATABASE_ENGINE = 'sqlite3' # variants: mysql, postgresql_psycopg2
+DATABASE_NAME = ''
+DATABASE_USER = ''
+DATABASE_PASSWORD = ''
+
+# Local time zone for this installation. All choices can be found here:
+# http://www.postgresql.org/docs/8.1/static/datetime-keywords.html#DATETIME-TIMEZONE-SET-TABLE
+#TIME_ZONE = 'Europe/Kiev'
+
+# Language code for this installation. All choices can be found here:
+# http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
+# http://blogs.law.harvard.edu/tech/stories/storyReader$15
+#LANGUAGE_CODE = 'en-us'
+
+TAGLINE = u'Everyone will like it'
+FOOTER = u'(c) 2007-2009 <a href="/about/">Alexander Solovyov</a>'
+
+DEFAULT_FROM_EMAIL = 'Your Blog <byteflow@your.dom>'
+# Uncomment to get reports of errors by email
+#ADMINS = (('Your Name', 'email@example.com'), )
+
+# You may place HTML templates in the ../themes/{{ THEME }}/ directory.
+# They will override the templates with the same name from ../templates/.
+# You can set THEMES_DIR if you want to keep your themes separate from
+# those included with Byteflow.
+THEME = 'default'
+
+# Sample static pages links
+STATIC_PAGES = (
+    ('About', '/about/', u'About me'),
+    ('Blog', '/blog/', u'Main place'),
+    ('', '', u''),
+    ('Dev', 'http://byteflow.su/', u'Take a look at the code and development'),
+    )
+
+# Set this to true to get the first comment by any user autoapproved.
+# This makes sense if captcha is enabled.
+ANONYMOUS_COMMENTS_APPROVED = True
+
+# Possible choices are: ''|'simple'|'recaptcha'
+# To utilize recaptcha you must get public/private keys
+# from http://recaptcha.net/
+CAPTCHA=''
+RECAPTCHA = {'example.com': {'public': '',
+                             'private': ''}}
+
+GA_ACC = {'host': 'code'}   # Google Analytics account
+LI_ACC = False              # Set True if you want liveinternet.ru counter
+GRAVATAR_ENABLE = False     # Enable gravatars?
+SHORT_POSTS_IN_FEED = False # Full or short posts in feed
+WYSIWYG_ENABLE = False      # WYSIWYG for post text in admin
+RENDER_METHOD = 'markdown'  # Choices: bbcode and simple.
+                            # Don't use html here, it is unsafe
+MAINTENANCE_MODE = False    # Set True if you want to put site in maitenance
+                            # (offline) mode
+
+# Format: {"domain": {"feedname": "feedburnername"}}, where:
+#  - `domain` is domain name of your blog
+#  - `feedname` is name of your feed in byteflow (f.e. "blog" or "tag/django")
+#  - `feedburnername` is name of your feed in FeedBurner (f.e. "AmazonByteflow")
+FEEDBURNER = {"example.com": {}}
+
+# SOCIAL_BOOKMARKS can be reconfigured to contain values from
+# apps/blog/templatetags/bookmarks.py
+# URL_PREFIX can be set to add url prefix to *all* urls
+# BLOG_URLCONF_ROOT can be set if you want to remove 'blog/' prefix
+
+# URL_ROOT_HANDLER meaningful values:
+# - 'blog.views.process_root_request': will redirect to BLOG_URLCONF_ROOT
+# - 'blog.views.post_list': will display list of posts
+# - 'life.views.life_index': will display list of your life flow,
+#    requires enabled 'life' application
+# - None: set it if you want to have flatpage as root page
+URL_ROOT_HANDLER = 'blog.views.process_root_request'
+
+# Set to True if you want to activate orm_debug template tag.
+# You also need to set the INTERNAL_IPS setting if you want to use the
+# "explain" feature of orm_debug
+ORM_DEBUG = False
+
+# Livejournal crossposting
+LJ_USERNAME = ''
+LJ_PASSWORD = ''
+
+# sape.ru settings
+#SAPE_USER = '74947f25f25d6eb17e910005cbeaa8e6' # You sape.ru ID
+# Links cache file. Check permissions!
+#SAPE_DB_FILE = os.path.join(PROJECT_ROOT, 'local', 'sape.links')
+# Set to True if you want see error messages when something goes wrong
+#SAPE_VERBOSE = True
+
+ADDITIONAL_APPS = (
+    'recaptcha',
+    'pingback',
+    'watchlist',   # comments subscription
+    'robots',
+#    'haystack'     # search, see settings.py for HAYSTACK_* options
+#    'nebula',      # support application for friends and life
+#    'friends',     # blogroll + planet-like aggregator
+#    'life',        # your activity aggregator
+#    'debug',       # debug sql query
+#    'livejournal', # livejournal crossposting
+#    'textblocks',
+#    'wpimport',
+#    'sape',        # sape.ru
+    )
+
+# DEBUG must be False in production mode
+# Please read http://byteflow.su/wiki/DEBUG
+DEBUG = True
+print "!!! Read about DEBUG in settings_local.py and then remove me !!!"

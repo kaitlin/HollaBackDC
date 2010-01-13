@@ -1,0 +1,7 @@
+{% load i18n %}
+
+<form id="search-form" method="get" action="/search/">
+  <label for="id_q">{% trans "Search" %}</label>
+  <input type="text" name="q" value="{{ request.GET.q }}" id="id_q" />
+</form>
+

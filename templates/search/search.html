@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load highlight %}
+
+{% block title %}{% trans "Search results for:" %} {{ query }}{% endblock %}
+
+{% block content %}
+
+<h1>{% trans "Search results for:" %} {{ query }}</h1>
+
+{% if not page.object_list %}
+    <p>{% trans "No results found" %}</p>
+{% else %}
+    <ul class="search-results">
+    {% for result in page.object_list %}
+        <li>
+            <strong><a href="{{ result.object.get_absolute_url }}">{{ result.name }}</a></strong><br/>
+            {% highlight result.body with query max_length 256 html_tag "span" %} 
+        </li>
+    {% endfor %}
+    </ul>
+
+    <div class="pagination" style="float:right">
+    {% if page.has_previous %}
+        <a href="{{ base }}?q={{ query|urlencode }}&amp;page={{ page.previous_page_number }}">&laquo; {% trans "Newer posts" %}</a>
+    {% endif %}
+        |
+    {% if page.has_next %}
+        <a href="{{ base }}?q={{ query|urlencode }}&amp;page={{ page.next_page_number }}">{% trans "Older posts" %} &raquo;</a>
+    {% endif %}
+    </div>
+{% endif %}
+
+{% endblock %}

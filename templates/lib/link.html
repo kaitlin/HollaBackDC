@@ -1,0 +1,5 @@
+{% if url %}
+    <a href="{{ url }}">{{ anchor|typogrify }}</a>
+{% else %}
+    {{ anchor|typogrify }}
+{% endif %}

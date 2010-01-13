@@ -1,0 +1,3 @@
+{% load i18n pytils_numeral %}{{ time }}{% if days %}
+({% trans "after" %} {{ days }} {{ days|choose_plural:_("day, days, days") }})
+{% endif %}

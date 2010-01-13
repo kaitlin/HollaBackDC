@@ -1,0 +1,10 @@
+  <div
+     class="pingback {% cycle odd,even %}"
+     id="p{{ pingback.id }}">
+    <span class="pingback-time"><a href="#p{{ pingback.id }}">{{ pingback.date|date }} {{ pingback.date|time }}</a></span>
+    <span class="pingback-title">
+      <a class="pingback-url" href="{{ pingback.url }}" rel="external nofollow">{{ pingback.title }}</a>
+      <span class="pingback-location">@{{ pingback.get_host }}</span>
+    </span>
+    <div class="text">{{ pingback.content|typogrify }}</div>
+  </div>

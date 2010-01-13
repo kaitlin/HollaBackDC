@@ -1,0 +1,7 @@
+Hi, {{ user.name }}.
+
+Someone, hopefully you, signed up for a new account at {{ site_url }}
+using this email address. If it was you, you can start using your account
+right now.
+
+Use your email as your login and this as password: {{ password }}

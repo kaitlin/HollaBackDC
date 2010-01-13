@@ -1,0 +1,27 @@
+.. -*- mode: rst -*-
+.. _coding:
+
+Coding Guide
+============
+
+Our coding style
+----------------
+
+ - `Django coding style`_ is used unless otherwise specified
+ - Use `object_list`_ for displaying paginated object lists
+ - Use `render_to`_ for views where usage of generic object_list, etc is not convenient.
+ - Use `ajax_request`_ for AJAX views
+ - Form processing must be performed inside classes ihnerited from`forms.Form`, but not in view.
+ - Exceed 80 chars limit only if in other case you code will look ugly, but never exceed 90 chars.
+
+.. _Django coding style: http://docs.djangoproject.com/en/dev/internals/contributing/#coding-style
+.. _render_to: http://hg.piranha.org.ua/byteflow/file/tip/apps/lib/decorators.py#l6
+.. _object_list: http://docs.djangoproject.com/en/dev/ref/generic-views/#django-views-generic-list-detail-object-list
+.. _ajax_request: http://hg.piranha.org.ua/byteflow/file/tip/apps/lib/decorators.py#l32
+
+Our points in development
+-------------------------
+
+ - `jQuery <http://jquery.com/>`_ is our JS framework
+ - Atom is main format to support, not RSS
+ - We want to have readable code

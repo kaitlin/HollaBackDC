@@ -1,0 +1,10 @@
+{% load i18n %}
+<div class="bookmarks">
+{% trans "Add post to" %}:
+{% for site in sites %}
+<a rel="nofollow" href="{{ site.url }}" title="{% trans "Add to" %} {{ site.name }}" target="_blank">
+    <img alt="{{ site.name }}" src="{{ STATIC_URL }}img/bookmarks/{{ site.image }}"/>
+</a>
+
+{% endfor %}
+</div>

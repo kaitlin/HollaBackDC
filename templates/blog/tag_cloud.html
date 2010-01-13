@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load theme %}
+{% load tagging_tags %}
+{% block title %}{% trans "Tags" %}{% endblock %}
+{% block extrahead %}{% theme_css "tagging" %}{% endblock %}
+{% block content %}
+<h2>{% trans "Tags" %}</h2>
+    <ul class="tag-cloud">
+        {% tag_cloud_for_queryset queryset as tags %}
+        {% render_tag_cloud tags %}
+    </ul>
+{% endblock %}

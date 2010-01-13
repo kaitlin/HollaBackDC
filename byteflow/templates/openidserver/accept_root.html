@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div id="content">
+  {% blocktrans with openid_request.trust_root as root and openid_request.identity as identity and openid_request.return_to as return_to and openid_request.getCancelURL as cancel_url %}
+  <p>We've got a request from <a href="{{ root }}">{{ root }}</a> 
+    to authenticate you as <a href="{{ identity }}">{{ identity }}</a>.</p>
+  <p>Click 'Accept' to accept authentication request (you'll be redirected to {{ return_to }}).</p>
+  <p>Click 'Dismiss' to dismiss request (and to go to {{ cancel_url }}).</p>
+  {% endblocktrans %}
+  
+  <form method="post" action="">
+    {% if openid_request.trustRootValid %}
+    <p><input type="checkbox" name="remember" checked="yes" value="yes" /> {% trans "Remember my answer" %}</p>
+    {% endif %}
+    <input type="submit" name="yes" value="{% trans "Accept" %}" />
+    <input type="submit" name="cancel" value="{% trans "Dismiss" %}" />
+  </form>
+</div>
+{% endblock %}
+

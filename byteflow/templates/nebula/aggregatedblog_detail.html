@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load theme %}
+
+{% block title %}{% trans "Nebula Planet" %} - {{ blog.name }}{% endblock %}
+
+
+{% block content %}
+<h2><a href="{% url nebula_index %}">{% trans "Latest entries" %}</a> - <a href="{{ blog.link }}">{{ blog.name }}</a>
+<a href="{{ blog.feed }}"><img src="{% global_staticfile "img/feed-icon-14x14.png" %}" alt="feed" /> </a></h2>
+
+<div class="post_list">
+	{% for post in object_list %}
+	<div>
+		<h3 class="title"><a href="{{ post.get_absolute_url }}">{% autoescape off %}{{ post.title }}{% endautoescape %}</a> {% if post.author %}by {{ post.author }}{% endif %}</h3>
+		<p class="date">{{ post.posted|date:"Y F d" }}</p>
+		<p class="body">{% autoescape off %}{{ post.body|removetags:"div script"|safe }}{% endautoescape %}</p>
+	</div>
+	{% endfor %}
+</div>
+
+{% if is_paginated %}
+<p class="pagination">
+	{% if has_next %}
+	<a class="older" href="?page={{ next }}">Older</a>
+	{% endif %}
+	{% if has_next and has_previous %} | {% endif %}
+	{% if has_previous %}
+	<a class="newer" href="?page={{ previous }}">Newer</a>
+	{% endif %}
+</p>
+{% endif %}
+{% endblock %}

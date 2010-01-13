@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Sign in" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "Sign in" %}</h1>
+
+<form name="openid-form-2" action="{% url openid_signin %}" method="post">
+	<fieldset>
+		<legend>{% trans "Sign in using your OpenID" %}</legend>
+	<div><label for="openid_url">{% trans "OpenID URL" %}: </label>{{ form.openid_url }}</div>
+    {% if form.openid_url.errors %}<div class="errors">{{ form.openid_url.errors|join:", " }}</div>{% endif %}
+	<div><input name="bsignin" type="submit" value="{% trans "Sign in" %}"></div>
+	</fieldset>
+</form>
+{% endblock %}

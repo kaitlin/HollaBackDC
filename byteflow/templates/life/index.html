@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load theme %}
+{% block title %}{% trans "Life" %}{% endblock %}
+{% block extrahead %}
+<link rel="alternate" type="application/atom+xml" title="{{ site.name }}: life feed" href="{% absolute_url feed "life" %}" />
+{% endblock %}
+
+{% block content %}
+  <h1>{% trans "Life" %}<a href="{% url feed "life" %}"><img src="{{ STATIC_URL }}/img/feed-icon-16x16.png" alt="feed" /></a></h1>
+
+{% if user.is_superuser %}
+<div class="admin-links">
+<a href="{% url life_fetch_feeds %}">{% trans "Manual refresh all feeds" %}</a>
+</div>
+{% endif %}
+
+<div class="life-event-list">
+	{% for event in object_list %}
+	<div id="life-event-{{ post.id }}" class="life-flow life-flow-{{ event.life.source }} life-event post">
+		<h3 class="title">
+		<a href="{{ event.get_absolute_url }}">{% autoescape off %}{{ event.title }}{% endautoescape %}</a> /
+		<nobr><a href="{{ event.life.link }}" rel="me">{{ event.life.name }}</a></nobr>
+		</h3>
+		<div class="metadata">
+		    {{ event.posted_tz|date:"Y-m-d H:i" }}
+		</div>
+		<div class="life-event-text text">
+		{% autoescape off %}{{ event.body|removetags:"div script img"|safe }}{% endautoescape %}
+		</div>
+	</div>
+	{% endfor %}
+</div>
+
+
+{% endblock %}

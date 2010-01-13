@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:foaf="http://xmlns.com/foaf/0.1/"
+xml:lang="en">
+<head>
+<link rel="openid.server" href="http://www.myopenid.com/server" />
+<link rel="openid.delegate" href="http://buriy.myopenid.com/" />
+<meta http-equiv="X-XRDS-Location" content="http://buriy.myopenid.com/xrds" />
+
+<link rel="rdfs:seeAlso" href="http://www.buriy.com/foaf.rdf"/>
+<link rel="foaf" href="http://www.buriy.com/foaf.rdf"/>
+<link rel="meta" type="application/rdf+xml" title="foaf" href="http://www.buriy.com/foaf.rdf" />
+</head>
+<body>
+</body>
+</html>

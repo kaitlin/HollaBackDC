@@ -1,0 +1,20 @@
+<div class="pagination">
+{% ifnotequal pages 1 %}    
+Страницы: 
+{% if lower_page %} 
+<a href="{{ get_params }}page={{ lower_page }}">&laquo;</a>
+{% endif %}
+{% for number in page_list %}
+{% ifequal number "." %}...
+{% else %}
+    {% ifequal number page %}{{ number }}{% endifequal %}
+    {% ifnotequal number page %}
+    <a href="{{ get_params }}page={{ number }}">{{ number }}</a>
+    {% endifnotequal %}
+{% endifequal %}
+{% endfor %}
+{% if higher_page %} 
+<a href="{{ get_params }}page={{ higher_page }}">&raquo;</a>
+{% endif %}
+{% endifnotequal %}
+</div>

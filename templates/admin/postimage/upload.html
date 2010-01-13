@@ -1,0 +1,17 @@
+{% extends "admin/postimage/base.html" %}
+{% load i18n %}
+{% block content %}
+<form enctype="multipart/form-data" action="" method="post" id="group_form">
+	<fieldset class="module aligned ">
+      <div class="form-row name  ">
+      <input type="hidden" name="for" value="{{ for  }}" />
+	<table>
+	{{ form }}
+	</table>
+	</div></fieldset>
+	<div class="submit-row">
+	<input type="submit" value="{% trans "Select uploaded" %}" name="_select" onclick="window.location='{% url postimage_attach %}?for={{for}}'; return false;" />
+	<input type="submit" value="{% trans "Submit" %}" class="default" name="_save" />
+	</div>
+</form>
+{% endblock %}

@@ -1,0 +1,46 @@
+.void {
+ position: absolute; 
+ top: 0;
+ left: 0;  
+ margin-top: 4px; 
+ margin-left: 4px;
+ font-size:12pt; 
+ color: #000000;
+}
+
+.copyright {
+ position: absolute; 
+ bottom: 0;
+ right: 0;  
+ margin-bottom: 4px; 
+ margin-right: 4px;
+ font-size: 10pt;
+ color: #E6E6E6;
+}
+
+.valid {
+ position: absolute; 
+ bottom: 0;
+ left: 0;  
+ margin-bottom: 4px; 
+ margin-left: 4px;
+ font-size: 10pt;
+ color: #E6E6E6;
+}
+
+.home {
+ position: absolute; 
+ top: 0;
+ right: 0;  
+ margin-top: 4px; 
+ margin-right: 4px;
+}
+
+a {
+ font-size:10pt; 
+ color: #E6E6E6
+} 
+
+body {
+ color: #FFFFFF;
+} 

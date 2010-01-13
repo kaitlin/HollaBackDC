@@ -1,0 +1,83 @@
+{% extends "includes/frame.html" %}
+
+{% load i18n %}
+{% load theme %}
+{% load tagging_tags %}
+{% load bfmarkup %}
+
+{% block title %}{% trans "Posts" %}{% endblock %}
+
+{% block extrahead %}
+{% theme_css "highlight" %}
+{% theme_js "highlight.pack" %}
+<script type="text/javascript">initHighlightingOnLoad();</script>
+{% if tags %}
+<link rel="alternate"
+      type="application/rss+xml"
+      title="{{ site.name }}: posts with tag{{ tags|length|pluralize }} '{{ tags|list_attr:"name"|join:", " }}' feed"
+      href="{% url feed feedurl %}" />
+{% else %}
+    {% if author %}
+    <link rel="alternate"
+      type="application/rss+xml"
+      title="{{ site.name }}: posts by author: '{{ author.name }}' feed"
+      href="{% url feed feedurl %}" />
+    {% endif %}
+{% endif %}
+{% endblock %}
+
+{% block body %}
+
+{% filter typogrify %}
+  {% if year %}<h1>{% trans "Archive for" %} {{ year }}</h1>{% endif %}
+  {% if month %}<h1>{% trans "Archive for" %} {{ month|date:"F, Y" }}</h1>{% endif %}
+  {% if day %}<h1>{% trans "Archive for" %} {{ day|date:"F d, Y" }}</h1>{% endif %}
+
+  {% if tags %}<h1>
+  {% if tags|length|pluralize %}
+    {% if union %}
+      {% trans "All articles, tagged with union of tags" %}
+    {% else %}
+      {% trans "All articles, tagged with intersection of tags" %}
+    {% endif %}
+  {% else %}
+    {% trans "All articles, tagged with" %}
+  {% endif %}
+  "{{ tags|list_attr:"name"|join:", " }}"
+  </h1>
+  {% else %}
+    {% if author %}
+    <h1>
+        {% trans "All articles, written by" %} "{{ author.name }}"
+    </h1>
+    {% endif %}
+  {% endif %}
+{% endfilter %}
+
+{% comment %}
+<!-- example of tag cloud usage -->
+{% tag_cloud_for_model blog.post as tags %}
+{% render_tag_cloud tags %}
+{% endcomment %}
+{% for object in object_list %}
+{% include "blog/post_entry.html" %}
+{% endfor %}
+
+<ul id="navigation">
+{% if month %}
+  {% with previous_month as pm %}<li class="left"><a href="{% url month_archive year=pm.year,month=pm|get_month %}">{% trans "Previous month" %}</a></li>{% endwith %}
+  {% with next_month as nm %}{% if nm %}<li class="right"><a href="{% url month_archive year=nm.year,month=nm|get_month %}">{% trans "Next month" %}</a></li>{% endif %}{% endwith %}
+{% endif %}
+
+{% if day %}
+  {% with previous_day as pd %}<li class="left"><a href="{% url day_archive year=pd.year,month=pd|get_month,day=pd|get_day %}">{% trans "Previous day" %}</a></li>{% endwith %}
+  {% with next_day as nd %}{% if nd %}<li class="right"><a href="{% url day_archive year=nd.year,month=nd|get_month,day=nd|get_day %}">{% trans "Next day" %}</a></li>{% endif %}{% endwith %}
+{% endif %}
+
+{% if has_previous %}
+  <li class="right">&laquo;&nbsp;<a rel="prev" href="{% ifequal previous 1 %}.{% else %}?page={{ previous }}{% endifequal %}">{% trans "Newer posts" %}</a></li>
+
+{% endif %}
+{% if has_next %}<li class="left"><a rel="next" href="?page={{ next }}">{% trans "Older posts" %}</a>&nbsp;&raquo;</li>{% endif %}
+</ul>
+{% endblock %}

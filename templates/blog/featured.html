@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+﻿{% load i18n %}
+{% load theme %}
+{% load pytils_dt %}
+{% load pytils_numeral %}
+{% load bookmarks %}
+
+{% block title %}Featured posts{% endblock %}
+
+{% block content %}
+{% for object in object_list %}
+<div id="post-{{ object.id }}" class="post">
+    <h2><a href="{{ object.get_absolute_url }}">{{ object.name|typogrify }}</a></h2>
+    <div class="text">
+    {{ object.teaser }}
+    <span class="read-more"><a href="{{ object.get_absolute_url }}">{% trans "continue&nbsp;reading" %}</a></span>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

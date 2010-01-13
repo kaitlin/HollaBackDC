@@ -1,0 +1,262 @@
+@import url('comments.css');
+
+body {
+    text-align: center;
+    margin: 0;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 0.85em;
+    color: #555555;
+    background-color: white;
+}
+
+.inner-body {
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+
+#content {
+    float: left;
+    width: 600px;
+}
+
+#sidebar {
+    float: left;
+    width: 350px;
+}
+
+.clear {
+    clear: both;
+}
+
+a {
+    color: #015272;
+}
+
+h1 a, h2 a, h3 a {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-family: Georgia,"Times New Roman",Times,serif;
+}
+
+h2 a:hover {
+    color:#58bbeb;
+}
+
+/* Head */
+
+#head {
+    background-color: #015272;
+    margin-bottom: 1em;
+    color: #c5c5c5;
+}
+
+#head .inner-body {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#head h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+#head h1 a {
+    color: white;
+    font-family: Georgia,"Times New Roman",Times,serif;
+}
+
+#head a {
+    font-family: Verdana, sans-serif;
+    color: white;
+}
+
+#head a:hover {
+    color: #f08934;
+}
+
+#site-description {
+    color: #c5c5c5;
+}
+
+/* Sidebar */
+#sidebar .header {
+    font-size: 1.6em;
+    font-family: Tahoma, Verdana, serif;
+    color: #888;
+}
+
+#sidebar .header img {
+    margin: 0;
+}
+
+#sidebar li {
+    list-style-type: none;
+    border-bottom: 1px dotted #dddddd;
+    margin: 0.3em 0;
+    text-indent: -1em;
+}
+
+#sidebar ul {
+    margin-left: 0.5em;
+    position: relative;
+    left: 1em;
+}
+
+#sidebar ul a {
+    text-decoration: none;
+}
+
+#sidebar ul a:hover {
+    text-decoration: underline;
+}
+
+#sidebar .last-comments .author {
+    padding-right: 1em;
+}
+
+/* Blog posts */
+.metadata {
+    margin-bottom: 0.5em;
+    font-family: Tahoma, Verdana, serif;
+    font-size: 0.8em;
+}
+
+.metadata a {
+    text-decoration: none;
+}
+
+.read-more {
+    text-align: right;
+}
+
+.read-more a {
+    text-decoration: none;
+}
+
+.post {
+    margin-bottom: 2em;
+}
+
+.bookmarks {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #fbfbfb;
+}
+
+.bookmarks img {
+    margin: 0;
+}
+
+.bookmarks a:hover {
+    border-bottom: 2px solid #ccc;
+}
+
+/* Navigation */
+.navigation {
+    margin-top: 1em;
+}
+
+.navigation li {
+    list-style-type: none;
+}
+
+/* Common classes */
+.left {
+    float: left;
+    width: 50%;
+}
+
+.right {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+/* Page layout */
+#content .inbox {
+    margin-right: 1em;
+}
+
+/* Footer */
+
+#footer {
+    margin-top: 2em;
+    background-color: #015272;
+}
+
+#footer .inner-body {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#footer, #footer a {
+    color: white;
+}
+
+/* Tag cloud */
+
+.tag-cloud a {
+    font-family: Verdana, sans-serif;
+}
+
+.tag-cloud .tag-1 {
+    font-size: 0.9em;
+}
+
+.tag-cloud .tag-2 {
+    font-size: 1.2em;
+}
+
+.tag-cloud .tag-3 {
+    font-size: 1.4em;
+}
+
+.tag-cloud .tag-4 {
+    font-size: 1.65em;
+}
+
+.tag-cloud .tag-5 {
+    font-size: 1.8em;
+}
+
+/* Forms */
+.errorlist {
+    margin: 0;
+    padding: 0;
+}
+
+.errorlist li {
+    list-style-type: none;
+    color: #c00;
+    font-weight: bold;
+}
+
+#login-box {
+    display: none;
+}
+
+#openid_url {
+    background: #FFFFFF url('../../img/openid-icon.gif') no-repeat scroll 0pt 50%;
+    padding-left: 18px;
+}
+
+form .wide label {
+    display: block;
+}
+
+form .wide input, form .wide textarea, form .wide select {
+    display: block;
+}
+
+form .wide input, form .wide textarea {
+    width: 80%;
+}

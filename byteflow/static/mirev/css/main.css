@@ -1,0 +1,105 @@
+@import url("http://yui.yahooapis.com/2.6.0/build/reset/reset-min.css");
+
+html { font-size: 62.5%; } /* 1em = 10 px */
+body { max-width: 45em; margin: 0 auto; font-size: 1.6em;
+     font-family: "Helvetica Neue",Arial,sans-serif; }
+
+/* head */
+#logo { margin-top: 1em; height: 97px; }
+#logo a { font-size: 200%; text-decoration: none; color: #434343; }
+#headright { float: right; }
+#login-form table td.first { padding-right: 1em; }
+#openid-form table tr.first { height: 1.55em; }
+#login-shortcuts { float: right; }
+#headright label { padding-right: 0.5em; }
+
+#openid_url { width: 20em; background: url("../../img/openid-icon.gif") no-repeat;
+              background-position: 0 50%; padding-left: 16px; }
+
+#search-form { display: inline; }
+
+
+/* post layout */
+#content { margin-top: 3em; }
+div.post h1, div.post h2 { margin: 2em 0 0 1em; }
+div.post .metadata { text-align: right; margin: -0.25em 0 0.5em 0; }
+div.footnotes {margin-top: 0.5em; }
+.footnote p { display: inline; }
+
+/* headers */
+h1 { font-size: 200%; }
+h2 { font-size: 160%; }
+h3 { font-size: 120%; }
+
+h2 span { font-size: 62.5%; }
+div.post h1 span.first, div.post h2 span.first
+  { font-size:200%; font-weight:normal; color:#06515f; }
+#content>h1, div.post>h1, div.post>h2 { font-family: "Liberation Serif","Times New Roman",serif; }
+
+h1 a, h2 a, h3 a { text-decoration: none; color: #434343; }
+h1 a:hover, h2 a:hover, h3 a:hover { color: #06515f; }
+
+/* behavior */
+p { margin: 0.2em 0 0.6em 0; text-indent: 1.5em; line-height: 1.4em; }
+a { color: #055580; }
+a:hover { color: #0777A0; }
+.footnote { font-size: 70%; }
+div#content span a { text-decoration: none; }
+code { font-family: Consolas, monospace; color: #043640; }
+.feed { margin-left: 3px; padding: 0 0 0 19px;
+        background: url("../../img/feed-icon-14x14.png") no-repeat 0 50%; }
+.bigfeed { margin-left: 3px; padding: 0 0 0 33px;
+           background: url("../../img/feed-icon-28x28.png") no-repeat 0 50%; }
+sup { font-size: small; vertical-align: super; }
+li { margin-left: 1em;}
+ul li:before { content: "— "; margin-left: -1.25em;}
+ol li { list-style-type: decimal; }
+.spaceless { margin-left: -0.25em; }
+blockquote { border-left: 2px solid #055876; padding-left: 0.5em; }
+br.clear { clear: both; }
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+.search-results .highlighted { font-style: italic; }
+
+/* comments */
+#pingbacks, #comments { margin-top: 3em; }
+#pingbacks h2, #comments h2 { margin-bottom: .5em; }
+#comments > .control-link { display: block; margin-top: 1em; }
+.control-link a { color: #055580; }
+.control-link a:hover { color: #0777A0; }
+
+.odd { background-color: #F5F5F5; }
+.blogcomment, .pingback { padding: 0.1em; margin: 1.2em 0.5em; position: relative; }
+.blogcomment .text { margin: 0 .5em .5em .5em; }
+.pingback .text { margin: 1em .5em 1em .5em; }
+
+.corner { position: absolute; top: 0; left: 0; width: 8em; height: 2em; 
+        border-top: 1px solid #AAA; border-left: 1px solid #AAA; }
+.blogcomment .comment-meta { border-bottom: 1px solid #AAA; border-right: 1px solid #AAA; }
+
+.comment-meta { float: right; }
+.comment-links a, .comment-links input { font-size: 85%; text-decoration: none; }
+.comment-links a { border-bottom: dashed; border-width: 1px; }
+.comment-links a.anchor-link { margin-right: 1em; font-weight: bold; border: none; }
+.comment-links, .comment-meta { margin: -0.5em 0 0 0; padding: 0 0.2em 0.2em 0.2em; }
+
+/* comment form */
+#comment-form { margin-top: 1em; }
+#comment-form h2 { display: none; }
+#comment-form div.metadata { text-align: right; }
+#comment-form-itself { margin-top: -1.25em; }
+#comment-form p { margin: 0; }
+form textarea, .text textarea { width: 100%; }
+.text textarea { height: 10em; }
+
+/* Footer */
+#footer { font-size: 85%; color: #767676; padding:3em 0 3em 0; }
+#footer div.right { float: right; text-align:right; }
+#footer a { color:#767676; text-decoration:none }
+#footer a:hover { color:#06515f; }
+
+/* navigation */
+#navigation { margin-top: 1em; }
+#navigation .right { float: right; }
+#navigation li:before { content: none; }

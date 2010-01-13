@@ -1,0 +1,50 @@
+.. -*- mode: rst -*-
+.. _install:
+
+Installation
+============
+
+Dependencies
+------------
+
+ * Python >=2.4
+ * `Django <http://djangoproject.com/>`_ 1.0
+ * Either `MySQLdb <http://mysql-python.sourceforge.net/>`_ or `psycopg2 <http://pypi.python.org/pypi/psycopg2>`_ if you're using mysql or postgresql.
+ * `python-openid <http://www.openidenabled.com/python-openid/>`_ 2.x (1.x is not supported and looks like it wouldn't)
+ * `BeautifulSoup <http://www.crummy.com/software/BeautifulSoup/>`_ 3.0.4
+ * `ElementTree <http://effbot.org/zone/element-index.htm>`_, if you are using python < 2.5
+ * `Python Imaging Library <http://www.pythonware.com/products/pil/>`_, if you need to use CAPTCHA (reCAPTCHA does not need it)
+ * `feedparser <http://www.feedparser.org/>`_, if you want to use friends list
+
+Setup
+-----
+
+ * Download: ``hg clone http://hg.piranha.org.ua/byteflow/`` (or `download`_ compressed archive, though the only way to update such archive is to download new copy).
+ * Create file settings_local.py from example settings_local.py.template in same dir and modify accordingly to your wishes. You can read help in `Django docs`_.
+ * If you are using mysql or postgres, create user and database.
+ * Run ``./manage.py syncdb`` (it is located in Byteflow directory)
+ * Then just follow any (`1`_, `2`_, anything else) tutorial on Django install. We recommend to use apache + mod_wsgi as most stable and fastest setup if you have enough memory.
+
+.. _download: http://hg.piranha.org.ua/byteflow/archive/tip.tar.gz
+.. _Django docs: http://docs.djangoproject.com/en/dev/ref/settings/#database-engine
+.. _1: http://docs.djangoproject.com/en/dev/howto/deployment/
+.. _2: http://code.google.com/p/modwsgi/wiki/IntegrationWithDjango
+
+Notes
+-----
+
+ * Common mistake - if you are using SQLite, make sure the database and its parent directory are writable by the user which runs Byteflow itself. mod_python installations runs as Apache user, mod_wsgi can be run as any user (using `Daemon mode`_).
+ * Read about `DEBUG`_ to be prepared - you **must** configure your web-server.
+
+.. _Daemon mode: http://code.google.com/p/modwsgi/wiki/ConfigurationDirectives#WSGIDaemonProcess
+.. _DEBUG: http://byteflow.su/wiki/DEBUG
+
+
+Installation tutorials from community
+=====================================
+
+ * `Ubuntu + nginx + FastCGI <https://wiki.ubuntu.com/byteflow>`_ installation guide on Ubuntu wiki
+ * Debian + apache2 + mod_python. `Installation <http://blog.leschinsky.in.ua/2008/02/05/byteflow-installation/>`_ and `setup <http://blog.leschinsky.in.ua/2008/02/05/byteflow-setup/>`_ guides by Oleg Leschinsky.
+ * `lighttpd + fastcgi <http://just-another.net/2008/05/13/im-spentand-appology/>`_ installation guide from Benjamin Smith
+ * `Installing byteflow on dreamhost <http://wstearns.com/blog/2008/05/21/byteflow-dreamhost/>`_ by William Stearns
+ * `ByteFlow on CentOS 5 with Apache, mod_wsgi and MySQL <http://hintshop.ludvig.co.nz/2008/12/23/byteflow-apache-howto/>`_ by Michal Ludvig

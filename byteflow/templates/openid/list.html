@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Your OpenIDs" %}{% endblock %}
+
+{% block content %}
+<h2>{% trans "Your OpenIDs" %}</h2>
+<ul>
+  {% for object in object_list %}
+  <li>
+    <a href="{{ object.openid_url }}">{{ object.openid_url }}</a>
+    <form action="{% url openid_delete %}" method="post" class="delete">
+      <input type="hidden" name="openid" value="{{ object.openid_url }}" />
+      <input type="submit" value="{% trans "Delete" %}" />
+    </form>
+  </li>
+  {% endfor %}
+</ul>
+<form name="openid-form-2" action="{% url openid_signin %}?force&next={% url openid_list %}" method="post">
+	<fieldset>
+		<legend>{% trans "Associate new OpenID" %}</legend>
+	<div><label for="openid_url">{% trans "OpenID URL" %}: </label>{{ form.openid_url }}</div>
+    {% if form.openid_url.errors %}<div class="errors">{{ form.openid_url.errors|join:", " }}</div>{% endif %}
+	<div><input name="bsignin" type="submit" value="{% trans "Associate" %}"></div>
+	</fieldset>
+</form>
+{% endblock %}

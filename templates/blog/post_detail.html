@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load pytils_dt %}
+{% load pytils_numeral %}
+{% load discussion_tags %}
+{% load theme %}
+
+{% block title %}{{ object.name }}{% endblock %}
+
+{% block extrahead %}
+{% theme_css "highlight" %}
+{% theme_js "highlight.pack" %}
+<script type="text/javascript">initHighlightingOnLoad();</script>
+{% theme_js "comments" %}
+{% theme_js "jquery.form" %}
+{% theme_js "ajaxforms" %}
+{% ifequal settings.CAPTCHA "recaptcha" %}<script type="text/javascript" src="http://api.recaptcha.net/js/recaptcha_ajax.js"></script>{% endifequal %}
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }}: comments on {{ object.name }} feed" href="{% url feed feedurl %}" />
+{% ifapp pingback %}<link rel="pingback" href="http://{{ site.domain }}{% url xmlrpc %}" />{% endifapp %}
+{% revcanonical object %}
+{% endblock %}
+
+{% block content %}
+{% include "blog/post_entry.html" %}
+
+<span class="control-link">
+  {% ifapp watchlist %}
+  {% load watchlist_tags %}
+    {% if form.subscribe %} {# using CommentForm feature for detection if user is already subscribed to object #}
+    <a class="subscribe-link" href="{% subscribe_url object %}">{% trans "Subscribe" %}</a>
+    {% else %}
+    <a class="subscribe-link" href="{% unsubscribe_url object %}">{% trans "Unsubscribe" %}</a>
+    {% endif %}
+    ({% trans "already" %}: {{ object.watchlist_count }})
+  {% endifapp %}
+  <a class="comment-link" onclick="return comment();" href="#">{% trans "Comment post" %}</a>
+</span>
+
+{% block pingbacks %}
+{% if object.pingback_count %}
+<div id="pingbacks"><h2>{% trans "Pingbacks" %}</h2>
+  {% for pingback in object.pingbacks.all %}
+  {% include "blog/pingback.html" %}
+  {% endfor %}
+</div>
+{% endif %}
+{% endblock %}
+
+{% comment_tree_for_object object as comments %}
+{% block comments %}
+<div id="comments"><h2>{% trans "Comments" %}</h2>
+  {% if not comments %}
+    <div>{% trans "No comments for this post" %}</div>
+  {% endif %}
+
+  {% for comment in comments %}
+  {% include "blog/comment.html" %}
+  {% endfor %}
+
+  {% if object.comments_open %}{% if not reply_to %}
+  {% include "blog/comment_form.html" %}
+  {% endif %}{% endif %}
+</div>
+
+{% if comments %} {# display link for commenting at bottom to avoid confusion #}
+<span>
+  {% ifapp watchlist %}
+  {% if form.subscribe %} {# using CommentForm feature for detection if user is already subscribed to object #}
+  <a class="subscribe-link" href="{% subscribe_url object %}">{% trans "Subscribe" %}</a>
+  {% else %}
+  <a class="subscribe-link" href="{% unsubscribe_url object %}">{% trans "Unsubscribe" %}</a>
+  {% endif %}
+  {% endifapp %}
+  <a class="comment-link" onclick="return comment();" href="#">{% trans "Comment post" %}</a>
+</span>
+{% endif %}
+{% endblock %}
+{% endblock %}
+

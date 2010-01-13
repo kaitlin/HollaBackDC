@@ -1,0 +1,34 @@
+{% spaceless %}
+{% load i18n %}
+{% load pytils_dt %}
+{% load pytils_numeral %}
+{% load bookmarks %}
+{% load tagging_tags %}
+{% load authorlink %}
+{% load bfmarkup %}
+{% endspaceless %}
+
+<div id="post-{{ object.id }}" class="post">
+    {{ post_detail|cond_display:"<h2>,<h1>" }}
+        <a href="{{ object.get_absolute_url }}">{{ object.name|typogrify }}</a>
+    {{ post_detail|cond_display:"</h2>,</h1>" }}
+    <div class="metadata">
+      {# <!-- Uncomment in case of multiauthor blog --> {{ object.author|authorlink }} | #}
+        {{ object.date|datelinks }} {{ object.date|time }}
+      | <a href="{{ object.get_absolute_url }}#comments">{{ object.approved_comments_count }}
+        {{ object.approved_comments_count|choose_plural:_("comment, comments, comments") }}</a>
+      | <a href="{{ object.get_absolute_url }}#pingbacks">{{ object.pingback_count }}
+        {{ object.pingback_count|choose_plural:_("pingback, pingbacks, pingbacks") }}</a>
+      | {% render_tag_string object.get_tags %}
+    </div>
+    <div class="text">
+    {% if not post_detail and object.shortable %}
+    {{ object.html_short|safe }}&nbsp;<span class="read-more"><a href="{{ object.get_absolute_url }}">{% trans "continue&nbsp;reading" %}</a></span>
+    {% else %}
+      {{ object.html|safe }}
+    {% endif %}
+    </div>
+    {% if post_detail %}
+    {% bookmarks object %}
+    {% endif %}
+</div>

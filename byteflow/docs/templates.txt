@@ -1,0 +1,83 @@
+.. -*- mode: rst -*-
+.. _templates:
+
+=========
+Templates
+=========
+
+You can provide you own design by creating a subdirectory under the ``themes`` 
+folder, and adding there you own version of the files you would like to overwrite.
+
+Similarly, for custom static content (like css), you should create a subdirectory
+under ``static`` and add your own version of the files you would like to overwrite.
+
+Finally, don't forget to set the new theme in your ``settings_local.py`` file.
+
+=================================
+Templates related to templatetags
+=================================
+
+blogroll/links.html
+-------------------
+
+This template should output HTML code for blogroll links. This HTML will be
+inserted at the point of ``{% blogroll_links %}`` inclusion.
+
+Template context
+^^^^^^^^^^^^^^^^
+
+* ``links``: A list of link objects. Each link object has the following data:
+
+  * ``url``: URL of link
+  * ``name``: text of link
+  * ``relations``: list of XFN relations on link,
+
+  Links are sorted in the display order.
+
+blog/sidebar.txt
+----------------
+
+This template outputs a sidebar with a listing of 
+
+* Last comments
+* Last posts
+* Tags
+* blogroll
+
+It can be included by the {% sidebar %} templatetag.
+
+Template context
+^^^^^^^^^^^^^^^^
+
+TODO
+
+blog/bookmarks.html
+-------------------
+
+Otputs social links for social bookmarks. For usage see the description in ``setting_local.py.template``.
+
+Can be invoked directly with the {% bookmarks %} tag.
+
+Other templatetags
+------------------
+
+discussion
+^^^^^^^^^^
+.. autofunction:: discussion.templatetags.discussion_tags.do_comment_counts_for_objects
+.. autofunction:: discussion.templatetags.discussion_tags.do_comment_tree_for_object
+
+pingback
+^^^^^^^^
+.. autoclass:: pingback.templatetags.pingback_tags.DoPingbackCount
+.. autoclass:: pingback.templatetags.pingback_tags.DoPingbackList
+
+Template filters
+----------------
+
+datelinks
+^^^^^^^^^
+.. autofunction:: blog.templatetags.datelinks.datelinks
+
+various
+^^^^^^^
+.. autofunction:: blog.templatetags.nofollow.nofollow

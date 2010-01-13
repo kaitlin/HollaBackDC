@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load theme %}
+{% block title %}{% trans "Friends" %}{% endblock %}
+{% block extrahead %}
+<link rel="outline" type="text/xml+opml" href="{% absolute_url friends_opml %}" />
+<link rel="alternate" type="application/atom+xml" title="{{ site.name }}: friends feed" href="{% absolute_url feed "friends" %}" />
+{% endblock %}
+
+{% block content %}
+  <h1>{% if has_previous or month or day %}<a href="{% url friends_index %}">{% trans "Friends" %}</a>
+      {% else %}{% trans "Friends" %}{% endif %}
+    <a href="{% url friends_opml %}"><img src="{{ STATIC_URL }}/img/opml-icon-16x16.png" alt="opml" /></a>
+    <a href="{% url feed "friends" %}"><img src="{{ STATIC_URL }}/img/feed-icon-16x16.png" alt="feed" /></a>
+  </h1>
+  {% if year %}<h2> {% trans "Archive for" %} {{ year }}</h2>{% endif %}
+  {% if month %}<h2>{% trans "Archive for" %} {{ month|date:"F, Y" }}</h2>{% endif %}
+  {% if day %}<h2>{% trans "Archive for" %} {{ day|date:"F d, Y" }}</h2>{% endif %}
+
+{% if user.is_superuser %}
+<div class="admin-links">
+<a href="{% url friends_fetch_feeds %}">{% trans "Manual refresh all feeds" %}</a>
+</div>
+{% endif %}
+
+<div class="post_list">
+	{% for post in object_list %}
+	<div id="friend-post-{{ post.id }}" class="friend-post post">
+		<h3 class="title"><a href="{{ post.get_absolute_url }}">{% autoescape off %}{{ post.title }}{% endautoescape %}</a> /
+		<nobr><a href="{{ post.friend.link }}"{% if post.friend.relations %} rel="{{ post.friend.relations }}"{% endif %}>{{ post.friend.name }}</a></nobr>
+		<a href="{{ post.blog.feed }}"><img src="{{ STATIC_URL }}/img/feed-icon-14x14.png" alt="feed" /></a></h3>
+		<div class="metadata">
+		    {{ post.posted_tz|datelinks:"friends_" }} {{ post.posted_tz|time }}
+		</div>
+		<div class="friend-post-text text">
+		{% autoescape off %}{{ post.spoiler|removetags:"div script"|safe }}{% endautoescape %}
+		</div>
+		{% if not post.is_full_entry %}
+		<div class="read-more"><a class="external-link" href="{{ post.get_absolute_url }}">{% trans "Read full entry at origin" %}</a></div>
+		{% endif %}
+	</div>
+	{% endfor %}
+</div>
+
+
+<ul id="navigation">
+{% if month %}
+  {% with previous_month as pm %}<li class="left"><a href="{% url friends_month_archive year=pm.year,month=pm|get_month %}">{% trans "Previous month" %}</a></li>{% endwith %}
+  {% with next_month as nm %}{% if nm %}<li class="right"><a href="{% url friends_month_archive year=nm.year,month=nm|get_month %}">{% trans "Next month" %}</a></li>{% endif %}{% endwith %}
+{% endif %}
+
+{% if day %}
+  {% with previous_day as pd %}<li class="left"><a href="{% url friends_day_archive year=pd.year,month=pd|get_month,day=pd|get_day %}">{% trans "Previous day" %}</a></li>{% endwith %}
+  {% with next_day as nd %}{% if nd %}<li class="right"><a href="{% url friends_day_archive year=nd.year,month=nd|get_month,day=nd|get_day %}">{% trans "Next day" %}</a></li>{% endif %}{% endwith %}
+{% endif %}
+
+{% if has_next %}<li class="left"><a rel="next" href="?page={{ next }}">{% trans "Older posts" %}</a></li>{% endif %}
+{% if has_previous %}
+  <li class="right"><a rel="prev" href="{% ifequal previous 1 %}.{% else %}?page={{ previous }}{% endifequal %}">{% trans "Newer posts" %}</a></li>
+{% endif %}
+</ul>
+{% endblock %}

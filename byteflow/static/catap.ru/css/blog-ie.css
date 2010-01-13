@@ -1,0 +1,12 @@
+#text {
+    width: 76.5%;
+}
+
+#content {
+    width: 51%;
+    margin-left: 21%;
+}
+
+pre.example{
+    word-wrap: break-word;
+}

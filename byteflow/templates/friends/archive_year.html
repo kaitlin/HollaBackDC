@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load theme %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Friends posts year archive" %}{% endblock %}
+
+{% block content %}
+
+{% filter typogrify %}
+  <h1>
+  <a href="{% url friends_index %}">{% trans "Friends" %}</a>
+  <a href="{% url friends_opml %}"><img src="{{ STATIC_URL }}/img/opml-icon-16x16.png" alt="opml" /></a>
+  <a href="{% url feed "friends" %}"><img src="{{ STATIC_URL }}/img/feed-icon-16x16.png" alt="feed" /></a></h1>
+  {% if year %}<h2>{% trans "Archive for" %} {{ year }}</h2>{% endif %}
+{% endfilter %}
+
+{% for month in date_list %}
+<a href="{% url friends_month_archive year=year,month=month|get_month %}">{% trans "Friends archive for" %} {{ month|date:"F, Y" }}</a>
+<br/>
+{% endfor %}
+
+{% endblock %}

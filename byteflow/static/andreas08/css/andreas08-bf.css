@@ -1,0 +1,219 @@
+#content {
+  font-size: 1em;
+}
+#content .entry {
+  padding-bottom: 2em;
+}
+#content .entry .entry-title {
+  display: block;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.5em;
+  text-indent: -1em;
+  padding-left: 1em;
+}
+#content .entry .entry-title a,
+#content .entry .entry-title a:link, 
+#content .entry .entry-title a:visited,
+#content .entry .entry-title a:active,
+#content .entry .entry-title a:hover {
+  display: block;
+  text-decoration: none;
+}
+#content .entry .entry-content {
+  text-align: justify;
+}
+
+#content .entry .entry-meta {
+  clear: both;
+  text-align: right;
+  font-size: 0.9em;
+  color: #567;
+}
+#content .entry .entry-meta li {
+  border-left: 1px solid #ccc;
+  padding: 0px 0px 0px 2px;
+  display: inline;
+}
+.read-more {
+  text-align: right;
+}
+
+#sidebar {
+  font-size: 1.1em;
+
+  float: right;
+  width: 170px;
+  padding: 20px 20px 10px 0;
+  line-height: 1.2em;
+}
+#sidebar .block { }
+#sidebar .block .block-title {
+  display: block;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: -1px;
+  color: #505050;
+  background-color: inherit;
+}
+
+#sidebar .block .block-rsstitle .block-title {
+  text-indent: 0;
+}
+#sidebar .block .block-rsstitle .rss-icon {
+  float: left;
+  width: 14px;
+  padding-right: 2px;
+}
+
+#sidebar .block .last-comments,
+#sidebar .block .last-posts {
+  margin: 0 0 20px 0;
+  font-size: 0.8em;
+  border-top: 1px solid transparent;
+}
+#sidebar .block .last-comments li,
+#sidebar .block .last-posts li {
+  list-style: none;
+  display: block;
+  padding: 2px;
+  margin-bottom: 2px;
+  border-bottom: 1px dotted gray;
+}
+
+#sidebar .block .last-comments li .comment-author ,
+#sidebar .block .last-comments li .comment-author a {
+  font-weight: bold;
+  text-align: right;
+}
+#sidebar .block .last-comments li .comment-post,
+#sidebar .block .last-posts li {
+  /*text-indent: -0.9em;*/
+}
+
+#sidebar .block .last-comments li a,
+#sidebar .block .last-posts li a {
+  font-weight: normal;
+  text-decoration: none;
+}
+
+#sidebar .block .tag-cloud a {
+  font-weight: normal;
+  text-decoration: underline;
+}
+#sidebar .block .tag-cloud .tag-1 {
+  font-size: 0.9em;
+}
+#sidebar .block .tag-cloud .tag-2 {
+  font-size: 1.2em;
+}
+#sidebar .block .tag-cloud .tag-3 {
+  font-size: 1.4em;
+}
+#sidebar .block .tag-cloud .tag-4 {
+  font-size: 1.6em;
+}
+#sidebar .block .tag-cloud .tag-5 {
+  font-size: 1.8em;
+}
+
+#id_body, .comment-edit-area {
+  width: 100%;
+  height: 150px;
+  border: 1px solid gray;
+}
+
+.metadata {
+  text-align: right;
+  color: gray;
+}
+
+#ajaxload {
+  display: none;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  z-index: 1000;
+}
+
+#comment-preview {
+  margin-left: 1em;
+  margin-right: 1em;
+  padding: 0.5em;
+  background-color: #eee;
+  border: 1px dotted gray;
+  display: none;
+}
+
+p {
+  padding: 0 0 1.2em;
+}
+
+.edit-submit, .cancel-edit {
+  display: none;
+}
+
+#header .first {
+  float: left;
+}
+#header .last {
+  float: right;
+}
+
+#login-form, #openid-form {
+  display: none;
+  float: right;
+  padding-right: 5px;
+}
+#openid-form {
+  padding-top: 25px;
+}
+#login-form {
+  padding-top: 25px;
+}
+
+#login-form div,
+#openid-form div {
+  text-align: right;
+}
+#login-form #email,
+#login-form #password,
+#openid-form #openid_url {
+  border: 1px solid #ccc;
+  padding: 1px;
+  margin: 2px;
+}
+
+#login-shortcuts li {
+  float: left;
+  list-style-type: none;
+  border-right: 0;
+  border-left: 1px solid #ffffff; 
+  white-space: nowrap;
+}
+#login-shortcuts li.first {
+  border-left: 0;
+}
+#login-shortcuts li a {
+  float: left;
+  display: block;
+  padding: 0 10px;
+  font-size: 0.8em;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: inherit;
+  color: #ffffff;
+}
+#login-shortcuts li span {
+  float: left;
+  display: block;
+  padding: 0 10px;
+  font-size: 0.8em;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: inherit;
+  color: #ccf;
+}

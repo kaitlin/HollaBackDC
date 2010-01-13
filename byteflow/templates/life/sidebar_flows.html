@@ -1,0 +1,12 @@
+{% load i18n %}
+{% load theme %}
+
+    {% if lifeflows %}
+    <ul>
+    {% for flow in lifeflows %}
+        <li><a href="{{ flow.link }}" rel="me">{{ flow.name }}</a></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p>{% trans "Have no life flows yet" %}</p>
+    {% endif %}

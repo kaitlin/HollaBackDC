@@ -1,0 +1,9 @@
+{% for name, url, title in pages %}
+  {% if not name %}|{% else %}
+    {% ifequal page_url url %}
+      <span class="selected">{{ name }}</span>
+    {% else %}
+      <a href="{{ url }}" title="{{ title }}">{{ name }}</a>
+    {% endifequal %}
+  {% endif %}
+{% endfor %}

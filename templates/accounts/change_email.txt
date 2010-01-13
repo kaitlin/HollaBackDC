@@ -1,0 +1,12 @@
+Hi, {{ user.name }}
+
+Someone, hopefully you, requested to change your email address at {{
+site_url }}. If it was you, and you'd like to change it to this
+address, click the link below or copy and paste it into your web
+browser's address bar:
+
+{{ site_url }}{% url change_email action_key %}
+
+If you didn't request this, you don't need to do anything; you won't 
+receive any more email from us, and the key will expire automatically 
+in {{ expiration_days }} days.

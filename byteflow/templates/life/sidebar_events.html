@@ -1,0 +1,12 @@
+{% load i18n %}
+{% load theme %}
+
+    {% if lifeevents %}
+    <ul>
+    {% for event in lifeevents %}
+        <li><a href="{{ event.get_absolute_url }}" rel="me">{{ event.title }}</a> <small>/ <a href="{{ event.life.link }}" rel="me">{{ event.life.name }}</a></small></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p>{% trans "Have no life events yet" %}</p>
+    {% endif %}

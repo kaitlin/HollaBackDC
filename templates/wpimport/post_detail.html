@@ -1,0 +1,46 @@
+{% extends "wpimport/base.html" %}
+
+{% load wpimporttags %}
+
+{% block content %}
+<a href="{% url wpimport.views.post_list %}">Go to listing</a>
+<h2>{{ object.title }} content:</h2>
+{% if imported %}ALREADY IMPORTED!!! <a href="{{ imported.get_absolute_url }}">{{ imported }}</a>{% endif %}
+<ul>
+  {% for key, value in object.dict.items %}
+  {% ifnotequal key "dict" %}
+  <li><strong>{{ key }}</strong>: {{ value }} </li>
+  {% endifnotequal %}
+  {% endfor %}
+</ul>
+
+<form action="." method="POST">
+{% if not imported %}
+<input type="submit" value="Import" />
+{% endif %}
+<h2>Comments:</h2>
+
+<a href="" onclick='$(":checkbox").attr("checked", 1); return false;'>Select all</a>
+<a href="" onclick='$(":checkbox").attr("checked", 0); return false;'>Deselect all</a>
+<ul>
+  {% for comment in object.comments.all %}
+  <li><ul>
+      <input type="checkbox" name="comment" value="{{ comment.id }}" />
+      {% author_exist comment %}
+      {% for key, value in comment.dict.items %}
+      {% ifnotequal key "dict" %}
+      <li><strong>{{ key }}</strong>: {{ value }}</li>
+      {% endifnotequal %}
+      {% endfor %}
+      <hr />
+  </ul></li>
+  {% endfor %}
+</ul>
+
+<a href="" onclick='$(":checkbox").attr("checked", 1); return false;'>Select all</a>
+<a href="" onclick='$(":checkbox").attr("checked", 0); return false;'>Deselect all</a>
+{% if not imported %}
+<br /><input type="submit" value="Import" />
+{% endif %}
+</form>
+{% endblock %}

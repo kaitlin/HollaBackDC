@@ -1,0 +1,74 @@
+.. -*- mode: rst -*-
+.. _howtousehg:
+
+How to use Mercurial for contribution
+=====================================
+
+Basics
+------
+
+Mercurial is a distributed VCS [#f1]_, which means that every repository copy
+contains all changes of data, unlike centralized VCS (Subversion, CVS). This may
+sound scaring but whole history (over 1k revisions) of Byteflow (with working
+copy) takes only 14% more space than a working copy of Subversion. This gives
+you ability to very fast checking of what's going on, using ``log``,
+``annotate``, etc.
+
+Also this means that two guys, sitting far away one from another, can
+simultaneously commit two different revisions to same repository (I mean it
+contains same history, but every guy has his own copy of a repository). This is
+absolutely normal situation, but this means that changeset history in Mercurial
+is not linear: as two different changesets can be committed on top of same
+changeset, then we got directed acyclic graph.
+
+In human language it is called "tree": root changeset and its descendants. Each
+descendant can have one or two (then it is a merge) and zero (then it's a head)
+or more children. Merges [#f2]_ are special changesets which merge (naturally
+;-) two branches of a changeset tree into single one. Heads are changesets which
+does not have children. When there is more than one head, then repository
+probably needs a merge. There is always head which is tagged with special tag
+"tip", which means that this is latest changeset.
+
+How to send patches
+-------------------
+
+Before doing anything you should slightly configure Mercurial. Its config is
+stored in ``~/.hgrc`` on \*nix and in ``%APPDATA%\Mercurial.ini`` on Windows.
+
+This is sample configuration that you might use as base for yours::
+
+  [ui]
+  username = Some Guy <someguy@example.com>
+
+  [diff]
+  git = 1
+
+  [extensions]
+  hgext.patchbomb=
+
+  [email]
+  method = sendmail
+
+Or if your want to use SMTP::
+
+  [email]
+  method = smtp
+
+  [smtp]
+  host = your.smtp.server
+  username = username
+  password = password
+
+After that it's easy to send your changesets for review and applying::
+
+  hg email -r REV # send particular changeset
+  hg email -o     # send all changesets that are not in destination repository
+
+You can also read ``hg help email`` if you want more information about
+options. Where to send patches? Preferred address is
+byteflow-hackers@googlegroups.com.
+
+.. rubric:: Footnotes
+
+.. [#f1] Version Control System
+.. [#f2] If you have used Subversion before, don't be afraid because of name: in Mercurial merge is more like ``svn update``.

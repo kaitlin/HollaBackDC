@@ -1,0 +1,21 @@
+{% load i18n %}
+{%load bfmarkup %}
+<div id="footer">{{ settings.FOOTER|safe }},
+  {% trans "Powered by " %} <a href="http://byteflow.su">Byteflow</a>
+</div>
+
+{% if settings.GA_ACC and not user.is_staff %}
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{{ settings.GA_ACC|get_key:site.domain }}']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+        'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+{% endif %}

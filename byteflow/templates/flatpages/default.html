@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% load bfmarkup %}
+
+{% block title %}{{ flatpage.title }}{% endblock %}
+
+{% block content %}
+<h1>{{ flatpage.title }}</h1>
+<div class="content">{{ flatpage.content|markdown }}</div>
+{% endblock %}

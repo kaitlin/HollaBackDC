@@ -1,0 +1,8 @@
+Hi, {{ user.name }}.
+
+Someone, hopefully you, reset your password at {{ site_url }}
+using this email address.
+
+Your new password is: {{ password }}
+
+Use it to login at {{ site_url }}{% url login %}

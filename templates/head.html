@@ -1,0 +1,42 @@
+{% load i18n %}
+
+<div id="header"><h1><a href="{% url post_list %}">{{ site.name }}</a></h1>
+
+  {% if not user.is_authenticated %}
+  <form id="login-form" action="{% url login %}" method="post">
+    <a href="#" onclick="return form_close();">{% trans "close" %}</a>
+    <a href="{% url password_reset %}">{% trans "forgot it?" %}</a>
+    <input type="text" id="email" name="email" />
+    <input type="password" id="password" name="password" />
+    <input type="submit" value="{% trans "Login" %}" />
+  </form>
+  <form id="openid-form" action="{% url openid_signin %}" method="post">
+    <a href="#" onclick="return form_close();">{% trans "close" %}</a>
+    <input type="text" id="openid_url" name="openid_url" />
+    <input type="submit" value="{% trans "Login" %}" />
+  </form>
+  <span id="login-shortcuts">{% trans "Login with" %}
+    <a href="#" onclick="return show_login();">{% trans "password" %}</a> {% trans "or" %}
+    <a href="#" onclick="return show_openid();">{% trans "OpenID" %}</a>
+  </span>
+  {% else %}
+  <span id="login-shortcuts">{% trans "Hello," %} {{ user.name }}</span>
+  {% endif %}
+  {% block extraheader %}{{ settings.TAGLINE|default:"&nbsp;" }}{% endblock %}
+</div>
+
+<div id="bar">
+  {% static_pages settings.STATIC_PAGES %}
+
+  {% if appcheck.haystack %}
+    {% include "search/form.html" %}
+  {% endif %}
+
+  {% if user.is_authenticated %}
+  <span id="bar-left">
+    <a href="{% url profile_edit %}">{% trans "Profile" %}</a>
+    <a href="{% url logout %}">{% trans "Logout" %}</a>
+  </span>
+  {% endif %}
+  {% block bar %}{% endblock %}
+</div>

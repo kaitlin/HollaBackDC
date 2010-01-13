@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Activation{% endblock %}
+
+{% block content %}
+<h1>Account activation</h1>
+{% if account %}
+<p>Thanks for signing up! You are logged in and can <a href="/">start</a> using the site!</p>
+{% else %}
+<p>Either your activation link was incorrect, or the activation key for your account has expired; activation keys are only
+valid for {{ expiration_days }} days after registration.</p>
+{% endif %}
+{% endblock %} 

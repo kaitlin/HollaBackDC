@@ -1,0 +1,1392 @@
+# Hungarian translation of Byteflow.
+# Copyright (C) 2008 Viktor Nagy
+# This file is distributed under the same license as the byteflow package.
+# Nagy Viktor <viktor@viktornagy.com>, 2008.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Byteflow\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-02 17:10+0200\n"
+"PO-Revision-Date: 2008-10-02 17:14+0200\n"
+"Last-Translator: Nagy Viktor <viktor@viktornagy.com>\n"
+"Language-Team: Hungarian <hu@gnome.hu>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#: apps/accounts/forms.py:10 apps/blog/models.py:23 apps/blogroll/models.py:15
+#: apps/discussion/forms.py:57 homepage/models.py:6
+msgid "Name"
+msgstr "Név"
+
+#: apps/accounts/forms.py:11 apps/discussion/forms.py:58
+#: templates/openid/complete.html:17 templates/openid/complete.html.py:25
+msgid "Email"
+msgstr "E-mail"
+
+#: apps/accounts/forms.py:11
+msgid "Changing email requires activation"
+msgstr "Az e-mail megváltoztatása aktiválni kell"
+
+#: apps/accounts/forms.py:12
+msgid "Site"
+msgstr "Honlap"
+
+#: apps/accounts/forms.py:13 apps/accounts/forms.py:14
+#: templates/openid/complete.html:26
+msgid "Password"
+msgstr "Jelszó"
+
+#: apps/accounts/forms.py:13
+msgid "Leave blank to keep current"
+msgstr "Hagyd üresen a jelenlegi megtartásához"
+
+#: apps/accounts/forms.py:14
+msgid "Repeat, to catch typos"
+msgstr "Ismételd meg, az elütések elkerülése érdekében"
+
+#: apps/accounts/forms.py:31
+msgid "This address already belongs to other user"
+msgstr "Ezt a címet már más felhasználó használja"
+
+#: apps/accounts/forms.py:33
+msgid "This field is required"
+msgstr "Kötelező mező"
+
+#: apps/accounts/forms.py:42
+msgid "You must type the same password each time"
+msgstr "Mindkét esetben ugyanazt a jelszót kell megadni"
+
+#: apps/accounts/views.py:41
+msgid "Email or password was not supplied"
+msgstr "Az e-mail vagy a jelszó hiányzik"
+
+#: apps/accounts/views.py:48
+msgid "Email or password are incorrect!"
+msgstr "Az e-mail vagy a jelszó hibás"
+
+#: apps/accounts/views.py:71
+msgid "Activation does not exist or already expired."
+msgstr "Az aktiváló nem létezik vagy már lejárt"
+
+#: apps/accounts/views.py:83
+msgid ""
+"Password succesfully resetted. Message with new password was sent to your "
+"email."
+msgstr ""
+"A jelszót sikeresen visszaállítottam. Az új jelszavadról az e-mailt "
+"elküldtem."
+
+#: apps/accounts/views.py:89
+msgid "Message with instructions to reset password was sent to your email."
+msgstr "Egy a jelszó visszaállításról szóló e-mailt küldtem neked."
+
+#: apps/accounts/views.py:91
+msgid "Sorry, no one user is associated with this email."
+msgstr "Bocs, de ezzel az e-mailcím egy felhasználóhoz sem tartozik."
+
+#: apps/accounts/views.py:99
+msgid "You have succesfully changed your email address!"
+msgstr "Az e-mailcímedet sikeresen megváltoztattam."
+
+#: apps/accounts/views.py:105
+msgid "Comment approval error"
+msgstr "A megjegyzést nem sikerült hitelesíteni"
+
+#: apps/accounts/views.py:124
+msgid "Changes to profile saved."
+msgstr "A profilodat elmentettem"
+
+#: apps/blog/models.py:24
+msgid "Slug"
+msgstr "Egyszerű url"
+
+#: apps/blog/models.py:26
+msgid "Post teaser"
+msgstr "Kopf"
+
+#: apps/blog/models.py:27
+msgid "Text"
+msgstr "Szöveg"
+
+#: apps/blog/models.py:28 apps/textblocks/models.py:15
+msgid "Render method"
+msgstr "Megjelenítés módja"
+
+#: apps/blog/models.py:29 apps/textblocks/models.py:17
+msgid "HTML"
+msgstr "HTML"
+
+#: apps/blog/models.py:30 apps/blog/models.py:31 apps/discussion/models.py:82
+msgid "Date"
+msgstr "Dátum"
+
+#: apps/blog/models.py:89
+msgid "view"
+msgstr "nézet"
+
+#: apps/blog/views.py:96
+msgid "Please look in your mailbox for info about your account."
+msgstr ""
+"Kérlek, vess egy pillantást a levelesládádra a számládról szóló "
+"információkért."
+
+#: apps/blog/views.py:99
+msgid "Please look in your mailbox for comment approval link."
+msgstr ""
+"Kérlek, vedd egy pillantást a levelesládádra a megjegyzés engedélyezése "
+"érdekében."
+
+#: apps/blogroll/models.py:14
+msgid "URL"
+msgstr "URL"
+
+#: apps/blogroll/models.py:16
+msgid "Relations"
+msgstr "Viszonyok"
+
+#: apps/blogroll/models.py:17
+msgid "Weight"
+msgstr "Súly"
+
+#: apps/blogroll/models.py:17
+msgid "You can order links by this field. Link with smaller number goes first."
+msgstr ""
+"Ezzel a mezővel tudod a linkeket sorba rendezni. Az alacsonyabb szám kerül "
+"előlre."
+
+#: apps/blogroll/models.py:19
+msgid "Friendship relation"
+msgstr "Baráti kapcsolat"
+
+#: apps/blogroll/models.py:20
+msgid "Physical relation"
+msgstr "Fizikai kapcsolat"
+
+#: apps/blogroll/models.py:21
+msgid "Profesional relation"
+msgstr "Szakmai kapcsolat"
+
+#: apps/blogroll/models.py:22
+msgid "Geographical relation"
+msgstr "Földrajzi kapcsolat"
+
+#: apps/blogroll/models.py:23
+msgid "Family relation"
+msgstr "Családi kapcsolat"
+
+#: apps/blogroll/models.py:24
+msgid "Romantic relation"
+msgstr "Viszony"
+
+#: apps/blogroll/models.py:25
+msgid "Identity relation"
+msgstr "Személyiségi kapcsolat"
+
+#: apps/blogroll/models.py:29
+msgid "Link"
+msgstr "Link"
+
+#: apps/blogroll/models.py:30 themes/buriy/blog/sidebar.html:65
+msgid "Links"
+msgstr "Linkek"
+
+#: apps/blogroll/relations.py:4
+msgid "contact"
+msgstr "kapcsolat"
+
+#: apps/blogroll/relations.py:5
+msgid "acquaintance"
+msgstr "ismerős"
+
+#: apps/blogroll/relations.py:6
+msgid "friend"
+msgstr "barát"
+
+#: apps/blogroll/relations.py:10
+msgid "met"
+msgstr "találkoztunk már"
+
+#: apps/blogroll/relations.py:14
+msgid "co-worker"
+msgstr "munkatárs"
+
+#: apps/blogroll/relations.py:15
+msgid "colleague"
+msgstr "szakmabeli"
+
+#: apps/blogroll/relations.py:19
+msgid "co-resident"
+msgstr "környéken lakik"
+
+#: apps/blogroll/relations.py:20
+msgid "neighbor"
+msgstr "szomszéd"
+
+#: apps/blogroll/relations.py:24
+msgid "child"
+msgstr "gyermek"
+
+#: apps/blogroll/relations.py:25
+msgid "parent"
+msgstr "szülő"
+
+#: apps/blogroll/relations.py:26
+msgid "sibling"
+msgstr "testvér"
+
+#: apps/blogroll/relations.py:27
+msgid "spouse"
+msgstr "házastárs"
+
+#: apps/blogroll/relations.py:28
+msgid "kin"
+msgstr "rokon"
+
+#: apps/blogroll/relations.py:32
+msgid "muse"
+msgstr "múzsa"
+
+#: apps/blogroll/relations.py:33
+msgid "crush"
+msgstr "egyoldalú viszony"
+
+#: apps/blogroll/relations.py:34
+msgid "date"
+msgstr "alkalmi kapcsolat"
+
+#: apps/blogroll/relations.py:35
+msgid "sweetheart"
+msgstr "párkapcsolat"
+
+#: apps/blogroll/relations.py:39
+msgid "me"
+msgstr "magam"
+
+#: apps/captcha/fields.py:42
+msgid "Captcha"
+msgstr "Captcha"
+
+#: apps/captcha/fields.py:43
+msgid "Please, enter symbols, which you see on the image"
+msgstr "Kérlek, add meg a képen látható jeleket"
+
+#: apps/captcha/fields.py:52
+msgid "Wrong answer"
+msgstr "Rossz válasz"
+
+#: apps/discussion/forms.py:19
+msgid "Subscribe to comments"
+msgstr "Felirakozom a megjegyzésekre"
+
+#: apps/discussion/forms.py:40
+msgid "You are trying to reply to unavailable comment"
+msgstr "Nem létező megjegyzésre próbálsz válaszolni"
+
+#: apps/discussion/forms.py:42
+msgid "Trying to reply to comment from another object"
+msgstr "Más objektum megjegyzésére próbálsz válaszolni"
+
+#: apps/discussion/forms.py:57
+msgid "Required. 30 chars of fewer."
+msgstr "Kötelező. 30 vagy kevesebb betű."
+
+#: apps/discussion/forms.py:58
+msgid "Required."
+msgstr "Kötelező."
+
+#: apps/discussion/forms.py:66
+msgid "Are you human?"
+msgstr "Ember vagy?"
+
+#: apps/discussion/models.py:80
+msgid "Publishing date"
+msgstr "Közzétéve"
+
+#: apps/discussion/models.py:83
+msgid "Body"
+msgstr "Hozzászólás"
+
+#: apps/discussion/models.py:84
+msgid "Body HTML"
+msgstr "HTML test"
+
+#: apps/livejournal/models.py:10
+msgid "All"
+msgstr "Minden"
+
+#: apps/livejournal/models.py:11
+msgid "Anonymous only"
+msgstr "Név nélkül"
+
+#: apps/livejournal/models.py:12
+msgid "non-Friends"
+msgstr "nem barátok"
+
+#: apps/livejournal/models.py:13
+msgid "None"
+msgstr "Semmi"
+
+#: apps/livejournal/models.py:25
+msgid "Needs crossposting"
+msgstr "Keresztpostolást igényel"
+
+#: apps/livejournal/models.py:27
+msgid "Turn off comments"
+msgstr "Megjegyzések kikapcsolása"
+
+#: apps/livejournal/models.py:28
+msgid "Comments screening"
+msgstr "Megjegyzések átnézése"
+
+#: apps/livejournal/models.py:29
+msgid "Access level"
+msgstr "Hozzáférés szintje"
+
+#: apps/openidconsumer/forms.py:25 apps/openidconsumer/views.py:113
+msgid "i-names are not supported"
+msgstr "Az i-nevek nem támogatottak"
+
+#: apps/openidconsumer/forms.py:32
+#, python-format
+msgid "next url \"%s\" is invalid"
+msgstr "a \"%s\" url érvénytelen"
+
+#: apps/openidconsumer/forms.py:54
+msgid "This email is already in database. Please choose another."
+msgstr "Ez az e-mail már létezik az adatbázisban. Kérlek, válassz másikat."
+
+#: apps/openidconsumer/forms.py:80
+msgid "This email doesn't exist. Please choose another."
+msgstr "Ez az e-mail nem létezik. Kérlek, válassz másikat."
+
+#: apps/openidconsumer/forms.py:87
+msgid ""
+"Please enter a correct email and password. Note that both fields are case-"
+"sensitive."
+msgstr ""
+"Kérlek, adj meg egy valódi e-mailt és jelszót. Mindkét mező nagybetűérzékeny."
+
+#: apps/openidconsumer/forms.py:89
+msgid "This account is inactive."
+msgstr "Ez a fiók inaktív."
+
+#: apps/openidconsumer/views.py:119
+msgid "The OpenID was invalid"
+msgstr "Az OpenID érvénytelen"
+
+#: apps/openidconsumer/views.py:145
+msgid "The request was cancelled"
+msgstr "A kérés meg lett szakítva"
+
+#: apps/openidconsumer/views.py:279
+msgid "Invalid POST data"
+msgstr "Érvénytelen POST adat"
+
+#: apps/openidconsumer/views.py:281
+msgid "You must have at least one OpenID if you don't have email!"
+msgstr "Legalább egy OpenID-val rendelkezned kell, ha nincsen e-mailed!"
+
+#: apps/openidconsumer/views.py:287
+msgid "OpenID deassociated successfully"
+msgstr "Az OpenID-t sikeresen leválasztottam"
+
+#: apps/postimage/forms.py:19
+msgid "Description"
+msgstr "Leírás"
+
+#: apps/postimage/forms.py:19
+msgid "Image"
+msgstr "Kép"
+
+#: apps/postimage/forms.py:23 apps/postimage/forms.py:30
+msgid "Select a file to attach"
+msgstr "Válassz ki egy kapcsolódó fájlt"
+
+#: apps/postimage/forms.py:29
+msgid "Subdirectory"
+msgstr "Alkönyvtár"
+
+#: apps/postimage/forms.py:35
+msgid "The subdirectory can't contain dots (.)"
+msgstr "Az alkönyvtár nem tartalmazhat pontokat (.)"
+
+#: apps/postimage/views.py:21
+msgid "Attach file"
+msgstr "Fájl csatolása"
+
+#: apps/postimage/views.py:46
+msgid "Upload file"
+msgstr "Fájl feltöltése"
+
+#: apps/recaptcha/recaptcha_newforms.py:20
+msgid "Unknown error."
+msgstr "Ismeretlen hiba."
+
+#: apps/recaptcha/recaptcha_newforms.py:21
+msgid "We weren't able to verify the public key. Please try again later."
+msgstr ""
+"A nyilvános kulcsot nem sikerült azonosítani. Kérlek, próbáld meg később."
+
+#: apps/recaptcha/recaptcha_newforms.py:22
+msgid "We weren't able to verify the private key. Please try again later."
+msgstr ""
+"Az egyéni kulcsot nem sikerült azonosítani. Kérlek, próbáld meg később."
+
+#: apps/recaptcha/recaptcha_newforms.py:23
+msgid "The challenge parameter of the verify script was incorrect."
+msgstr "Az ellenőrző szkript kihívás paramétere hibás."
+
+#: apps/recaptcha/recaptcha_newforms.py:24
+msgid "The CAPTCHA solution was incorrect."
+msgstr "A Captcha megoldása hibás."
+
+#: apps/recaptcha/recaptcha_newforms.py:25
+msgid ""
+"The parameters to /verify were incorrect, make sure you are passing all the "
+"required parameters.  Please try again later."
+msgstr ""
+"Az ellenőrizendő paraméterek hibásak. Ellenőrizd, hogy minden kötelező "
+"paramétert átadsz. Kérlek, próbáld újra."
+
+#: apps/recaptcha/recaptcha_newforms.py:26
+msgid ""
+"reCAPTCHA API keys are tied to a specific domain name for security reasons.  "
+"Please try again later."
+msgstr ""
+"A reCaptcha API kulcsok biztonsági okokból adott domainre szólnak. Kérlek, "
+"próbáld újra."
+
+#: apps/recaptcha/recaptcha_newforms.py:27
+msgid "Unable to contact the reCAPTCHA verify server.  Please try again later."
+msgstr "A reCaptcha ellenőzrő szerver nem elérhető. Kérlek, próbáld újra."
+
+#: apps/recaptcha/recaptcha_newforms.py:64
+msgid "An error occured with the CAPTCHA service. Please try again."
+msgstr "A Captcha szolgáltatónál hiba történt, kérlek, próbáld újra."
+
+#: apps/recaptcha/recaptcha_newforms.py:66
+msgid "Please enter the CAPTCHA solution."
+msgstr "Kérlek, add meg a Captcha megoldását."
+
+#: apps/robots/admin.py:10
+msgid "URL patterns"
+msgstr "URL mint"
+
+#: apps/robots/admin.py:11
+msgid "Advanced options"
+msgstr "Haladó beállítások"
+
+#: apps/robots/models.py:14
+msgid "pattern"
+msgstr "minta"
+
+#: apps/robots/models.py:14
+msgid ""
+"Case-sensitive. A missing trailing slash does also match to files which "
+"start with the name of the pattern, e.g., '/admin' matches /admin.html too. "
+"Some major search engines allow an asterisk (*) as a wildcard and a dollar "
+"sign ($) to match the end of the URL, e.g., '/*.jpg$'."
+msgstr ""
+"Nagybetűérzékeny. A hiányzó záró perjel megtalálja azokat a mintával kezdődő "
+"fájlokat is, pl: '/admin' megtalálja a /admin.html-t is. Néhány nagyobb "
+"keresőmotor jokerként engedélyezi a csillagot (*) és az URL végét jelző "
+"dollárjelet ($) is, pl: '/*.jpg$'."
+
+#: apps/robots/models.py:17 apps/robots/models.py:18
+msgid "url"
+msgstr "url"
+
+#: apps/robots/models.py:36
+msgid "robot"
+msgstr "robot"
+
+#: apps/robots/models.py:36
+msgid ""
+"This should be a user agent string like 'Googlebot'. Enter an asterisk (*) "
+"for all user agents. For a full list look at the <a target=_blank "
+"href='http://www.robotstxt.org/wc/active/html/index.html'>database of Web "
+"Robots</a>."
+msgstr ""
+"Ez egy felhasználói-ügynök sztring, pl 'Googlebot'. Minden felhasználói-"
+"ügynökhöz írj csillagot (*). A <a target=_blank href='http://www.robotstxt."
+"org/wc/active/html/index.html'>robotok teljes listáját itt találod</a>."
+
+#: apps/robots/models.py:37
+msgid "These are URLs which are allowed to be accessed by web robots."
+msgstr "A webrobotok ezeket az URL-eket érhetik el."
+
+#: apps/robots/models.py:38
+msgid "These are URLs which are not allowed to be accessed by web robots."
+msgstr "A webrobotok ezeket az URL-eket nem érhetik el."
+
+#: apps/robots/models.py:40
+msgid "crawl delay"
+msgstr "pásztázás késleltetése"
+
+#: apps/robots/models.py:43
+msgid "rule"
+msgstr "szabály"
+
+#: apps/robots/models.py:44
+msgid "rules"
+msgstr "szabályok"
+
+#: apps/robots/models.py:50 apps/robots/models.py:54
+msgid "and"
+msgstr "és"
+
+#: apps/robots/models.py:51
+msgid "allowed"
+msgstr "engedett"
+
+#: apps/robots/models.py:55
+msgid "disallowed"
+msgstr "nem engedett"
+
+#: apps/tagging/__init__.py:22
+#, python-format
+msgid "The model %s has already been registered."
+msgstr "A %s modelt már regisztráltam."
+
+#: apps/tagging/fields.py:69
+#, python-format
+msgid "%s can only be set on instances."
+msgstr "A %s csak egy példányon állítható."
+
+#: apps/tagging/forms.py:22
+#, python-format
+msgid "Each tag may be no more than %s characters long."
+msgstr "Minden címke legfeljebb %s karakter hosszú lehet."
+
+#: apps/tagging/managers.py:53
+#, python-format
+msgid "No tags were given: \"%s\"."
+msgstr "Nincsen címke megadva: \"%s\"."
+
+#: apps/tagging/managers.py:55
+#, python-format
+msgid "Multiple tags were given: \"%s\"."
+msgstr "Több címke van megadva: \"%s\"."
+
+#: apps/tagging/models.py:17
+msgid "name"
+msgstr "név"
+
+#: apps/tagging/models.py:18
+msgid "name translation"
+msgstr "név fordítása"
+
+#: apps/tagging/models.py:25 apps/tagging/models.py:45
+msgid "tag"
+msgstr "címke"
+
+#: apps/tagging/models.py:26
+msgid "tags"
+msgstr "címkék"
+
+#: apps/tagging/models.py:46
+msgid "content type"
+msgstr "tartalom tipusa"
+
+#: apps/tagging/models.py:47
+msgid "object id"
+msgstr "objektumazonosító"
+
+#: apps/tagging/models.py:54
+msgid "tagged item"
+msgstr "címkézett elem"
+
+#: apps/tagging/models.py:55
+msgid "tagged items"
+msgstr "címkézett elemek"
+
+#: apps/tagging/utils.py:183
+msgid ""
+"If a list or tuple of tags is provided, they must all be tag names, Tag "
+"objects or Tag ids."
+msgstr ""
+"Ha a címkék listáját vagy tömbjét adod meg, akkor mindnek címkenévnek, címke "
+"objektumnak vagy címkeazonosítónak kell lennie."
+
+#: apps/tagging/utils.py:185
+msgid "The tag input given was invalid."
+msgstr "A megadott címke érvénytelen."
+
+#: apps/tagging/utils.py:230
+#, python-format
+msgid "Invalid distribution algorithm specified: %s."
+msgstr "Érvénytelen elosztási algoritmus: %s."
+
+#: apps/tagging/templatetags/tagging_tags.py:19
+#, python-format
+msgid "tags_for_model tag was given an invalid model: %s"
+msgstr "A tags_for_model címke érvénytelen modellt kapott: %s."
+
+#: apps/tagging/templatetags/tagging_tags.py:32
+#, python-format
+msgid "tag_cloud_for_model tag was given an invalid model: %s"
+msgstr "A tag_cloud_for_model címke érvénytelen modellt kapott: %s"
+
+#: apps/tagging/templatetags/tagging_tags.py:56
+#, python-format
+msgid "tagged_objects tag was given an invalid model: %s"
+msgstr "A tagged_objects_tag érvénytelen modellt kapott: %s"
+
+#: apps/tagging/templatetags/tagging_tags.py:89
+#, python-format
+msgid "%s tag requires either three or five arguments"
+msgstr "A %s címke vagy három, vagy négy argumentumot igényel"
+
+#: apps/tagging/templatetags/tagging_tags.py:91
+#: apps/tagging/templatetags/tagging_tags.py:143
+#: apps/tagging/templatetags/tagging_tags.py:198
+#, python-format
+msgid "second argument to %s tag must be 'as'"
+msgstr "A %s címke második argumentumának 'mikéntnek' (as) kell lennie"
+
+#: apps/tagging/templatetags/tagging_tags.py:94
+#: apps/tagging/templatetags/tagging_tags.py:147
+#, python-format
+msgid "if given, fourth argument to %s tag must be 'with'"
+msgstr "ha létezik, a %s címke negyedik argumentumának 'with'-nek kell lennie"
+
+#: apps/tagging/templatetags/tagging_tags.py:96
+#, python-format
+msgid "if given, fifth argument to %s tag must be 'counts'"
+msgstr "Ha létezik, a %s címke ötödik argumentumának 'counts'-nak kell lennie"
+
+#: apps/tagging/templatetags/tagging_tags.py:141
+#, python-format
+msgid "%s tag requires either three or between five and seven arguments"
+msgstr "A %s címke három, négy vagy öt argumentumot igényel"
+
+#: apps/tagging/templatetags/tagging_tags.py:155
+#, python-format
+msgid "%(tag)s tag's '%(option)s' option was not a valid integer: '%(value)s'"
+msgstr ""
+"A %(tag)s címke '%(option)s' tulajdonsága érvénytelen egész szám: '%(value)s'"
+
+#: apps/tagging/templatetags/tagging_tags.py:164
+#, python-format
+msgid "%(tag)s tag's '%(option)s' option was not a valid choice: '%(value)s'"
+msgstr ""
+"A %(tag)s címke '%(option)s' tulajdonsága érvénytelen választás: '%(value)s'"
+
+#: apps/tagging/templatetags/tagging_tags.py:170
+#, python-format
+msgid "%(tag)s tag was given an invalid option: '%(option)s'"
+msgstr "A %(tag)s címke érvénytelen tulajdonságot kapott: '%(option)s'"
+
+#: apps/tagging/templatetags/tagging_tags.py:175
+#, python-format
+msgid "%(tag)s tag was given a badly formatted option: '%(option)s'"
+msgstr "A %(tag)s címke hibásan formázott tulajdonságot kapott: '%(option)s'"
+
+#: apps/tagging/templatetags/tagging_tags.py:196
+#, python-format
+msgid "%s tag requires exactly three arguments"
+msgstr "A %s címke pontosan három argumentumot igényel"
+
+#: apps/tagging/templatetags/tagging_tags.py:221
+#, python-format
+msgid "%s tag requires exactly five arguments"
+msgstr "A %s címke pontosan öt argumentumot igényel"
+
+#: apps/tagging/templatetags/tagging_tags.py:223
+#, python-format
+msgid "second argument to %s tag must be 'in'"
+msgstr "A %s címke második argumentumának 'in'-nek kell lennie"
+
+#: apps/tagging/templatetags/tagging_tags.py:225
+#, python-format
+msgid "fourth argument to %s tag must be 'as'"
+msgstr "A %s negyedik argumentumának 'as'-nek kell lennie"
+
+#: apps/textblocks/models.py:10
+msgid "Unique system code"
+msgstr "Egyedi rendszerkód"
+
+#: apps/textblocks/models.py:11
+msgid "The key attribute"
+msgstr "Egyéni azonosító"
+
+#: apps/textblocks/models.py:12
+msgid "Block name"
+msgstr "Blokk címe"
+
+#: apps/textblocks/models.py:13
+msgid "The name is renders as h4 (if it is not blank)"
+msgstr "(Ha nem üres, ) H4-ként jelenik meg"
+
+#: apps/textblocks/models.py:14
+msgid "Block content"
+msgstr "Blokk tartalma"
+
+#: apps/textblocks/models.py:18
+msgid "Comments about block"
+msgstr "Megjegyzés"
+
+#: apps/textblocks/models.py:19
+msgid "The comment on text block is shown only in admin interface"
+msgstr "A megjegyzés csak az admin felületen látható"
+
+#: homepage/models.py:7
+msgid "Feed url"
+msgstr "Szál url"
+
+#: homepage/models.py:8
+msgid "Etag"
+msgstr "Etag"
+
+#: homepage/models.py:8 homepage/models.py:9
+msgid "Don't modify this"
+msgstr "Ne változtasd meg"
+
+#: homepage/models.py:9
+msgid "Last modified"
+msgstr "Utoljára módosítva"
+
+#: templates/footer.html:3 themes/lite/footer.html:5
+#: themes/viktornagy.com/footer.html:3
+msgid "Powered by "
+msgstr "Mozgatja a "
+
+#: templates/head.html:7 templates/head.html.py:14
+msgid "close"
+msgstr "bezár"
+
+#: templates/head.html:8
+msgid "forgot it?"
+msgstr "elfelejtetted?"
+
+#: templates/head.html:11 templates/head.html.py:16
+#: templates/accounts/login.html:13 templates/accounts/openid.html:11
+#: themes/viktornagy.com/accounts/login.html:14
+#: themes/viktornagy.com/accounts/openid.html:12
+msgid "Login"
+msgstr "Belépés"
+
+#: templates/head.html:18 themes/catap.ru/login.html:17
+#: themes/lite/head.html:21 themes/viktornagy.com/head.html:16
+#: themes/white/head.html:18
+msgid "Login with"
+msgstr "Belépés"
+
+#: templates/head.html:19 themes/catap.ru/login.html:18
+#: themes/lite/head.html:22 themes/viktornagy.com/head.html:17
+#: themes/white/head.html:19
+msgid "password"
+msgstr "jelszóval"
+
+#: templates/head.html:19 themes/catap.ru/login.html:18
+#: themes/lite/head.html:22 themes/viktornagy.com/head.html:17
+#: themes/white/head.html:19
+msgid "or"
+msgstr "vagy "
+
+#: templates/head.html:20 themes/catap.ru/login.html:19
+#: themes/lite/head.html:23 themes/viktornagy.com/head.html:18
+#: themes/white/head.html:20
+msgid "OpenID"
+msgstr "OpenIDval"
+
+#: templates/head.html:23 themes/buriy/login.html:17
+#: themes/catap.ru/login.html:22 themes/viktornagy.com/head.html:21
+#: themes/web_brains/head.html:28 themes/white/head.html:23
+msgid "Hello,"
+msgstr "Szeva"
+
+#: templates/head.html:32 themes/buriy/login.html:19
+#: themes/catap.ru/navigation.html:8 themes/lite/head.html:27
+#: themes/viktornagy.com/head.html:31 themes/web_brains/head.html:30
+#: themes/white/head.html:32
+msgid "Admin"
+msgstr "Gazda"
+
+#: templates/head.html:33 themes/buriy/login.html:18
+#: themes/catap.ru/navigation.html:9 themes/lite/head.html:28
+#: themes/viktornagy.com/head.html:32 themes/web_brains/head.html:29
+#: themes/white/head.html:33
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/head.html:34 themes/buriy/login.html:20
+#: themes/catap.ru/navigation.html:10 themes/lite/head.html:26
+#: themes/viktornagy.com/head.html:33 themes/web_brains/head.html:31
+#: themes/white/head.html:34
+msgid "Logout"
+msgstr "Kilépés"
+
+#: templates/accounts/profile_edit.html:5
+#: themes/lite/accounts/profile_edit.html:5
+#: themes/viktornagy.com/accounts/profile_edit.html:6
+msgid "Profile editing"
+msgstr "Profil szerkesztése"
+
+#: templates/accounts/profile_edit.html:8
+#: themes/lite/accounts/profile_edit.html:8
+#: themes/viktornagy.com/accounts/profile_edit.html:9
+msgid "Associated OpenIDs"
+msgstr "Hozzárendelt OpenID-k"
+
+#: templates/accounts/profile_edit.html:9 templates/watchlist/list.html:6
+#: templates/watchlist/list.html.py:9 themes/lite/accounts/profile_edit.html:9
+#: themes/viktornagy.com/accounts/profile_edit.html:10
+#: themes/viktornagy.com/watchlist/list.html:7
+#: themes/viktornagy.com/watchlist/list.html:10
+msgid "Subscriptions list"
+msgstr "Feliratkozások"
+
+#: templates/accounts/reset.html:8 themes/viktornagy.com/accounts/reset.html:9
+msgid "Password reset"
+msgstr "Jelszó visszaállítása"
+
+#: templates/accounts/reset.html:13
+#: themes/viktornagy.com/accounts/reset.html:14
+msgid "Please enter your email."
+msgstr "Kérlek add meg az emailcímedet."
+
+#: templates/accounts/reset.html:16
+#: themes/viktornagy.com/accounts/reset.html:17
+msgid "Reset password"
+msgstr "Jelszóvisszaállítás"
+
+#: templates/admin/postimage/attach.html:15
+msgid "Upload new"
+msgstr "Új fájl feltöltése"
+
+#: templates/admin/postimage/attach.html:16
+#: templates/admin/postimage/upload.html:14
+#: themes/lite/accounts/profile_edit.html:14
+msgid "Submit"
+msgstr "Mehet"
+
+#: templates/admin/postimage/upload.html:13
+msgid "Select uploaded"
+msgstr "Feltöltött választása"
+
+#: templates/blog/bookmarks.html:3 themes/catap.ru/blog/bookmarks.html:3
+#: themes/lite/blog/bookmarks.html:3
+msgid "Add post to"
+msgstr "Cikk hozzáadása"
+
+#: templates/blog/bookmarks.html:5 themes/catap.ru/blog/bookmarks.html:5
+#: themes/lite/blog/bookmarks.html:5
+msgid "Add to"
+msgstr "Hozzáad"
+
+#: templates/blog/comment.html:14 themes/catap.ru/blog/post_detail.html:63
+#: themes/lite/blog/comment.html:18 themes/white/blog/post_detail.html:65
+msgid "reply"
+msgstr "válaszol"
+
+#: templates/blog/comment.html:21 themes/catap.ru/blog/post_detail.html:70
+#: themes/lite/blog/comment.html:25 themes/white/blog/post_detail.html:72
+msgid "edit"
+msgstr "szerkeszt"
+
+#: templates/blog/comment.html:25 themes/catap.ru/blog/post_detail.html:74
+#: themes/lite/blog/comment.html:29 themes/white/blog/post_detail.html:76
+msgid "cancel"
+msgstr "mégsem"
+
+#: templates/blog/comment.html:34 themes/catap.ru/blog/post_detail.html:83
+#: themes/lite/blog/comment.html:38 themes/white/blog/post_detail.html:85
+msgid "delete"
+msgstr "töröl"
+
+#: templates/blog/comment_form.html:4 themes/catap.ru/blog/comment_form.html:4
+#: themes/lite/blog/comment_form.html:4
+#, python-format
+msgid "Comment form for &laquo;%(object)s&raquo;"
+msgstr "&laquo;%(object)s&raquo: hozzászólás beküldése"
+
+#: templates/blog/comment_form.html:9 templates/blog/post_detail.html:33
+#: themes/buriy/blog/comment_form.html:9
+#: themes/catap.ru/blog/comment_form.html:9
+#: themes/lite/blog/comment_form.html:9
+#: themes/viktornagy.com/blog/post_detail.html:52
+#: themes/white/blog/post_detail.html:27
+msgid "Comment"
+msgstr "Hozzászólás"
+
+#: templates/blog/comment_form.html:10 themes/buriy/blog/comment_form.html:10
+#: themes/catap.ru/blog/comment_form.html:10
+#: themes/lite/blog/comment_form.html:10
+msgid "Preview"
+msgstr "Előnézet"
+
+#: templates/blog/comment_form.html:11 themes/buriy/blog/comment_form.html:11
+#: themes/catap.ru/blog/comment_form.html:11
+#: themes/lite/blog/comment_form.html:11
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: templates/blog/featured.html:17 templates/blog/post_entry.html:24
+#: themes/buriy/blog/post_entry.html:50 themes/catap.ru/blog/featured.html:17
+#: themes/catap.ru/blog/post_entry.html:16 themes/lite/blog/featured.html:17
+#: themes/lite/blog/post_entry.html:42 themes/white/blog/post_entry.html:24
+msgid "continue&nbsp;reading"
+msgstr "olvass&nbsp;tovább"
+
+#: templates/blog/post_archive_year.html:5
+#: themes/viktornagy.com/blog/post_archive_year.html:6
+#: themes/viktornagy.com/contact_form/contact_form_sent.html:5
+msgid "Posts year archive"
+msgstr "Cikkek éves archívuma"
+
+#: templates/blog/post_archive_year.html:10
+#: templates/blog/post_archive_year.html:14 templates/blog/post_list.html:25
+#: templates/blog/post_list.html.py:26 templates/blog/post_list.html:27
+#: themes/buriy/blog/post_list.html:19 themes/buriy/blog/post_list.html:20
+#: themes/buriy/blog/post_list.html:21 themes/catap.ru/blog/post_list.html:19
+#: themes/catap.ru/blog/post_list.html:20
+#: themes/catap.ru/blog/post_list.html:21 themes/lite/blog/post_list.html:25
+#: themes/lite/blog/post_list.html.py:26 themes/lite/blog/post_list.html:27
+#: themes/viktornagy.com/blog/post_archive_year.html:11
+#: themes/viktornagy.com/blog/post_archive_year.html:15
+#: themes/viktornagy.com/blog/post_list.html:25
+#: themes/viktornagy.com/blog/post_list.html:26
+#: themes/viktornagy.com/blog/post_list.html:27
+#: themes/web_brains/blog/post_list.html:19
+#: themes/web_brains/blog/post_list.html:20
+#: themes/web_brains/blog/post_list.html:21
+#: themes/white/blog/post_list.html:27 themes/white/blog/post_list.html:28
+#: themes/white/blog/post_list.html:29
+msgid "Archive for"
+msgstr "Archívum: "
+
+#: templates/blog/post_detail.html:29 templates/watchlist/subscribe.html:11
+#: themes/lite/blog/post_detail.html:31
+#: themes/viktornagy.com/blog/post_detail.html:48
+#: themes/viktornagy.com/watchlist/subscribe.html:12
+msgid "Subscribe"
+msgstr "Feliratkozás"
+
+#: templates/blog/post_detail.html:31 templates/watchlist/unsubscribe.html:12
+#: themes/lite/blog/post_detail.html:33
+#: themes/viktornagy.com/blog/post_detail.html:50
+#: themes/viktornagy.com/watchlist/unsubscribe.html:13
+msgid "Unsubscribe"
+msgstr "Leiratkozás"
+
+#: templates/blog/post_detail.html:38 themes/buriy/blog/post_detail.html:27
+#: themes/catap.ru/blog/post_detail.html:28
+#: themes/lite/blog/post_detail.html:40
+#: themes/viktornagy.com/blog/post_detail.html:57
+#: themes/white/blog/post_detail.html:30
+msgid "Pingbacks"
+msgstr "Pingbackek"
+
+#: templates/blog/post_detail.html:48 themes/buriy/blog/post_detail.html:37
+#: themes/catap.ru/blog/post_detail.html:45
+#: themes/lite/blog/post_detail.html:52
+#: themes/viktornagy.com/blog/post_detail.html:67
+#: themes/white/blog/post_detail.html:47
+msgid "Comments"
+msgstr "Hozzászólások"
+
+#: templates/blog/post_detail.html:50 themes/buriy/blog/post_detail.html:39
+#: themes/catap.ru/blog/post_detail.html:47
+#: themes/lite/blog/post_detail.html:54
+#: themes/viktornagy.com/blog/post_detail.html:69
+#: themes/white/blog/post_detail.html:49
+msgid "No comments for this post"
+msgstr "Légy te a cikk első hozzászólója!"
+
+#: templates/blog/post_entry.html:17 themes/catap.ru/blog/post_entry.html:27
+#: themes/lite/blog/post_entry.html:21 themes/white/blog/post_entry.html:17
+msgid "comment, comments, comments"
+msgstr "hozzászólás, hozzászólás, hozzászólás"
+
+#: templates/blog/post_entry.html:19 themes/catap.ru/blog/post_entry.html:36
+#: themes/lite/blog/post_entry.html:30 themes/white/blog/post_entry.html:19
+msgid "pingback, pingbacks, pingbacks"
+msgstr "pingback, pingback, pingback"
+
+#: templates/blog/post_list.html:8 themes/buriy/blog/post_list.html:5
+#: themes/lite/blog/post_list.html:8
+#: themes/viktornagy.com/blog/post_list.html:8
+#: themes/web_brains/blog/post_list.html:5 themes/white/blog/post_list.html:8
+msgid "Posts"
+msgstr "Cikkek"
+
+#: templates/blog/post_list.html:32 themes/lite/blog/post_list.html:32
+#: themes/viktornagy.com/blog/post_list.html:32
+msgid "All articles, tagged with union of tags"
+msgstr "Minden címkék uniójával cimkézett cikk"
+
+#: templates/blog/post_list.html:34 themes/lite/blog/post_list.html:34
+#: themes/viktornagy.com/blog/post_list.html:34
+msgid "All articles, tagged with intersection of tags"
+msgstr "Minden a címkék metszetével címkézett cikk"
+
+#: templates/blog/post_list.html:37 themes/buriy/blog/post_list.html:23
+#: themes/catap.ru/blog/post_list.html:23 themes/lite/blog/post_list.html:37
+#: themes/viktornagy.com/blog/post_list.html:37
+#: themes/web_brains/blog/post_list.html:23
+#: themes/white/blog/post_list.html:31
+msgid "All articles, tagged with"
+msgstr "Minden cikk, aminek címkéje"
+
+#: templates/blog/post_list.html:55 themes/buriy/blog/next.html:11
+#: themes/catap.ru/blog/post_list.html:38 themes/lite/blog/post_list.html:55
+#: themes/viktornagy.com/blog/post_list.html:55
+#: themes/web_brains/blog/post_list.html:38
+#: themes/white/blog/post_list.html:46
+msgid "Previous month"
+msgstr "Előző hónap"
+
+#: templates/blog/post_list.html:56 themes/buriy/blog/next.html:12
+#: themes/catap.ru/blog/post_list.html:39 themes/lite/blog/post_list.html:56
+#: themes/viktornagy.com/blog/post_list.html:56
+#: themes/web_brains/blog/post_list.html:39
+#: themes/white/blog/post_list.html:47
+msgid "Next month"
+msgstr "Következő hónap"
+
+#: templates/blog/post_list.html:60 themes/buriy/blog/next.html:6
+#: themes/catap.ru/blog/post_list.html:43 themes/lite/blog/post_list.html:60
+#: themes/viktornagy.com/blog/post_list.html:60
+#: themes/web_brains/blog/post_list.html:33
+#: themes/white/blog/post_list.html:51
+msgid "Previous day"
+msgstr "Előző nap"
+
+#: templates/blog/post_list.html:61 themes/buriy/blog/next.html:7
+#: themes/catap.ru/blog/post_list.html:44 themes/lite/blog/post_list.html:61
+#: themes/viktornagy.com/blog/post_list.html:61
+#: themes/web_brains/blog/post_list.html:34
+#: themes/white/blog/post_list.html:52
+msgid "Next day"
+msgstr "Következő nap"
+
+#: templates/blog/post_list.html:64 templates/wpimport/post_list.html:12
+#: themes/catap.ru/blog/post_list.html:47 themes/lite/blog/post_list.html:64
+#: themes/viktornagy.com/blog/post_list.html:64
+#: themes/white/blog/post_list.html:55
+msgid "Older posts"
+msgstr "Korábbi cikkek"
+
+#: templates/blog/post_list.html:66 templates/wpimport/post_list.html:14
+#: themes/catap.ru/blog/post_list.html:49 themes/lite/blog/post_list.html:66
+#: themes/viktornagy.com/blog/post_list.html:66
+#: themes/white/blog/post_list.html:57
+msgid "Newer posts"
+msgstr "Újabb cikkek"
+
+#: templates/blog/tag_cloud.html:5 templates/blog/tag_cloud.html.py:8
+#: themes/catap.ru/blog/tags.html:5 themes/lite/blog/sidebar.html:52
+#: themes/viktornagy.com/blog/sidebar.html:52
+#: themes/viktornagy.com/homepage/index.html:28
+#: themes/web_brains/blog/sidebar.html:40 themes/white/blog/sidebar.html:13
+msgid "Tags"
+msgstr "Címkék"
+
+#: templates/openid/complete.html:8
+msgid "Your OpenID is verified! "
+msgstr "Az OpenID-d ellenőrizve!"
+
+#: templates/openid/complete.html:10
+msgid "Associate your OpenID"
+msgstr "Rendeld hozzá az OpenID-dat"
+
+#: templates/openid/complete.html:14
+msgid "A new account"
+msgstr "Új fiók"
+
+#: templates/openid/complete.html:16
+msgid "Screen name"
+msgstr "Képernyőnév"
+
+#: templates/openid/complete.html:23
+msgid "Associate with exisiting account"
+msgstr "Létező fiókhoz rendelés"
+
+#: templates/openid/list.html:5 templates/openid/list.html.py:8
+#: themes/viktornagy.com/openid/list.html:6
+#: themes/viktornagy.com/openid/list.html:9
+msgid "Your OpenIDs"
+msgstr "OpenID-jaid"
+
+#: templates/openid/list.html:15 themes/viktornagy.com/openid/list.html:16
+msgid "Delete"
+msgstr "Töröl"
+
+#: templates/openid/list.html:22 themes/viktornagy.com/openid/list.html:23
+msgid "Associate new OpenID"
+msgstr "Új OpenID hozzárendelése"
+
+#: templates/openid/list.html:23 templates/openid/signin.html:13
+#: themes/viktornagy.com/openid/list.html:24
+#: themes/viktornagy.com/openid/signin.html:14
+msgid "OpenID URL"
+msgstr "OpenID URL"
+
+#: templates/openid/list.html:25 themes/viktornagy.com/openid/list.html:26
+msgid "Associate"
+msgstr "Hozzárendel"
+
+#: templates/openid/signin.html:5 templates/openid/signin.html.py:8
+#: templates/openid/signin.html:15 themes/viktornagy.com/openid/signin.html:6
+#: themes/viktornagy.com/openid/signin.html:9
+#: themes/viktornagy.com/openid/signin.html:16
+msgid "Sign in"
+msgstr "Bejelentkezik"
+
+#: templates/openid/signin.html:12 themes/viktornagy.com/openid/signin.html:13
+msgid "Sign in using your OpenID"
+msgstr "Bejelentkezés OpenIDval"
+
+#: templates/openidserver/accept_root.html:6
+#, python-format
+msgid ""
+"\n"
+"  <p>We've got a request from <a href=\"%(root)s\">%(root)s</a> \n"
+"    to authenticate you as <a href=\"%(identity)s\">%(identity)s</a>.</p>\n"
+"  <p>Click 'Accept' to accept authentication request (you'll be redirected "
+"to %(return_to)s).</p>\n"
+"  <p>Click 'Dismiss' to dismiss request (and to go to %(cancel_url)s).</p>\n"
+"  "
+msgstr ""
+"\n"
+"..<p><a href=\"%(root)s\">%(root)s</a>-tól kaptunk egy kérést, hogy <a href="
+"\"%(identity)s\">%(identity)s</a>-ként azonosítsunk \n"
+".</p>\n"
+"  <p>Kattints az 'Elfogad'-ra az azonosítási kérelem elfogadásához. Ebben az "
+"esetben átirányítunk %(return_to)s-re..</p>\n"
+"  <p>Kattints a 'Megtagad'-ra a kérelem elutasításához. Ekkor a %(cancel_url)"
+"s címre irányítunk át.</p>\n"
+"  "
+
+#: templates/openidserver/accept_root.html:15
+msgid "Remember my answer"
+msgstr "Választás megjegyzése"
+
+#: templates/openidserver/accept_root.html:17
+msgid "Accept"
+msgstr "Elfogad"
+
+#: templates/openidserver/accept_root.html:18
+msgid "Dismiss"
+msgstr "Elutasít"
+
+#: templates/tagging/tag_cloud.html:7 templates/tagging/tag_string.html:7
+#: themes/catap.ru/blog/post_entry.html:44
+#: themes/catap.ru/tagging/tag_cloud.html:7
+#: themes/lite/blog/post_entry.html:37 themes/lite/tagging/tag_cloud.html:7
+msgid "Click to filter by"
+msgstr "Kattins a szűréshez"
+
+#: templates/templatetags/datelinks.html:1
+msgid "Click to see day archive"
+msgstr "Kattints a napi archívumhoz"
+
+#: templates/templatetags/datelinks.html:1
+msgid "Click to see month archive"
+msgstr "Kattints a havi archívumhoz"
+
+#: templates/templatetags/datelinks.html:1
+msgid "Click to see year archive"
+msgstr "Kattints az éves archívumhoz"
+
+#: templates/watchlist/list.html:13
+#: themes/viktornagy.com/watchlist/list.html:14
+msgid "unsubscribe"
+msgstr "leiratkozás"
+
+#: templates/watchlist/list.html:17
+#: themes/viktornagy.com/watchlist/list.html:18
+msgid "Unsubscribe from subscription type"
+msgstr "Leiratkozás a feliratkozás tipusról"
+
+#: templates/watchlist/list.html:22
+#: themes/viktornagy.com/watchlist/list.html:23
+#, python-format
+msgid "Unsubscribe from all %(ctype)ss."
+msgstr "Leiratkozás minden %(ctype)s-ről"
+
+#: templates/watchlist/subscribe.html:5
+#: themes/viktornagy.com/watchlist/subscribe.html:6
+msgid "Subscribing to"
+msgstr "Feliratkozás "
+
+#: templates/watchlist/subscribe.html:8
+#: themes/viktornagy.com/watchlist/subscribe.html:9
+#, python-format
+msgid "Subscribing to \"%(object)s\". Are you sure you want to do that?"
+msgstr "Feliratkozás \"%(object)s\"-re. Biztosan ezt akarod?"
+
+#: templates/watchlist/unsubscribe.html:5
+#: templates/watchlist/unsubscribe.html:8
+#: themes/viktornagy.com/watchlist/unsubscribe.html:6
+#: themes/viktornagy.com/watchlist/unsubscribe.html:9
+msgid "Unsubscribing from"
+msgstr "Leiratkozás innen "
+
+#: templates/watchlist/unsubscribe.html:9
+#: themes/viktornagy.com/watchlist/unsubscribe.html:10
+msgid "Are you sure you want to do that?"
+msgstr "Biztosan ezt akarod?"
+
+#: themes/buriy/head.html:20 themes/web_brains/head.html:20
+msgid "About"
+msgstr "Önkép"
+
+#: themes/buriy/head.html:32 themes/buriy/login.html:28
+#: themes/web_brains/head.html:44
+msgid "Login with password"
+msgstr "Bejelentkezés jelszóval"
+
+#: themes/buriy/head.html:38 themes/buriy/login.html:36
+#: themes/web_brains/head.html:50
+msgid "Forgot password?"
+msgstr "Elfelejtetted a jelszavad?"
+
+#: themes/buriy/head.html:39 themes/buriy/login.html:40
+#: themes/web_brains/head.html:51
+msgid "Login with OpenID"
+msgstr "Bejelentkezés OpenID-val"
+
+#: themes/buriy/blog/comment_form.html:4
+#, python-format
+msgid "Reply to &laquo;%(object)s&raquo;"
+msgstr "&laquo;%(object)s&raquo;-nak válaszolj"
+
+#: themes/buriy/blog/next.html:18 themes/web_brains/blog/post_list.html:45
+msgid "Previous year"
+msgstr "Előző év"
+
+#: themes/buriy/blog/next.html:19 themes/web_brains/blog/post_list.html:46
+msgid "Next year"
+msgstr "Következő év"
+
+#: themes/buriy/blog/post_detail.html:53
+#: themes/catap.ru/blog/post_detail.html:25
+msgid "Add comment"
+msgstr "Hozzászólás hozzáadása"
+
+#: themes/buriy/blog/sidebar.html:38 themes/lite/blog/sidebar.html:6
+#: themes/viktornagy.com/blog/sidebar.html:6
+#: themes/viktornagy.com/homepage/index.html:36
+#: themes/web_brains/blog/sidebar.html:6
+msgid "Last comments"
+msgstr "Utolsó hozzászólások"
+
+#: themes/buriy/blog/sidebar.html:54 themes/lite/blog/sidebar.html:21
+#: themes/viktornagy.com/blog/sidebar.html:21
+#: themes/web_brains/blog/sidebar.html:19
+msgid "Last posts"
+msgstr "Utolsó cikkek"
+
+#: themes/buriy/blog/sidebar.html:68 themes/web_brains/blog/sidebar.html:34
+#: themes/white/blog/sidebar.html:7
+msgid "Blog feed"
+msgstr "Blog szál"
+
+#: themes/buriy/blog/sidebar.html:69 themes/web_brains/blog/sidebar.html:35
+#: themes/white/blog/sidebar.html:8
+msgid "Comments feed"
+msgstr "Megjegyzések szál"
+
+#: themes/catap.ru/blogroll.html:5 themes/lite/blog/sidebar.html:60
+#: themes/viktornagy.com/blog/sidebar.html:60
+#: themes/viktornagy.com/homepage/index.html:51
+msgid "Blogroll"
+msgstr "Blogroll"
+
+#: themes/catap.ru/navigation.html:4
+msgid "Navigation"
+msgstr "Navigáció"
+
+#: themes/catap.ru/search.html:4
+msgid "Search"
+msgstr "Keresét"
+
+#: themes/catap.ru/blog/post_entry.html:21
+msgid "Write on:"
+msgstr "Téma: "
+
+#: themes/catap.ru/blog/post_entry.html:41
+msgid "tags:"
+msgstr "címkék"
+
+#: themes/catap.ru/blog/post_entry.html:46
+msgid "permalink"
+msgstr "permalink"
+
+#: themes/lite/base.html:11
+msgid "blog entries feed"
+msgstr "blog cikkek szál"
+
+#: themes/lite/base.html:12
+msgid "comments feed"
+msgstr "hozzászólások szál"
+
+#: themes/lite/blog/post_detail.html:35
+msgid "Make comment"
+msgstr "hozzászólás készítése"
+
+#: themes/lite/blog/sidebar.html:16 themes/viktornagy.com/blog/sidebar.html:16
+#: themes/viktornagy.com/homepage/index.html:46
+#: themes/web_brains/blog/sidebar.html:14
+msgid "No comments on blog"
+msgstr "Nincsenek hozzászólások"
+
+#: themes/lite/blog/sidebar.html:31 themes/lite/blog/sidebar.html.py:46
+#: themes/viktornagy.com/blog/sidebar.html:31
+#: themes/viktornagy.com/blog/sidebar.html:46
+#: themes/viktornagy.com/homepage/index.html:83
+#: themes/web_brains/blog/sidebar.html:27
+msgid "No posts on blog"
+msgstr "Nincsenek cikkek"
+
+#: themes/lite/blog/sidebar.html:36 themes/viktornagy.com/blog/sidebar.html:36
+msgid "Popular posts"
+msgstr "Kedvenc cikkek"
+
+#: themes/lite/blog/sidebar.html:37 themes/viktornagy.com/blog/sidebar.html:37
+msgid "Feature not ready yet"
+msgstr "A funkció még nem létezik"
+
+#: themes/lite/blog/sidebar.html:67 themes/viktornagy.com/blog/sidebar.html:67
+#: themes/web_brains/blog/sidebar.html:49
+msgid "Advertize"
+msgstr "Hirdess"
+
+#: themes/viktornagy.com/blog/post_detail.html:46
+msgid "Subscribe via RSS"
+msgstr "Feliratkozás az RSS-re"
+
+#: themes/viktornagy.com/contact_form/contact_form.html:6
+msgid "Contact me"
+msgstr "Írj nekem"
+
+#: themes/viktornagy.com/contact_form/contact_form.html:9
+msgid "Mail me here"
+msgstr "Itt írj nekem"
+
+#: themes/viktornagy.com/contact_form/contact_form.html:14
+msgid "Send mail"
+msgstr "Levél küldése"
+
+#: themes/viktornagy.com/contact_form/contact_form_sent.html:7
+msgid "Your message was sent successfully"
+msgstr "Üzenetedet sikeresen postáztam"
+
+#: themes/viktornagy.com/homepage/index.html:73
+msgid "Previous posts"
+msgstr "Korábbi cikkek"
+
+#: themes/web_brains/blog/sidebar.html:32 themes/white/blog/sidebar.html:5
+msgid "Useful information"
+msgstr "Hasznos információ"
+
+#~ msgid "Author"
+#~ msgstr "Szerző"
+
+#~ msgid "Archive for %(year)s"
+#~ msgstr "%(year)s archívuma"

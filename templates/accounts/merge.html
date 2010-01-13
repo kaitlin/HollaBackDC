@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Merge{% endblock %}
+
+{% block content %}
+<div class="error">{{ error }}</div>
+<form action="." method="post">
+  <table>
+    {{ form.as_table }}
+  </table>
+  <input type="submit" value='{% trans "Merge" %}' />
+</form>
+<script type="text/javascript">
+document.getElementById('id_email').focus()
+</script>
+{% endblock %}

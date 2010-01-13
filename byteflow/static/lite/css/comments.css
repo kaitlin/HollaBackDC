@@ -1,0 +1,88 @@
+/* Comment styles from piranha css */
+a.comment-link {
+   float: right;
+   display: none;
+}
+
+.blogcomment, .pingback {
+   clear: left;
+   padding: 0.2em 0.3em;
+}
+
+.blogcomment .text, .pingback .text {
+   padding-top: .01em;
+}
+
+.odd {
+   background-color: #F5F5F9; /* WhiteSmoke */
+}
+
+.author, .pingback-title {
+   float: left;
+   font-weight: bold;
+}
+
+.comment-time, .pingback-time {
+   float: right;
+}
+
+blockquote {
+   border-left:5px solid #DDDDDD;
+   margin-left:1em;
+   padding-left:1em;
+}
+
+.comment-edit-area {
+   width: 100%;
+   height: 10em;
+}
+
+.edit-submit {
+   display: none;
+}
+
+.pingback-location {
+   color: #999;
+}
+
+/* Comment Form */
+
+#comment-form {
+    margin-top: 2em;
+}
+
+#comment-form label {
+    float: left;
+    width: 5em;
+}
+
+#comment-form input {
+    width: 50%;
+}
+
+#comment-form textarea {
+   height: 15em;
+   width: 100%;
+   font-size: 1.5em;
+}
+
+#comment-form .invalid {
+    background-color: #ffcccc;
+}
+
+#comment-form .button {
+    width: auto;
+}
+
+#comment-form input:hover, textarea:hover {
+    background-color: #ccffcc;
+}
+
+.message {
+   border: 1px solid #F00;
+   margin-top: 1em;
+}
+
+.blogcomment .footer a {
+    text-decoration: none;
+}

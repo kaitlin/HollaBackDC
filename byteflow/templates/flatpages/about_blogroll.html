@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% load bfmarkup %}
+
+{% block title %}{{ flatpage.title }}{% endblock %}
+
+{% block content %}
+<h1>{{ flatpage.title }}</h1>
+<div class="content">{{ flatpage.content|markdown }}</div>
+
+{% ifapp blogroll %}
+{% load blogroll_extras %}
+{% load i18n %}
+<h2>{% trans "Blogroll" %}:</h2>
+{% blogroll_links %}
+{% endifapp %}
+
+{% endblock %}

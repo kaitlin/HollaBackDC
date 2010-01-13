@@ -1,0 +1,98 @@
+.. -*- mode: rst -*-
+.. _index:
+
+Byteflow documentation
+======================
+
+.. rubric:: Everything you want to know about Byteflow.
+
+What's that
+-----------
+
+Byteflow is a blog engine, written on `Python`_, using `Django`_. Why should you choose it over competitors? It has very clean codebase and developers, which are struggling to keep it so (that ease learning code and adding features for python programmers and those who sympathize ;). It has a lot of cool features, which you can't get in other blog engines or will get with difficulty (consider feed by union of tags, eh?). And of course it is actively developed so release are not that far away.
+
+.. _Python: http://python.org/
+.. _Django: http://djangoproject.com/
+
+Features
+--------
+
+* Markdown & typogrify for posts and comments
+* Threaded comments
+* Pingbacks
+* Directory pings
+* Automated registration for user after comment posting (no anonymous users!)
+* Registration approval/email change/profile edit
+* `Atom`_ and `RSS`_ feeds for posts, comments, comments for specified post,
+  posts within specified tag.
+* Tags (and filtering posts by tag)
+* Display and feeds for:
+
+  * intersection of tags (separated by +)
+  * for union of tags (separated by '|')
+
+* Archives by day, month, year
+* `OpenID`_ client. Supports multiple OpenID urls attached to single user
+* OpenID server.
+* `Wordpress`_ importer
+* `Gravatar`_ support
+* Optional `WYSIWYG`_ editor in admin part (for posts, not for comments)
+* `LiveJournal`_ crossposting
+* `XFN`_ support (for links in blogroll)
+* `Feedburner`_ support
+* Translations to Russian, German, Hungarian
+* Image uploading (and selecting for display in post)
+* Profile merge
+
+.. _Atom: http://en.wikipedia.org/wiki/Atom_(standard)
+.. _RSS: http://en.wikipedia.org/wiki/RSS
+.. _OpenID: http://en.wikipedia.org/wiki/OpenID
+.. _Wordpress: http://wordpress.org/
+.. _Gravatar: http://gravatar.com/
+.. _WYSIWYG: http://en.wikipedia.org/wiki/WYSIWYG
+.. _LiveJournal: http://livejournal.com/
+.. _XFN: http://en.wikipedia.org/wiki/XHTML_Friends_Network
+.. _Feedburner: http://feedburner.com/
+
+Usage
+-----
+
+:ref:`Installation <install>`
+    Installation instructions
+
+
+Development
+-----------
+
+:ref:`Coding guide <coding>`
+    Which principles we have in mind when coding
+:ref:`How to use Mercurial for contribution <howtousehg>`
+    Introduction to Mercurial: how to use it to contribute
+:ref:`Templates <templates>`
+    Templates which are used to render content
+
+Various
+-------
+
+- `Enabling WYMEditor for flatpages`_ - if you want to use WYSIWYG editor when editing flatpage
+
+.. _Enabling WYMEditor for flatpages: http://groups.google.com/group/byteflow-users/t/7b20d99dab9bb9f9
+
+Contents
+========
+
+.. toctree::
+   :maxdepth: 2
+
+   install
+   templates
+   coding
+   howtousehg
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+

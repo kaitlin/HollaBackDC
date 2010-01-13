@@ -1,0 +1,1377 @@
+# translation of django.po to
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# cafeine <cafeine@no-log.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: django\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-10 20:37+0100\n"
+"PO-Revision-Date: 2009-03-14 17:53+0100\n"
+"Last-Translator: cafeine <cafeine@no-log.org>\n"
+"Language-Team:  <fr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: apps/accounts/forms.py:11 apps/blog/models.py:30 apps/blogroll/models.py:17
+#: apps/discussion/forms.py:57
+msgid "Name"
+msgstr "Nom"
+
+#: apps/accounts/forms.py:12 apps/accounts/forms.py:109
+#: apps/discussion/forms.py:58 templates/accounts/login.html:11
+#: templates/openid/complete.html:17 templates/openid/complete.html.py:25
+msgid "Email"
+msgstr "Email"
+
+#: apps/accounts/forms.py:12
+msgid "Changing email requires activation"
+msgstr "Changer l'adresse mail nécessite l'activation du compte"
+
+#: apps/accounts/forms.py:13
+msgid "Site"
+msgstr "Site Web"
+
+#: apps/accounts/forms.py:14 apps/accounts/forms.py:15
+#: apps/accounts/forms.py:110 templates/accounts/login.html:12
+#: templates/openid/complete.html:26 themes/andreas08/head.html:15
+#: themes/mirev/head.html:15
+msgid "Password"
+msgstr "Mot de passe"
+
+#: apps/accounts/forms.py:14
+msgid "Leave blank to keep current"
+msgstr "Laisser en blanc pour garder le mot de passe actuel"
+
+#: apps/accounts/forms.py:15
+msgid "Repeat, to catch typos"
+msgstr "Encore, pour éviter les fautes de frappe"
+
+#: apps/accounts/forms.py:28
+msgid "This name is already used by another user. Please choose another."
+msgstr "Ce nom est déjà utilisé. Merci d'en choisir un autre."
+
+#: apps/accounts/forms.py:39
+msgid "This address already belongs to other user"
+msgstr "Cette adresse appartient à un autre utilisateur"
+
+#: apps/accounts/forms.py:41
+msgid "This field is required"
+msgstr "Ce champ est obligatoire"
+
+#: apps/accounts/forms.py:50
+msgid "You must type the same password each time"
+msgstr "Vous devez saisir le même mot de passe à chaque fois"
+
+#: apps/accounts/forms.py:109
+msgid "Email address of account to merge"
+msgstr "Adresse mail du compte à fusionner"
+
+#: apps/accounts/forms.py:119
+msgid "Specified user not found"
+msgstr "Utilisateur spécifié non trouvé"
+
+#: apps/accounts/views.py:45
+msgid "Email or password was not supplied"
+msgstr "Adresse mail ou mot de passe manquant"
+
+#: apps/accounts/views.py:52
+msgid "Email or password are incorrect!"
+msgstr "Adresse mail ou mot de passe incorrect!"
+
+#: apps/accounts/views.py:75
+msgid "Activation does not exist or already expired."
+msgstr "Activation inexistante ou périmée."
+
+#: apps/accounts/views.py:87
+msgid ""
+"Password succesfully resetted. Message with new password was sent to your "
+"email."
+msgstr "Réinitialisation du mot de passe réussie. Un email contenant votre nouveau mot de passe vous a été envoyé."
+
+#: apps/accounts/views.py:91
+msgid "Please enter email."
+msgstr "Veuillez entrer votre adresse mail."
+
+#: apps/accounts/views.py:95
+msgid "Message with instructions to reset password was sent to your email."
+msgstr "Un message contenant des instructions pour réinitialiser votre mot de passe vous a été envoyé."
+
+#: apps/accounts/views.py:97
+msgid "Sorry, no one user is associated with this email."
+msgstr "Désolé, aucun utilisateur ne correspond à cette adresse mail."
+
+#: apps/accounts/views.py:105
+msgid "You have succesfully changed your email address!"
+msgstr "Votre changement d'adresse mail est réussi!"
+
+#: apps/accounts/views.py:111
+msgid "Comment approval error"
+msgstr "Erreur de validation de commentaire"
+
+#: apps/accounts/views.py:130
+msgid "Changes to profile saved."
+msgstr "Modifications du profil enregistrées."
+
+#: apps/blog/models.py:31
+msgid "Slug"
+msgstr "Slug"
+
+#: apps/blog/models.py:33
+msgid "Text"
+msgstr "Texte"
+
+#: apps/blog/models.py:35 apps/textblocks/models.py:15
+msgid "Render method"
+msgstr "Méthode de rendu"
+
+#: apps/blog/models.py:37 apps/textblocks/models.py:17
+msgid "HTML"
+msgstr "HTML"
+
+#: apps/blog/models.py:38 apps/blog/models.py:39 apps/discussion/models.py:82
+msgid "Date"
+msgstr "Date"
+
+#: apps/blog/models.py:40
+msgid "Draft"
+msgstr "Brouillon"
+
+#: apps/blog/models.py:107
+msgid "view"
+msgstr "voir"
+
+#: apps/blog/views.py:107
+msgid "Please look in your mailbox for info about your account."
+msgstr "Veuillez s'il vous plaît consulter votre boîte aux lettres pour y trouver des informations concernant votre compte."
+
+#: apps/blog/views.py:110
+msgid "Please look in your mailbox for comment approval link."
+msgstr "Veuillez consulter votre boîte aux lettres pour trouver le lien de validation de commentaire."
+
+#: apps/blogroll/models.py:16
+msgid "URL"
+msgstr "URL"
+
+#: apps/blogroll/models.py:18
+msgid "Relations"
+msgstr "Relations"
+
+#: apps/blogroll/models.py:19
+msgid "Weight"
+msgstr "Poids"
+
+#: apps/blogroll/models.py:19
+msgid "You can order links by this field. Link with smaller number goes first."
+msgstr "Vous pouvez trier les liens à l'aide de ce champ. Les liens avec le poids le plus léger seront affichés en premier."
+
+#: apps/blogroll/models.py:21
+msgid "Friendship relation"
+msgstr "Relation amicale"
+
+#: apps/blogroll/models.py:22
+msgid "Physical relation"
+msgstr "relation concrète"
+
+#: apps/blogroll/models.py:23
+msgid "Profesional relation"
+msgstr "Relation professionnelle"
+
+#: apps/blogroll/models.py:24
+msgid "Geographical relation"
+msgstr "Relation géographique"
+
+#: apps/blogroll/models.py:25
+msgid "Family relation"
+msgstr "Relation familiale"
+
+#: apps/blogroll/models.py:26
+msgid "Romantic relation"
+msgstr "Relation amoureuse"
+
+#: apps/blogroll/models.py:27
+msgid "Identity relation"
+msgstr "Identité"
+
+#: apps/blogroll/models.py:31
+msgid "Link"
+msgstr "Lien"
+
+#: apps/blogroll/models.py:32 themes/buriy/blog/sidebar.html:65
+msgid "Links"
+msgstr "Liens"
+
+#: apps/blogroll/relations.py:4
+msgid "contact"
+msgstr "contact"
+
+#: apps/blogroll/relations.py:5
+msgid "acquaintance"
+msgstr "connaissance"
+
+#: apps/blogroll/relations.py:6
+msgid "friend"
+msgstr "ami(e)"
+
+#: apps/blogroll/relations.py:10
+msgid "met"
+msgstr "rencontré(e)"
+
+#: apps/blogroll/relations.py:14
+msgid "co-worker"
+msgstr "collègue de travail"
+
+#: apps/blogroll/relations.py:15
+msgid "colleague"
+msgstr "confrère"
+
+#: apps/blogroll/relations.py:19
+msgid "co-resident"
+msgstr "colocataire"
+
+#: apps/blogroll/relations.py:20
+msgid "neighbor"
+msgstr "voisin"
+
+#: apps/blogroll/relations.py:24
+msgid "child"
+msgstr "enfant"
+
+#: apps/blogroll/relations.py:25
+msgid "parent"
+msgstr "parent"
+
+#: apps/blogroll/relations.py:26
+msgid "sibling"
+msgstr "frère/soeur"
+
+#: apps/blogroll/relations.py:27
+msgid "spouse"
+msgstr "conjoint"
+
+#: apps/blogroll/relations.py:28
+msgid "kin"
+msgstr "apparenté"
+
+#: apps/blogroll/relations.py:32
+msgid "muse"
+msgstr "muse"
+
+#: apps/blogroll/relations.py:33
+msgid "crush"
+msgstr "coup de foudre"
+
+#: apps/blogroll/relations.py:34
+msgid "date"
+msgstr "petit(e)-ami(e)"
+
+#: apps/blogroll/relations.py:35
+msgid "sweetheart"
+msgstr "être aimé"
+
+#: apps/blogroll/relations.py:39
+msgid "me"
+msgstr "moi"
+
+#: apps/captcha/fields.py:42
+msgid "Captcha"
+msgstr "Image antispam"
+
+#: apps/captcha/fields.py:43
+msgid "Please, enter symbols, which you see on the image"
+msgstr "Veuillez entrer les caractères que vous voyez sur l'image"
+
+#: apps/captcha/fields.py:52
+msgid "Wrong answer"
+msgstr "Mauvaise réponse"
+
+#: apps/discussion/forms.py:19
+msgid "Subscribe to comments"
+msgstr "S'abonner aux commentaires"
+
+#: apps/discussion/forms.py:40
+msgid "You are trying to reply to unavailable comment"
+msgstr "Vous essayez de répondre à un commentaire non disponible"
+
+#: apps/discussion/forms.py:42
+msgid "Trying to reply to comment from another object"
+msgstr "Réponse à un commentaire appartenant à un autre objet"
+
+#: apps/discussion/forms.py:57
+msgid "Required. 30 chars of fewer."
+msgstr "Obligatoire. 30 caractères ou moins."
+
+#: apps/discussion/forms.py:58
+msgid "Required."
+msgstr "Obligatoire."
+
+#: apps/discussion/forms.py:66
+msgid "Are you human?"
+msgstr "Êtes-vous un humain?"
+
+#: apps/discussion/models.py:80
+msgid "Publishing date"
+msgstr "Date de publication"
+
+#: apps/discussion/models.py:83
+msgid "Body"
+msgstr "Contenu"
+
+#: apps/discussion/models.py:84
+msgid "Body HTML"
+msgstr "Contenu en HTML"
+
+#: apps/livejournal/models.py:10
+msgid "All"
+msgstr "Tout"
+
+#: apps/livejournal/models.py:11
+msgid "Anonymous only"
+msgstr "Anonyme seulement"
+
+#: apps/livejournal/models.py:12
+msgid "non-Friends"
+msgstr "non-Amis"
+
+#: apps/livejournal/models.py:13
+msgid "None"
+msgstr "Aucun"
+
+#: apps/livejournal/models.py:25
+msgid "Needs crossposting"
+msgstr "Postage croisé"
+
+#: apps/livejournal/models.py:27
+msgid "Turn off comments"
+msgstr "Désactiver les commentaires"
+
+#: apps/livejournal/models.py:28
+msgid "Comments screening"
+msgstr "Filtrage des commentaires"
+
+#: apps/livejournal/models.py:29
+msgid "Access level"
+msgstr "Niveau d'accès"
+
+#: apps/openidconsumer/forms.py:25 apps/openidconsumer/views.py:113
+msgid "i-names are not supported"
+msgstr "les \"i-names\" ne sont pas supportés"
+
+#: apps/openidconsumer/forms.py:32
+#, python-format
+msgid "next url \"%s\" is invalid"
+msgstr "l'adresse suivante \"%s\" n'est pas valide"
+
+#: apps/openidconsumer/forms.py:54
+msgid "This email is already in database. Please choose another."
+msgstr "Cette adresse est déjà dans la base de donnée. Veuillez en choisir une autre s'il vous plaît."
+
+#: apps/openidconsumer/forms.py:80
+msgid "This email doesn't exist. Please choose another."
+msgstr "Cette adresse n'existe pas. Veuillez en choisir une autre s'il vous plaît."
+
+#: apps/openidconsumer/forms.py:87
+msgid ""
+"Please enter a correct email and password. Note that both fields are case-"
+"sensitive."
+msgstr "Veuillez entrer une adresse mail correcte et un mot de passe. Notez que les deux champs sont sensibles à la casse."
+
+#: apps/openidconsumer/forms.py:89
+msgid "This account is inactive."
+msgstr "Ce compte n'est pas actif."
+
+#: apps/openidconsumer/views.py:119
+msgid "The OpenID was invalid"
+msgstr "Cet OpenID était invalide"
+
+#: apps/openidconsumer/views.py:145
+msgid "The request was cancelled"
+msgstr "Cette requête a été annulée"
+
+#: apps/openidconsumer/views.py:279
+msgid "Invalid POST data"
+msgstr "Données de POST invalides"
+
+#: apps/openidconsumer/views.py:281
+msgid "You must have at least one OpenID if you don't have email!"
+msgstr "Vous devez avoir au moins une OpenID si vous n'avez pas d'adresse mail!"
+
+#: apps/openidconsumer/views.py:287
+msgid "OpenID deassociated successfully"
+msgstr "Désassociation d'OpenID réussie"
+
+#: apps/postimage/forms.py:19
+msgid "Description"
+msgstr "Description"
+
+#: apps/postimage/forms.py:19
+msgid "Image"
+msgstr "Image"
+
+#: apps/postimage/forms.py:23 apps/postimage/forms.py:30
+msgid "Select a file to attach"
+msgstr "Choisissez un fichier à joindre"
+
+#: apps/postimage/forms.py:29
+msgid "Subdirectory"
+msgstr "Sous-dossier"
+
+#: apps/postimage/forms.py:35
+msgid "The subdirectory can't contain dots (.)"
+msgstr "Le nom de sous-dossier ne peut pas contenir de point (.)"
+
+#: apps/postimage/views.py:21
+msgid "Attach file"
+msgstr "Joindre fichier"
+
+#: apps/postimage/views.py:46
+msgid "Upload file"
+msgstr "Envoyer fichier"
+
+#: apps/recaptcha/recaptcha_newforms.py:22
+msgid "Unknown error."
+msgstr "Erreur inconnue."
+
+#: apps/recaptcha/recaptcha_newforms.py:23
+msgid "We weren't able to verify the public key. Please try again later."
+msgstr "Nous n'avons pas pu vérifier la clé publique. Merci de réessayer ultérieurement."
+
+#: apps/recaptcha/recaptcha_newforms.py:24
+msgid "We weren't able to verify the private key. Please try again later."
+msgstr "Nous n'avons pas pu vérifier la clé privée. Merci de réessayer ultérieurement."
+
+#: apps/recaptcha/recaptcha_newforms.py:25
+msgid "The challenge parameter of the verify script was incorrect."
+msgstr "Le paramètre \"challenge\" du script de vérification était incorrect."
+
+#: apps/recaptcha/recaptcha_newforms.py:26
+msgid "The CAPTCHA solution was incorrect."
+msgstr "Les caractères de l'image antispam étaient incorrects."
+
+#: apps/recaptcha/recaptcha_newforms.py:27
+msgid ""
+"The parameters to /verify were incorrect, make sure you are passing all the "
+"required parameters.  Please try again later."
+msgstr "Les paramètres de /verify étaient incorrects, vérifiez que vous passez les paramètres nécessaires. Veuillez réessayer ultérieurement."
+
+#: apps/recaptcha/recaptcha_newforms.py:28
+msgid ""
+"reCAPTCHA API keys are tied to a specific domain name for security reasons.  "
+"Please try again later."
+msgstr ""
+"Les clés d'API reCAPTCHA sont liées à un nom de domaine spécifique pour des raisons de sécurité. "
+"Veuillez réessayer plus tard."
+
+#: apps/recaptcha/recaptcha_newforms.py:29
+msgid "Unable to contact the reCAPTCHA verify server.  Please try again later."
+msgstr "Impossible de contacter le serveur de vérification reCAPTCHA. Veuillez essayer plus tard."
+
+#: apps/recaptcha/recaptcha_newforms.py:70
+msgid "An error occured with the CAPTCHA service. Please try again."
+msgstr "Une erreur s'est produite avec le service reCAPTCHA. Veuillez réessayer."
+
+#: apps/recaptcha/recaptcha_newforms.py:72
+msgid "Please enter the CAPTCHA solution."
+msgstr "Veuillez saisir les caractères de l'image."
+
+#: apps/robots/admin.py:10
+msgid "URL patterns"
+msgstr "Expressions d'URL"
+
+#: apps/robots/admin.py:11
+msgid "Advanced options"
+msgstr "Options avancées"
+
+#: apps/robots/models.py:14
+msgid "pattern"
+msgstr "expression"
+
+#: apps/robots/models.py:14
+msgid ""
+"Case-sensitive. A missing trailing slash does also match to files which "
+"start with the name of the pattern, e.g., '/admin' matches /admin.html too. "
+"Some major search engines allow an asterisk (*) as a wildcard and a dollar "
+"sign ($) to match the end of the URL, e.g., '/*.jpg$'."
+msgstr ""
+"Sensible à la casse. Un slash (\"/\") final manquant retourne aussi les fichiers qui commencent avec le nom de l'expression, c'est-à-dire que \"/admin\" correspond aussi à \"/admin.html\". "
+"Certains moteurs de recherche majeurs autorisent une astérisque (\"*\") comme caractère joker et un dollar(\"$\") pour correspondre à la fin de l'URL, c'est-à-dire par exemple \"/*.jpg$\"."
+
+#: apps/robots/models.py:17 apps/robots/models.py:18
+msgid "url"
+msgstr "url"
+
+#: apps/robots/models.py:36
+msgid "robot"
+msgstr "robot"
+
+#: apps/robots/models.py:36
+msgid ""
+"This should be a user agent string like 'Googlebot'. Enter an asterisk (*) "
+"for all user agents. For a full list look at the <a target=_blank "
+"href='http://www.robotstxt.org/wc/active/html/index.html'>database of Web "
+"Robots</a>."
+msgstr ""
+"Ce doit être une chaîne de \"user-agent\", tel que 'Googlebot'. "
+"Entrez une astérisque (\"*\") pour tous les user-agents. Pour une liste complète, consultez la <a target=_blank href='http://www.robotstxt.org/wc/active/html/index.html'>base de donnée des robots web</a>."
+
+#: apps/robots/models.py:37
+msgid "These are URLs which are allowed to be accessed by web robots."
+msgstr "Ce sont les URL dont l'accès est autorisé aux robots web."
+
+#: apps/robots/models.py:38
+msgid "These are URLs which are not allowed to be accessed by web robots."
+msgstr "Ce sont les URL dont l'accès est interdit aux robots web."
+
+#: apps/robots/models.py:40
+msgid "crawl delay"
+msgstr "délai entre deux passages"
+
+#: apps/robots/models.py:43
+msgid "rule"
+msgstr "règle"
+
+#: apps/robots/models.py:44
+msgid "rules"
+msgstr "règles"
+
+#: apps/robots/models.py:50 apps/robots/models.py:54
+msgid "and"
+msgstr "et"
+
+#: apps/robots/models.py:51
+msgid "allowed"
+msgstr "autorisé"
+
+#: apps/robots/models.py:55
+msgid "disallowed"
+msgstr "non autorisé"
+
+#: apps/tagging/__init__.py:22
+#, python-format
+msgid "The model %s has already been registered."
+msgstr "Le modèle %s a déjà été enregistré."
+
+#: apps/tagging/fields.py:69
+#, python-format
+msgid "%s can only be set on instances."
+msgstr "%s ne peut être positionné que sur des instances."
+
+#: apps/tagging/forms.py:22
+#, python-format
+msgid "Each tag may be no more than %s characters long."
+msgstr "Chaque mot-clé ne peut être long de plus de %s caractères."
+
+#: apps/tagging/managers.py:48
+#, python-format
+msgid "No tags were given: \"%s\"."
+msgstr "Aucun mot-clé n'a été donné: \"%s\"."
+
+#: apps/tagging/managers.py:50
+#, python-format
+msgid "Multiple tags were given: \"%s\"."
+msgstr "Plusieurs mots-clés ont été donnés: \"%s\"."
+
+#: apps/tagging/models.py:17
+msgid "name"
+msgstr "nom"
+
+#: apps/tagging/models.py:24 apps/tagging/models.py:38
+msgid "tag"
+msgstr "mot-clé"
+
+#: apps/tagging/models.py:25
+msgid "tags"
+msgstr "mots-clés"
+
+#: apps/tagging/models.py:39
+msgid "content type"
+msgstr "type de contenu"
+
+#: apps/tagging/models.py:40
+msgid "object id"
+msgstr "id objet"
+
+#: apps/tagging/models.py:47
+msgid "tagged item"
+msgstr "objet marqué"
+
+#: apps/tagging/models.py:48
+msgid "tagged items"
+msgstr "objets marqués"
+
+#: apps/tagging/utils.py:183
+msgid ""
+"If a list or tuple of tags is provided, they must all be tag names, Tag "
+"objects or Tag ids."
+msgstr "Si une liste ou un tuple de mots-clés est fourni, le contenu doit être des noms de mots-clés, des objets \"Tag\" ou des id de \"Tag\"."
+
+#: apps/tagging/utils.py:185
+msgid "The tag input given was invalid."
+msgstr "Les valeurs d'entrée sont invalides."
+
+#: apps/tagging/utils.py:230
+#, python-format
+msgid "Invalid distribution algorithm specified: %s."
+msgstr "Algorithme de distribution spécifié invalide: %s."
+
+#: apps/tagging/templatetags/tagging_tags.py:20
+#, python-format
+msgid "tags_for_model tag was given an invalid model: %s"
+msgstr "le mot-clé de \"tags_for_model\" a reçu un modèle invalide: %s"
+
+#: apps/tagging/templatetags/tagging_tags.py:35
+#, python-format
+msgid "tag_cloud_for_model tag was given an invalid model: %s"
+msgstr "le mot-clé de \"tag_cloud_for_model\" a reçu un modèle invalide: %s"
+
+#: apps/tagging/templatetags/tagging_tags.py:61
+#, python-format
+msgid "tagged_objects tag was given an invalid model: %s"
+msgstr "le mot-clé de \"tagged_objects\" a reçu un modèle invalide: %s"
+
+#: apps/tagging/templatetags/tagging_tags.py:94
+#, python-format
+msgid "%s tag requires either three or five arguments"
+msgstr "le mot-clé %s nécessite 3 ou 5 arguments"
+
+#: apps/tagging/templatetags/tagging_tags.py:96
+#: apps/tagging/templatetags/tagging_tags.py:148
+#: apps/tagging/templatetags/tagging_tags.py:264
+#, python-format
+msgid "second argument to %s tag must be 'as'"
+msgstr "le deuxième argument du mot-clé %s doit être \"as\""
+
+#: apps/tagging/templatetags/tagging_tags.py:99
+#: apps/tagging/templatetags/tagging_tags.py:152
+#, python-format
+msgid "if given, fourth argument to %s tag must be 'with'"
+msgstr "si présent, le quatrième argument du mot-clé %s doit être \"with\""
+
+#: apps/tagging/templatetags/tagging_tags.py:101
+#, python-format
+msgid "if given, fifth argument to %s tag must be 'counts'"
+msgstr "si présent, le cinquième argument du mot-clé %s doit être \"counts\""
+
+#: apps/tagging/templatetags/tagging_tags.py:146
+#, python-format
+msgid "%s tag requires either three or between five and seven arguments"
+msgstr "le mot-clé %s nécessite soit trois, soit entre cinq et sept arguments"
+
+#: apps/tagging/templatetags/tagging_tags.py:160
+#, python-format
+msgid "%(tag)s tag's '%(option)s' option was not a valid integer: '%(value)s'"
+msgstr "l'option %(option)s du mot-clé %(tag)s n'était pas un entier valide: '%(value)s'"
+
+#: apps/tagging/templatetags/tagging_tags.py:169
+#, python-format
+msgid "%(tag)s tag's '%(option)s' option was not a valid choice: '%(value)s'"
+msgstr "l'option %(option)s du mot-clé %(tag)s n'était pas un choix valide: '%(value)s'"
+
+#: apps/tagging/templatetags/tagging_tags.py:175
+#: apps/tagging/templatetags/tagging_tags.py:238
+#, python-format
+msgid "%(tag)s tag was given an invalid option: '%(option)s'"
+msgstr "le mot-clé %(tag)s a reçu une option invalide: '%(option)s'"
+
+#: apps/tagging/templatetags/tagging_tags.py:180
+#, python-format
+msgid "%(tag)s tag was given a badly formatted option: '%(option)s'"
+msgstr "le mot-clé %(tag)s a reçu une option mal formatée: '%(option)s'"
+
+#: apps/tagging/templatetags/tagging_tags.py:242
+#, python-format
+msgid "%(tag)s tag was given badly formatted option: '%(option)s'"
+msgstr "le mot-clé %(tag)s a reçu une option invalide: '%(option)s'"
+
+#: apps/tagging/templatetags/tagging_tags.py:262
+#, python-format
+msgid "%s tag requires exactly three arguments"
+msgstr "le mot-clé %s nécessite exactement trois arguments"
+
+#: apps/tagging/templatetags/tagging_tags.py:287
+#, python-format
+msgid "%s tag requires exactly five arguments"
+msgstr "le mot-clé %s nécessite exactement cinq arguments"
+
+#: apps/tagging/templatetags/tagging_tags.py:289
+#, python-format
+msgid "second argument to %s tag must be 'in'"
+msgstr "le deuxième argument du mot-clé %s doit être 'in'"
+
+#: apps/tagging/templatetags/tagging_tags.py:291
+#, python-format
+msgid "fourth argument to %s tag must be 'as'"
+msgstr "le quatrième argument du mot-clé %s doit être 'as'"
+
+#: apps/tagging/templatetags/tagging_tags.py:322
+#, python-format
+msgid "related_objects tag was given an invalid model: %s"
+msgstr "le mot-clé \"related_objects\" a reçu un modèle invalide: %s"
+
+#: apps/tagging/templatetags/tagging_tags.py:342
+#, python-format
+msgid "%s tag requires 5 or 7 arguments"
+msgstr "le mot-clé %s nécessite 5 ou 7 arguments"
+
+#: apps/tagging/templatetags/tagging_tags.py:345
+#, python-format
+msgid "%s tag: invalid syntax"
+msgstr "mot-clé %s: syntaxe invalide"
+
+#: apps/textblocks/models.py:10
+msgid "Unique system code"
+msgstr "Code système unique"
+
+#: apps/textblocks/models.py:11
+msgid "The key attribute"
+msgstr "L'attribut clé"
+
+#: apps/textblocks/models.py:12
+msgid "Block name"
+msgstr "Nom de bloc"
+
+#: apps/textblocks/models.py:13
+msgid "The name is renders as h4 (if it is not blank)"
+msgstr "Le nom est rendu avec h4 (s'il n'est pas vide)"
+
+#: apps/textblocks/models.py:14
+msgid "Block content"
+msgstr "Contenu du bloc"
+
+#: apps/textblocks/models.py:18
+msgid "Comments about block"
+msgstr "Commentaires sur le bloc"
+
+#: apps/textblocks/models.py:19
+msgid "The comment on text block is shown only in admin interface"
+msgstr "Ce commentaire sur le bloc texte n'est visible que dans l'interface d'admin"
+
+#: templates/footer.html:3 themes/andreas08/footer.html:3
+#: themes/lite/footer.html:5
+msgid "Powered by "
+msgstr "Mu par "
+
+#: templates/head.html:7 templates/head.html.py:14
+msgid "close"
+msgstr "fermer"
+
+#: templates/head.html:8 themes/mirev/head.html:14
+msgid "forgot it?"
+msgstr "mot de passe oublié?"
+
+#: templates/head.html:11 templates/head.html.py:16
+#: templates/accounts/login.html:15 templates/accounts/openid.html:11
+#: themes/andreas08/head.html:44 themes/mirev/head.html:20
+#: themes/mirev/head.html.py:34
+msgid "Login"
+msgstr "Connection"
+
+#: templates/head.html:18 themes/catap.ru/login.html:17
+#: themes/lite/head.html:24 themes/mirev/head.html:45
+msgid "Login with"
+msgstr "Se connecter avec"
+
+#: templates/head.html:19 themes/andreas08/head.html:45
+#: themes/catap.ru/login.html:18 themes/lite/head.html:25
+#: themes/mirev/head.html:46
+msgid "password"
+msgstr "un mot de passe"
+
+#: templates/head.html:19 themes/catap.ru/login.html:18
+#: themes/lite/head.html:25 themes/mirev/head.html:46
+msgid "or"
+msgstr "ou"
+
+#: templates/head.html:20 themes/andreas08/head.html:46
+#: themes/catap.ru/login.html:19 themes/lite/head.html:26
+#: themes/mirev/head.html:47
+msgid "OpenID"
+msgstr "OpenID"
+
+#: templates/head.html:23 themes/buriy/login.html:17
+#: themes/catap.ru/login.html:22 themes/mirev/head.html:50
+#: themes/web_brains/head.html:30
+msgid "Hello,"
+msgstr "Bonjour,"
+
+#: templates/head.html:32 themes/andreas08/head.html:50
+#: themes/buriy/login.html:19 themes/catap.ru/navigation.html:8
+#: themes/lite/head.html:30 themes/mirev/head.html:49
+#: themes/mirev/head.html.py:62 themes/web_brains/head.html:32
+msgid "Admin"
+msgstr "Admin"
+
+#: templates/head.html:33 themes/andreas08/head.html:48
+#: themes/buriy/login.html:18 themes/catap.ru/navigation.html:9
+#: themes/lite/head.html:31 themes/mirev/head.html:63
+#: themes/web_brains/head.html:31
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/head.html:34 themes/andreas08/head.html:52
+#: themes/buriy/login.html:20 themes/catap.ru/navigation.html:10
+#: themes/lite/head.html:29 themes/mirev/head.html:64
+#: themes/web_brains/head.html:33
+msgid "Logout"
+msgstr "Déconnecter"
+
+#: templates/accounts/login.html:16
+msgid "comment on any post to register"
+msgstr "Faites un commentaire sur un article pour vous enregistrer"
+
+#: templates/accounts/merge.html:11
+msgid "Merge"
+msgstr "Fusionner"
+
+#: templates/accounts/profile_edit.html:5
+#: themes/lite/accounts/profile_edit.html:5
+msgid "Profile editing"
+msgstr "Édition du profil"
+
+#: templates/accounts/profile_edit.html:8
+#: themes/lite/accounts/profile_edit.html:8
+msgid "Associated OpenIDs"
+msgstr "OpenIDs associées"
+
+#: templates/accounts/profile_edit.html:9
+msgid "Merge with another account"
+msgstr "Fusionner avec un autre compte"
+
+#: templates/accounts/profile_edit.html:10 templates/watchlist/list.html:6
+#: templates/watchlist/list.html.py:9 themes/lite/accounts/profile_edit.html:9
+msgid "Subscriptions list"
+msgstr "Liste d'abonnements"
+
+#: templates/accounts/profile_edit.html:15
+#: templates/admin/postimage/attach.html:16
+#: templates/admin/postimage/upload.html:14
+#: themes/lite/accounts/profile_edit.html:14
+msgid "Submit"
+msgstr "Envoyer"
+
+#: templates/accounts/reset.html:8
+msgid "Password reset"
+msgstr "Réinitialisation du mot de passe"
+
+#: templates/accounts/reset.html:13
+msgid "Please enter your email."
+msgstr "Veuillez entrer votre adresse mail."
+
+#: templates/accounts/reset.html:16
+msgid "Reset password"
+msgstr "Réinitialiser le mot de passe"
+
+#: templates/admin/postimage/attach.html:15
+msgid "Upload new"
+msgstr "Envoyer nouvelle"
+
+#: templates/admin/postimage/upload.html:13
+msgid "Select uploaded"
+msgstr "Sélectionner image"
+
+#: templates/blog/bookmarks.html:3 themes/catap.ru/blog/bookmarks.html:3
+#: themes/lite/blog/bookmarks.html:3
+msgid "Add post to"
+msgstr "Ajouter article à"
+
+#: templates/blog/bookmarks.html:5 themes/catap.ru/blog/bookmarks.html:5
+#: themes/lite/blog/bookmarks.html:5
+msgid "Add to"
+msgstr "Ajouter à"
+
+#: templates/blog/comment.html:15 themes/andreas08/blog/comment.html:18
+#: themes/catap.ru/blog/post_detail.html:63 themes/lite/blog/comment.html:18
+#: themes/mirev/blog/comment.html:22
+msgid "reply"
+msgstr "répondre"
+
+#: templates/blog/comment.html:23 themes/andreas08/blog/comment.html:25
+#: themes/catap.ru/blog/post_detail.html:70 themes/lite/blog/comment.html:25
+#: themes/mirev/blog/comment.html:30
+msgid "edit"
+msgstr "modifier"
+
+#: templates/blog/comment.html:24 themes/andreas08/blog/comment.html:29
+#: themes/catap.ru/blog/post_detail.html:74 themes/lite/blog/comment.html:29
+#: themes/mirev/blog/comment.html:31
+msgid "cancel"
+msgstr "annuler"
+
+#: templates/blog/comment.html:27 themes/mirev/blog/comment.html:34
+msgid "submit"
+msgstr "envoyer"
+
+#: templates/blog/comment.html:36 themes/andreas08/blog/comment.html:38
+#: themes/catap.ru/blog/post_detail.html:83 themes/lite/blog/comment.html:38
+#: themes/mirev/blog/comment.html:43
+msgid "delete"
+msgstr "effacer"
+
+#: templates/blog/comment_form.html:4 themes/catap.ru/blog/comment_form.html:4
+#: themes/lite/blog/comment_form.html:4
+#, python-format
+msgid "Comment form for &laquo;%(object)s&raquo;"
+msgstr "Formulaire de commentaire pour &laquo;%(object)s&raquo;"
+
+#: templates/blog/comment_form.html:9
+#: themes/andreas08/blog/comment_form.html:9
+#: themes/buriy/blog/comment_form.html:9
+#: themes/catap.ru/blog/comment_form.html:9
+#: themes/lite/blog/comment_form.html:10
+msgid "Comment"
+msgstr "Commenter"
+
+#: templates/blog/comment_form.html:10
+#: themes/andreas08/blog/comment_form.html:10
+#: themes/buriy/blog/comment_form.html:10
+#: themes/catap.ru/blog/comment_form.html:10
+#: themes/lite/blog/comment_form.html:11
+msgid "Preview"
+msgstr "Prévisualiser"
+
+#: templates/blog/comment_form.html:11
+#: themes/andreas08/blog/comment_form.html:11
+#: themes/buriy/blog/comment_form.html:11
+#: themes/catap.ru/blog/comment_form.html:11
+#: themes/lite/blog/comment_form.html:12
+msgid "Cancel"
+msgstr "Annuler"
+
+#: templates/blog/featured.html:17 templates/blog/post_entry.html:26
+#: themes/andreas08/blog/post_entry.html:33
+#: themes/buriy/blog/post_entry.html:45 themes/catap.ru/blog/featured.html:17
+#: themes/catap.ru/blog/post_entry.html:16 themes/lite/blog/featured.html:17
+#: themes/lite/blog/post_entry.html:39 themes/mirev/blog/post_entry.html:25
+msgid "continue&nbsp;reading"
+msgstr "lire&nbsp;la suite"
+
+#: templates/blog/post_archive_year.html:5
+msgid "Posts year archive"
+msgstr "Archive annuelle des articles"
+
+#: templates/blog/post_archive_year.html:10
+#: templates/blog/post_archive_year.html:14 templates/blog/post_list.html:32
+#: templates/blog/post_list.html.py:33 templates/blog/post_list.html:34
+#: themes/andreas08/blog/post_list.html:13
+#: themes/andreas08/blog/post_list.html:14
+#: themes/andreas08/blog/post_list.html:15 themes/buriy/blog/post_list.html:19
+#: themes/buriy/blog/post_list.html:20 themes/buriy/blog/post_list.html:21
+#: themes/catap.ru/blog/post_list.html:19
+#: themes/catap.ru/blog/post_list.html:20
+#: themes/catap.ru/blog/post_list.html:21 themes/lite/blog/post_list.html:25
+#: themes/lite/blog/post_list.html.py:26 themes/lite/blog/post_list.html:27
+#: themes/mirev/blog/post_list.html:32 themes/mirev/blog/post_list.html:33
+#: themes/mirev/blog/post_list.html:34
+#: themes/web_brains/blog/post_list.html:19
+#: themes/web_brains/blog/post_list.html:20
+#: themes/web_brains/blog/post_list.html:21
+msgid "Archive for"
+msgstr "Archive pour"
+
+#: templates/blog/post_detail.html:30 templates/blog/post_detail.html.py:69
+#: templates/watchlist/subscribe.html:11 themes/lite/blog/post_detail.html:31
+#: themes/mirev/blog/post_detail.html:42 themes/mirev/blog/post_detail.html:66
+msgid "Subscribe"
+msgstr "S'abonner"
+
+#: templates/blog/post_detail.html:32 templates/blog/post_detail.html.py:71
+#: templates/watchlist/unsubscribe.html:12
+#: themes/lite/blog/post_detail.html:33 themes/mirev/blog/post_detail.html:44
+#: themes/mirev/blog/post_detail.html:68
+msgid "Unsubscribe"
+msgstr "Se désabonner"
+
+#: templates/blog/post_detail.html:34 themes/mirev/blog/post_detail.html:46
+msgid "already"
+msgstr "déjà"
+
+#: templates/blog/post_detail.html:36 templates/blog/post_detail.html.py:74
+#: themes/mirev/blog/post_detail.html:48 themes/mirev/blog/post_detail.html:71
+msgid "Comment post"
+msgstr "commentaires"
+
+#: templates/blog/post_detail.html:41 themes/buriy/blog/post_detail.html:27
+#: themes/catap.ru/blog/post_detail.html:28
+#: themes/lite/blog/post_detail.html:40 themes/mirev/blog/post_detail.html:26
+msgid "Pingbacks"
+msgstr "Pingbacks"
+
+#: templates/blog/post_detail.html:51 themes/buriy/blog/post_detail.html:37
+#: themes/catap.ru/blog/post_detail.html:45
+#: themes/lite/blog/post_detail.html:51 themes/mirev/blog/post_detail.html:37
+msgid "Comments"
+msgstr "Commentaires"
+
+#: templates/blog/post_detail.html:53 themes/buriy/blog/post_detail.html:39
+#: themes/catap.ru/blog/post_detail.html:47
+#: themes/lite/blog/post_detail.html:53 themes/mirev/blog/post_detail.html:51
+msgid "No comments for this post"
+msgstr "Pas de commentaires pour cet article"
+
+#: templates/blog/post_entry.html:19 themes/andreas08/blog/post_entry.html:18
+#: themes/catap.ru/blog/post_entry.html:27 themes/lite/blog/post_entry.html:21
+#: themes/mirev/blog/post_entry.html:26 themes/mirev/blog/post_entry.html:33
+msgid "comment, comments, comments"
+msgstr "commentaire, commentaires, commentaires"
+
+#: templates/blog/post_entry.html:21 themes/andreas08/blog/post_entry.html:24
+#: themes/catap.ru/blog/post_entry.html:36 themes/lite/blog/post_entry.html:30
+msgid "pingback, pingbacks, pingbacks"
+msgstr "pingback, pingbacks, pingbacks"
+
+#: templates/blog/post_list.html:8 themes/andreas08/blog/post_list.html:8
+#: themes/buriy/blog/post_list.html:5 themes/lite/blog/post_list.html:8
+#: themes/mirev/blog/post_list.html:8 themes/web_brains/blog/post_list.html:5
+msgid "Posts"
+msgstr "Articles"
+
+#: templates/blog/post_list.html:39 themes/andreas08/blog/post_list.html:20
+#: themes/lite/blog/post_list.html:32 themes/mirev/blog/post_list.html:39
+msgid "All articles, tagged with union of tags"
+msgstr "Tous les articles, marqués par union de mots-clés"
+
+#: templates/blog/post_list.html:41 themes/andreas08/blog/post_list.html:22
+#: themes/lite/blog/post_list.html:34 themes/mirev/blog/post_list.html:41
+msgid "All articles, tagged with intersection of tags"
+msgstr "Tous les articles, marqués par intersection de mots-clés"
+
+#: templates/blog/post_list.html:44 themes/andreas08/blog/post_list.html:25
+#: themes/buriy/blog/post_list.html:23 themes/catap.ru/blog/post_list.html:23
+#: themes/lite/blog/post_list.html:37 themes/mirev/blog/post_list.html:44
+#: themes/web_brains/blog/post_list.html:23
+msgid "All articles, tagged with"
+msgstr "Tous les articles, marqués avec"
+
+#: templates/blog/post_list.html:51 themes/mirev/blog/post_list.html:51
+msgid "All articles, written by"
+msgstr "Tous les articles, écrits par"
+
+#: templates/blog/post_list.html:69 themes/andreas08/blog/post_list.html:38
+#: themes/buriy/blog/next.html:11 themes/catap.ru/blog/post_list.html:38
+#: themes/lite/blog/post_list.html:55 themes/mirev/blog/post_list.html:66
+#: themes/web_brains/blog/post_list.html:38
+msgid "Previous month"
+msgstr "Mois précédent"
+
+#: templates/blog/post_list.html:70 themes/andreas08/blog/post_list.html:39
+#: themes/buriy/blog/next.html:12 themes/catap.ru/blog/post_list.html:39
+#: themes/lite/blog/post_list.html:56 themes/mirev/blog/post_list.html:63
+#: themes/web_brains/blog/post_list.html:39
+msgid "Next month"
+msgstr "Mois suivant"
+
+#: templates/blog/post_list.html:74 themes/andreas08/blog/post_list.html:43
+#: themes/buriy/blog/next.html:6 themes/catap.ru/blog/post_list.html:43
+#: themes/lite/blog/post_list.html:60 themes/mirev/blog/post_list.html:75
+#: themes/web_brains/blog/post_list.html:33
+msgid "Previous day"
+msgstr "Jour précédent"
+
+#: templates/blog/post_list.html:75 themes/andreas08/blog/post_list.html:44
+#: themes/buriy/blog/next.html:7 themes/catap.ru/blog/post_list.html:44
+#: themes/lite/blog/post_list.html:61 themes/mirev/blog/post_list.html:72
+#: themes/web_brains/blog/post_list.html:34
+msgid "Next day"
+msgstr "Jour suivant"
+
+#: templates/blog/post_list.html:78 templates/wpimport/post_list.html:12
+#: themes/andreas08/blog/post_list.html:47
+#: themes/catap.ru/blog/post_list.html:47 themes/lite/blog/post_list.html:64
+#: themes/mirev/blog/post_list.html:83
+msgid "Older posts"
+msgstr "Articles plus vieux"
+
+#: templates/blog/post_list.html:80 templates/wpimport/post_list.html:14
+#: themes/andreas08/blog/post_list.html:49
+#: themes/catap.ru/blog/post_list.html:49 themes/lite/blog/post_list.html:66
+#: themes/mirev/blog/post_list.html:80
+msgid "Newer posts"
+msgstr "Articles plus récents"
+
+#: templates/blog/tag_cloud.html:5 templates/blog/tag_cloud.html.py:8
+#: themes/andreas08/blog/sidebar.html:45 themes/catap.ru/blog/tags.html:5
+#: themes/lite/blog/sidebar.html:51 themes/web_brains/blog/sidebar.html:39
+msgid "Tags"
+msgstr "Mots-clés"
+
+#: templates/flatpages/about_blogroll.html:14 themes/catap.ru/blogroll.html:5
+#: themes/lite/blog/sidebar.html:61
+msgid "Blogroll"
+msgstr "Blogoliste"
+
+#: templates/openid/complete.html:8
+msgid "Your OpenID is verified! "
+msgstr "Votre OpenID est vérifiée! "
+
+#: templates/openid/complete.html:10
+msgid "Associate your OpenID"
+msgstr "Associez votre OpenID"
+
+#: templates/openid/complete.html:14
+msgid "A new account"
+msgstr "Un nouveau compte"
+
+#: templates/openid/complete.html:16
+msgid "Screen name"
+msgstr "Pseudo"
+
+#: templates/openid/complete.html:23
+msgid "Associate with exisiting account"
+msgstr "Associer avec un compte existant"
+
+#: templates/openid/list.html:5 templates/openid/list.html.py:8
+msgid "Your OpenIDs"
+msgstr "Vos OpenIDs"
+
+#: templates/openid/list.html:15
+msgid "Delete"
+msgstr "Effacer"
+
+#: templates/openid/list.html:22
+msgid "Associate new OpenID"
+msgstr "Associer nouvelle OpenID"
+
+#: templates/openid/list.html:23 templates/openid/signin.html:13
+msgid "OpenID URL"
+msgstr "URL OpenID"
+
+#: templates/openid/list.html:25
+msgid "Associate"
+msgstr "Associer"
+
+#: templates/openid/signin.html:5 templates/openid/signin.html.py:8
+#: templates/openid/signin.html:15
+msgid "Sign in"
+msgstr "Se connecter"
+
+#: templates/openid/signin.html:12
+msgid "Sign in using your OpenID"
+msgstr "Se connecter avec OpenID"
+
+#: templates/openidserver/accept_root.html:6
+#, python-format
+msgid ""
+"\n"
+"  <p>We've got a request from <a href=\"%(root)s\">%(root)s</a> \n"
+"    to authenticate you as <a href=\"%(identity)s\">%(identity)s</a>.</p>\n"
+"  <p>Click 'Accept' to accept authentication request (you'll be redirected "
+"to %(return_to)s).</p>\n"
+"  <p>Click 'Dismiss' to dismiss request (and to go to %(cancel_url)s).</p>\n"
+"  "
+msgstr ""
+"\n"
+"  <p>Nous avons reçu une requête de <a href=\"%(root)s\">%(root)s</a> \n"
+"    qui vous identifie comme <a href=\"%(identity)s\">%(identity)s</a>.</p>\n"
+"  <p>Cliquez 'Accepter' pour accepter la requête d'identification (vous serez redirigé vers %(return_to)s).</p>\n"
+"  <p>Cliquez sur 'Annuler' pour annuler la requête (et être redirigé vers %(cancel_url)s).</p>\n"
+"  "
+
+#: templates/openidserver/accept_root.html:15
+msgid "Remember my answer"
+msgstr "Mémoriser ma réponse"
+
+#: templates/openidserver/accept_root.html:17
+msgid "Accept"
+msgstr "Accepter"
+
+#: templates/openidserver/accept_root.html:18
+msgid "Dismiss"
+msgstr "Annuler"
+
+#: templates/tagging/tag_cloud.html:7 templates/tagging/tag_string.html:7
+#, python-format
+msgid "Click to filter by %(tag)s"
+msgstr "Cliquez pour filtrer par %(tag)s"
+
+#: templates/templatetags/authorlink.html:1
+msgid "Click to see all posts by {{ author.name }}"
+msgstr "Cliquez pour voir tous les articles de {{ author.name }}"
+
+#: templates/templatetags/datelinks.html:1
+#: themes/mirev/templatetags/datelinks.html:3
+msgid "Click to see day archive"
+msgstr "Cliquez pour voir l'archive du jour"
+
+#: templates/templatetags/datelinks.html:1
+#: themes/mirev/templatetags/datelinks.html:2
+msgid "Click to see month archive"
+msgstr "Cliquez pour voir l'archive du mois"
+
+#: templates/templatetags/datelinks.html:1
+#: themes/mirev/templatetags/datelinks.html:1
+msgid "Click to see year archive"
+msgstr "Cliquez pour voir l'archive de l'année"
+
+#: templates/templatetags/relative_datetime.html:2
+msgid "after"
+msgstr "après"
+
+#: templates/templatetags/relative_datetime.html:2
+msgid "day, days, days"
+msgstr "jour, jours, jours"
+
+#: templates/watchlist/list.html:13
+msgid "unsubscribe"
+msgstr "se désabonner"
+
+#: templates/watchlist/list.html:17
+msgid "Unsubscribe from subscription type"
+msgstr "se désabonner par type de contenu"
+
+#: templates/watchlist/list.html:22
+#, python-format
+msgid "Unsubscribe from all %(app)s %(model)ss."
+msgstr "se désabonner de tous les %(app)s %(model)ss."
+
+#: templates/watchlist/subscribe.html:5
+msgid "Subscribing to"
+msgstr "Abonnement à"
+
+#: templates/watchlist/subscribe.html:8
+#, python-format
+msgid "Subscribing to \"%(object)s\". Are you sure you want to do that?"
+msgstr "Abonnement à \"%(object)s\". Êtes-vous sûr de vouloir faire cela?"
+
+#: templates/watchlist/unsubscribe.html:5
+#: templates/watchlist/unsubscribe.html:8
+msgid "Unsubscribing from"
+msgstr "Désabonnement de"
+
+#: templates/watchlist/unsubscribe.html:9
+msgid "Are you sure you want to do that?"
+msgstr "Êtes-vous sûr de vouloir faire cela?"
+
+#: themes/andreas08/base.html:18 themes/lite/base.html:11
+msgid "blog entries feed"
+msgstr "flux des articles"
+
+#: themes/andreas08/base.html:19 themes/lite/base.html:12
+msgid "comments feed"
+msgstr "flux des commentaires"
+
+#: themes/andreas08/footer.html:4
+msgid "Original design by "
+msgstr "Design original par"
+
+#: themes/andreas08/blog/sidebar.html:9 themes/buriy/blog/sidebar.html:38
+#: themes/lite/blog/sidebar.html:5 themes/web_brains/blog/sidebar.html:5
+msgid "Last comments"
+msgstr "Derniers commentaires"
+
+#: themes/andreas08/blog/sidebar.html:22 themes/lite/blog/sidebar.html:15
+#: themes/web_brains/blog/sidebar.html:13
+msgid "No comments on blog"
+msgstr "Pas de commentaires sur le blog"
+
+#: themes/andreas08/blog/sidebar.html:29 themes/buriy/blog/sidebar.html:54
+#: themes/lite/blog/sidebar.html:20 themes/web_brains/blog/sidebar.html:18
+msgid "Last posts"
+msgstr "Derniers articles"
+
+#: themes/andreas08/blog/sidebar.html:39 themes/lite/blog/sidebar.html:30
+#: themes/lite/blog/sidebar.html.py:45 themes/web_brains/blog/sidebar.html:26
+msgid "No posts on blog"
+msgstr "Pas d'articles sur ce blog"
+
+#: themes/andreas08/tagging/tag_cloud.html:8
+#: themes/catap.ru/tagging/tag_cloud.html:7
+#: themes/lite/tagging/tag_cloud.html:8
+msgid "Click to filter by"
+msgstr "Cliquez pour filtrer par"
+
+#: themes/buriy/head.html:20 themes/web_brains/head.html:22
+msgid "About"
+msgstr "A propos"
+
+#: themes/buriy/head.html:32 themes/buriy/login.html:28
+#: themes/web_brains/head.html:46
+msgid "Login with password"
+msgstr "Se connecter avec un mot de passe"
+
+#: themes/buriy/head.html:38 themes/buriy/login.html:36
+#: themes/web_brains/head.html:52
+msgid "Forgot password?"
+msgstr "Mot de passe oublié?"
+
+#: themes/buriy/head.html:39 themes/buriy/login.html:40
+#: themes/web_brains/head.html:53
+msgid "Login with OpenID"
+msgstr "Se connecter avec OpenID"
+
+#: themes/buriy/blog/comment_form.html:4
+#, python-format
+msgid "Reply to &laquo;%(object)s&raquo;"
+msgstr "Répondre à &laquo;%(object)s&raquo;"
+
+#: themes/buriy/blog/next.html:18 themes/web_brains/blog/post_list.html:45
+msgid "Previous year"
+msgstr "Année précédente"
+
+#: themes/buriy/blog/next.html:19 themes/web_brains/blog/post_list.html:46
+msgid "Next year"
+msgstr "Année suivante"
+
+#: themes/buriy/blog/post_detail.html:53
+#: themes/catap.ru/blog/post_detail.html:25
+msgid "Add comment"
+msgstr "Ajouter un commentaire"
+
+#: themes/buriy/blog/sidebar.html:68 themes/web_brains/blog/sidebar.html:33
+msgid "Blog feed"
+msgstr "Flux du blog"
+
+#: themes/buriy/blog/sidebar.html:69 themes/web_brains/blog/sidebar.html:34
+msgid "Comments feed"
+msgstr "Flux des commentaires"
+
+#: themes/catap.ru/navigation.html:4
+msgid "Navigation"
+msgstr "Navigation"
+
+#: themes/catap.ru/search.html:4
+msgid "Search"
+msgstr "Recherche"
+
+#: themes/catap.ru/blog/post_entry.html:21
+msgid "Write on:"
+msgstr "Écrire sur:"
+
+#: themes/catap.ru/blog/post_entry.html:41
+msgid "tags:"
+msgstr "Mots-clés:"
+
+#: themes/catap.ru/blog/post_entry.html:43
+msgid "permalink"
+msgstr "permalien"
+
+#: themes/lite/blog/post_detail.html:35
+msgid "Make comment"
+msgstr "Commenter"
+
+#: themes/lite/blog/sidebar.html:35
+msgid "Popular posts"
+msgstr "Articles populaires"
+
+#: themes/lite/blog/sidebar.html:36
+msgid "Feature not ready yet"
+msgstr "Fonctionnalité pas encore implémentée"
+
+#: themes/lite/blog/sidebar.html:69 themes/web_brains/blog/sidebar.html:49
+msgid "Advertize"
+msgstr "Publicité"
+
+#: themes/mirev/footer.html:5
+msgid "Powered by"
+msgstr "Mu par"
+
+#: themes/mirev/head.html:51
+msgid "logout"
+msgstr "Déconnection"
+
+#: themes/web_brains/blog/sidebar.html:31
+msgid "Useful information"
+msgstr "Information utile"
+

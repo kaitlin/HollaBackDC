@@ -1,0 +1,20 @@
+{% extends "admin/postimage/base.html" %}
+{% load i18n %}
+{% block content %}
+<form enctype="multipart/form-data" action="" method="post" onsubmit="Postimage.submit(); return false;" id="posimage_attach_form">
+	<fieldset class="module aligned">
+      <div class="form-row name">
+        <input type="hidden" name="for" id="for" value="{{ for  }}" />
+        <input type="hidden" name="baseurl" id="baseurl" value="{{ postimage_url }}" />
+        <input type="hidden" name="image_root" id="image_root" value="{{ postimage_root }}" />
+	    <table>
+	      {{ form }}
+	    </table>
+	</div></fieldset>
+	<div class="submit-row">
+	  <input type="submit" value="{% trans "Upload new" %}" name="_addanother" onclick="window.location='{% url postimage_upload %}?for={{ for }}'; return false;" />
+	  <input type="submit" value="{% trans "Submit" %}" class="default" name="_save" />
+	</div>
+	<script type="text/javascript">document.getElementById("id_file").focus();</script>
+</form>
+{% endblock %}

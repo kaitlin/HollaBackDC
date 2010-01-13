@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% load bfmarkup %}
+
+{% block title %}about{% endblock %}
+
+{% block extrahead %}
+<link rel="openid.server" href="http://blog.piranha.org.ua/wp-content/plugins/openid/server.php/">
+<link rel="openid.delegate" href="http://blog.piranha.org.ua/">
+{% endblock %}
+
+{% block extraheader %}{{ flatpage.title }}{% endblock %}
+
+{% block content %}
+{{ flatpage.content|markdown }}
+{% endblock %}

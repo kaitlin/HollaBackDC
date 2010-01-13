@@ -1,0 +1,13 @@
+{% load i18n %}
+
+<div id="comment-form">
+<h2>{% blocktrans %}Comment form for &laquo;{{ object }}&raquo;{% endblocktrans %}</h2>
+<div class="metadata">You can use <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> here.</div>
+<form id="comment-form-itself" action="." method="post">
+  {{ form.as_p }}
+  <div id="comment-preview"></div>
+  <input type="submit" class="button" value="{% trans "Comment" %}" />
+  <input type="button" class="button" value="{% trans "Preview" %}" onclick="return preview_comment('{% url comment_preview %}');" />
+  <input type="button" class="button" value="{% trans "Cancel" %}" onclick="return cancel_comment();" />
+</form>
+</div>
