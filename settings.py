@@ -13,6 +13,9 @@ ADMINS = (
 )
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
+#BLOG_URLCONF_ROOT = 'apps.blog.urls'
+#URL_ROOT_HANDLER = 'apps.blog.views.process_root_request'
+
 sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
 sys.path.insert(0, os.path.join(PROJECT_ROOT, 'compat'))
 
@@ -26,6 +29,12 @@ DATABASE_USER = ''             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
+
+EMAIL_HOST = 'smtp.webfaction.com'
+EMAIL_HOST_USER = 'kaitlin_hbdc'
+EMAIL_HOST_PASSWORD = 'ae5e80bd'
+DEFAULT_FROM_EMAIL = 'server@hollabackdc.kaitlinlee.com'
+SERVER_EMAIL = 'server@hollabackdc.kaitlinlee.com'
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -113,6 +122,11 @@ LANGUAGES = (
     )
 LANGUAGE_CODE = 'en'
 
+#CAPTCHA = 'recaptcha'
+#RECAPTCHA = {'hollabackdc.kaitlinlee.com': {'public': '6LdQsAoAAAAAAOBzjZfSBLGQu_r0hDVAqgfz70UU', 'private': '6LdQsAoAAAAAALC5fLqiw66zGoDOxeNCpRP1jS3R' }}
+
+#BLOG_NAME = 'HollaBackDC'
+
 CMS_DEFAULT_LANGUAGE = 'en'
 
 CMS_TEMPLATES = (
@@ -157,7 +171,7 @@ INSTALLED_APPS = (
     'cms.plugins.twitter',
     'cms.plugins.flash',
     'cms.plugins.teaser',
-    'south',
+#    'south',
     'django.contrib.sitemaps',
     'django.contrib.flatpages',
     'django.contrib.markup',
@@ -174,10 +188,11 @@ INSTALLED_APPS = (
     'openidserver',
     'revcanonical',
     'pingback',
-    'watchlist',
+    #'watchlist',
     'robots',
     'wpimport',
     'textblocks',
+    'django_extensions'
 )
 
 APPEND_SLASH = False
