@@ -1,7 +1,7 @@
 from django import template
 from django.contrib.contenttypes.models import ContentType
 
-from lib.helpers import reverse
+from django.core.urlresolvers import reverse
 from watchlist.models import Subscription
 
 register = template.Library()
@@ -10,16 +10,16 @@ register = template.Library()
 @register.simple_tag
 def unsubscribe_url(obj):
     ctype = ContentType.objects.get_for_model(obj)
-    return reverse('wl_unsubscribe', content_type='.'.join((ctype.app_label, ctype.model)), object_id=obj.pk)
+    return reverse('watchlist:wl_unsubscribe', args=['.'.join((ctype.app_label, ctype.model)), obj.pk], current_app='watchlist')
 
 @register.simple_tag
 def unsubscribe_type_url(content_type):
-    return reverse('wl_unsubscribe_type', content_type='.'.join((content_type.app_label, content_type.model)))
+    return reverse('watchlist:wl_unsubscribe_type',args=['.'.join((content_type.app_label, content_type.model))])
 
 @register.simple_tag
 def subscribe_url(obj):
     ctype = ContentType.objects.get_for_model(obj)
-    return reverse('wl_subscribe', content_type='.'.join((ctype.app_label, ctype.model)), object_id=obj.pk)
+    return reverse('watchlist:wl_subscribe', args=['.'.join((ctype.app_label, ctype.model)), obj.pk])
 
 @register.filter
 def is_subscribed_to(user, obj):

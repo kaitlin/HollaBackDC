@@ -1,6 +1,6 @@
 # This module must be imported somewhere to work
 
-import settings
+from django.conf import settings
 import traceback
 
 from django.template import Context, loader, Template, TemplateDoesNotExist
