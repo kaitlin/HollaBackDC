@@ -26,11 +26,14 @@ class CommentNodeAdmin(admin.ModelAdmin):
 
         if obj is not None: # additional interface features in admin
             if obj.object_id and obj.content_type: # link to parent object
-                object_url = urlreverse('admin', args=['%s/%s/%d' % (obj.content_type.app_label, obj.content_type.model, obj.object_id)])
+#                object_url = urlreverse('admin', args=['%s/%s/%d' % (obj.content_type.app_label, obj.content_type.model, obj.object_id)])
+                object_url = urlreverse('admin:%s_%s_change' % ('blog', 'post'), args=(13,))
                 form_cls.base_fields['object_id'].help_text += u'| <a href="%s">%s</a> |' % (object_url, _('Parent object'))
 
             if obj.reply_to_id: # link to reply_to comment node
-                comment_url = urlreverse('admin', args=['discussion/CommentNode/%d/' % obj.reply_to_id])
+                #comment_url = urlreverse('admin', args=['discussion/CommentNode/%d/' % obj.reply_to_id])
+                
+                comment_url = urlreverse('admin:%s_%s_change' % ('discussion', 'CommentNode'), args=(obj.reply_to_id,))
                 form_cls.base_fields['object_id'].help_text += u'| <a href="%s">%s</a> |' % (comment_url, _('Parent comment'))
 
         return form_cls
