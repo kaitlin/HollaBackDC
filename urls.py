@@ -32,6 +32,7 @@ urlpatterns = patterns('',
     url(r'^tagging_autocomplete/', include('tagging_autocomplete.urls')),
 )
 
+
 if appcheck.wpimport:
     urlpatterns += patterns('', url(r'^wpimport/', include('wpimport.urls')),)
 
