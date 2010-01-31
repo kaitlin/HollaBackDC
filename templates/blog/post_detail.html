@@ -18,7 +18,7 @@
 {% ifequal settings.CAPTCHA "recaptcha" %}<script type="text/javascript" src="http://api.recaptcha.net/js/recaptcha_ajax.js"></script>{% endifequal %}
 <link rel="alternate" type="application/rss+xml" title="{{ site.name }}: comments on {{ object.name }} feed" href="{% url feed feedurl %}" />
 {% ifapp pingback %}<link rel="pingback" href="http://{{ site.domain }}{% url xmlrpc %}" />{% endifapp %}
-{% revcanonical object %}
+{# revcanonical object #}
 {% endblock %}
 
 {% block content %}
