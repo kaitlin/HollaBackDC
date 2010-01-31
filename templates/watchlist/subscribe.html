@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Subscribing to" %} {{ object }}{% endblock %}
+
+{% block content %}
+<p>{% blocktrans %}Subscribing to "{{ object }}". Are you sure you want to do that?{% endblocktrans %}</p>
+<form action="." method="post">
+  <input type="hidden" value="{{ next }}" name="next" />
+  <input type="submit" value="{% trans "Subscribe" %}" name="Subscribe" />
+</form>
+{% endblock %}

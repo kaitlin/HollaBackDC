@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Unsubscribing from" %} {% if object %}{{ object }}{% else %}{{ ctype.app_label }} {{ ctype.model }}s{% endif %}{% endblock %}
+
+{% block content %}
+<p>{% trans "Unsubscribing from" %} {% if object %}"{{ object }}"{% else %}{{ ctype.app_label }} {{ ctype.model }}s{% endif %}.
+  {% blocktrans %}Are you sure you want to do that?{% endblocktrans %}</p>
+<form action="." method="post">
+  <input type="hidden" value="{{ next }}" name="next" />
+  <input type="submit" value="{% trans "Unsubscribe" %}" name="Unsubscribe" />
+</form>
+{% endblock %}
