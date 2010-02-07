@@ -1,3 +1,5 @@
+{% load cms_tags %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +34,8 @@
 
             <ul>
 
-                <li class="first"><a href="/about" alt="about HollaBackDC!">about</a></li>
+                {% show_menu %}
+               <!-- <li class="first"><a href="/about" alt="about HollaBackDC!">about</a></li>
 
                 <li><a href="/blog/" alt="blog">blog</a></li>
 
@@ -42,12 +45,11 @@
 
                 <li><a href="/events" alt="events">events</a></li>
 
-                <li><a class="last" href="/get-involved" alt="get involved!">get involved</a></li>
+                <li><a class="last" href="/get-involved" alt="get involved!">get involved</a></li>-->
 
             </ul>
 
         </div>
-
         <div class="content-body">
             {% block body %}
 
