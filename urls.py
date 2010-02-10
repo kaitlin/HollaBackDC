@@ -33,6 +33,10 @@ urlpatterns = patterns('',
 )
 
 
+if appcheck.watchlist:
+        urlpatterns += patterns('', url(r'^watchlist/', include('watchlist.urls')),)
+
+
 if appcheck.wpimport:
     urlpatterns += patterns('', url(r'^wpimport/', include('wpimport.urls')),)
 

@@ -9,6 +9,7 @@ ul li a {text-decoration: none; color: black;}
 
 ul#navigation li.right, ul#navigation li.left {font-weight:bold;}
 
+.home-link { display: block; position: absolute; top: 0; left: 0; width: 106px; height: 115px;}
 .content {width: 1024px; margin-top: 10px;}
 
 .content-body {background-color: white; color: rgb(128,128,128); padding: 30px; width: 744px; float:left; margin: 0 5px 0 0px; min-height: 550px;}
@@ -23,7 +24,7 @@ ul#navigation li.right, ul#navigation li.left {font-weight:bold;}
 
 .sidebar h4 {color: rgb(24, 31, 39); font-size: 1em; margin-top:10px; float:left; margin-bottom:0px;}
 
-.sidebar .bar-headline {color: rgb(1, 63, 115); font-weight: bold; font-size: .8em; font-family:arial, serif, sans-serif;}
+.sidebar .bar-headline a {color: rgb(1, 63, 115); font-weight: bold; font-size: .8em; font-family:arial, serif, sans-serif;}
 
 .sidebar .bar-date {color: black; font-size: .8em; font-family:arial, serif, sans-serif;}
 

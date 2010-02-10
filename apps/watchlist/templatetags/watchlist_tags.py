@@ -19,7 +19,7 @@ def unsubscribe_type_url(content_type):
 @register.simple_tag
 def subscribe_url(obj):
     ctype = ContentType.objects.get_for_model(obj)
-    return reverse('watchlist:wl_subscribe', args=['.'.join((ctype.app_label, ctype.model)), obj.pk])
+    return reverse('wl_subscribe', args=['.'.join((ctype.app_label, ctype.model)), obj.pk])
 
 @register.filter
 def is_subscribed_to(user, obj):
