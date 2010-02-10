@@ -110,6 +110,50 @@ def by_author(request, author, *args, **kwargs):
     return object_list(request, *args, **kwargs)
 
 
+
+@render_to('blog/post_detail.html')
+def post_detail_sidebar(request, id, slug=None):
+    
+    reply_to = _get_reply_to(request)
+    qs = (request.user.is_staff and Post.all_objects or Post.objects)
+    filtr = {'id': id}
+       
+    post = get_object_or_404(qs, **filtr)
+    if post.comments_open():
+        Form = (request.user.is_authenticated()
+                and CommentForm
+                or AnonymousCommentForm)
+        form = build_form(Form, request, post=post, user=request.user,
+                          remote_ip=request.META.get('REMOTE_ADDR'),
+                          initial={'reply_to': reply_to})
+        if form.is_valid():
+            c, user_is_new = form.save()
+            if not request.user.is_authenticated():
+                if user_is_new:
+                    c.user.backend = 'django.contrib.auth.backends.ModelBackend'
+                    message = _('Please look in your mailbox for info about your account.')
+                else:
+                    ActionRecord.approvals.send_approval(c)
+                    message = _('Please look in your mailbox for comment approval link.')
+            else:
+                message = None
+            raise RedirectException(c.get_absolute_url(), notice_message=message)
+    else:
+        form = None
+    return {
+            'object': post,
+            'form': form,
+            'reply_to': reply_to,
+            'feedurl': 'comments/%s' % post.id,
+            'site': Site.objects.get_current(),
+            'post_detail': True}
+
+
+@ajax_request
+def comment_edit(request, object_id):
+    comment = get_object_or_404_ajax(CommentNode, pk=object_id)
+
+
 @render_to('blog/post_detail.html')
 def post_detail(request, year, month, day, slug):
     reply_to = _get_reply_to(request)

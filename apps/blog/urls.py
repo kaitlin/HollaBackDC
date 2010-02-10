@@ -14,6 +14,7 @@ urlpatterns = patterns(
     '',
     url(r'^(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[-\w]+)/$',
         views.post_detail, name="post_detail"),
+    url(r'^(?P<id>[\d]+)/(?P<slug>[-\w]+)/$', views.post_detail_sidebar, name="post-detail-sidebar"),
     url(r'^(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/$',
         views.archive_day, name="day_archive"),
     url(r'^(?P<year>\d{4})/(?P<month>\d{2})/$',

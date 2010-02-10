@@ -1,32 +1,23 @@
+{% load get_latest %}
 <div class="sidebar">
 
             <h4>latest blog entries</h4>
 
             <ul class="sidebar-entries">
+                
+                {% get_latest blog.Post 3 as recent_entries %}
+
+                {% for e in recent_entries %}
 
                 <li>
+            
+                    <span class="bar-headline"><a href="{% url post-detail-sidebar e.pk e.slug  %}">{{ e.name }} </a></span><br />
 
-                    <span class="bar-headline">I Did Nothing Wrong </span><br />
-
-                    <span class="bar-date">Today</span>
-
-                </li>
-
-                <li>
-
-                    <span class="bar-headline">I Did Nothing Wrong </span><br />
-
-                    <span class="bar-date">June 26</span>
+                    <span class="bar-date">{{e.date|date}}</span>
 
                 </li>
+                {% endfor %}
 
-                <li>
-
-                    <span class="bar-headline">I Did Nothing Wrong </span><br />
-
-                    <span class="bar-date">Yesterday</span>
-
-                </li>
 
             </ul><br />
 

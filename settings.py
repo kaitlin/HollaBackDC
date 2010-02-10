@@ -13,8 +13,8 @@ ADMINS = (
 )
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
-#BLOG_URLCONF_ROOT = 'apps.blog.urls'
-#URL_ROOT_HANDLER = 'apps.blog.views.process_root_request'
+BLOG_URLCONF_ROOT = 'apps.blog.urls'
+URL_ROOT_HANDLER = 'apps.blog.views.process_root_request'
 
 sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
 sys.path.insert(0, os.path.join(PROJECT_ROOT, 'compat'))
@@ -122,10 +122,10 @@ LANGUAGES = (
     )
 LANGUAGE_CODE = 'en'
 
-#CAPTCHA = 'recaptcha'
-#RECAPTCHA = {'hollabackdc.kaitlinlee.com': {'public': '6LdQsAoAAAAAAOBzjZfSBLGQu_r0hDVAqgfz70UU', 'private': '6LdQsAoAAAAAALC5fLqiw66zGoDOxeNCpRP1jS3R' }}
+CAPTCHA = 'recaptcha'
+RECAPTCHA = {'hollabackdc.kaitlinlee.com': {'public': '6LdQsAoAAAAAAOBzjZfSBLGQu_r0hDVAqgfz70UU', 'private': '6LdQsAoAAAAAALC5fLqiw66zGoDOxeNCpRP1jS3R' }}
 
-#BLOG_NAME = 'HollaBackDC'
+BLOG_NAME = 'HollaBackDC'
 
 CMS_DEFAULT_LANGUAGE = 'en'
 
@@ -188,11 +188,12 @@ INSTALLED_APPS = (
     'openidserver',
     'revcanonical',
     'pingback',
-    #'watchlist',
+    'watchlist',
     'robots',
     'wpimport',
     'textblocks',
-    'django_extensions'
+    'django_extensions',
+    'util'
 )
 
 APPEND_SLASH = True
@@ -203,7 +204,7 @@ THEME = 'default'
 # App settings
 PAGINATE_BY = 10
 NAME_LENGTH = 256
-DATE_FORMAT = "j.m.Y"
+DATE_FORMAT = "m.j.Y"
 TIME_FORMAT = "G:i"
 ACTION_RECORD_DAYS = 3
 # Set to integer value to close comments after this number of days
