@@ -22,7 +22,7 @@ def get_form(self, request, obj=None, *args, **kwargs):
     form_cls = super(UserAdmin, self).get_form(request, obj, *args, **kwargs)
 
     if obj is not None: # additional interface feature for users and commentnodes
-        comment_list_url = urlreverse('admin', args=['discussion/commentnode'])
+        comment_list_url = urlreverse('admin:discussion_commentnode_changelist')
         comment_list_url += '/?q=%s' % obj.username
         form_cls.base_fields['email_new'].help_text += u'<a href="%s">%s</a>' % (comment_list_url, _('Users comments'))
 
