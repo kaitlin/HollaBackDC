@@ -15,6 +15,10 @@ ul#navigation li.right, ul#navigation li.left {font-weight:bold;}
 
 .content-body .post {color: #5C5959;}
 .content-body p {font-size: .9em;}
+.content-body p img {margin: 20px; }
+.content-body p img.left {float:left; margin-left: 0px;}
+.content-body p img.right {float:right; margin-right: 0px;}
+
 .content-body h2 {color: rgb(24, 31, 39); margin-top:0px;}
 .content-body .post h2 a, .content-body .post a {color: #013F73; }
 .metadata { font-size: .7em; margin-bottom:10px; }

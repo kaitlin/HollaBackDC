@@ -195,7 +195,7 @@ INSTALLED_APPS = (
     'django_extensions'
 )
 
-APPEND_SLASH = False
+APPEND_SLASH = True
 REMOVE_WWW = True
 SITE_PROTOCOL = 'http'
 THEME = 'default'
