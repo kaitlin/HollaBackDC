@@ -30,6 +30,7 @@ urlpatterns = patterns('',
     url(r'^robots.txt$', include('robots.urls')),
     url(r'^feeds/', include('feed.urls')),
     url(r'^tagging_autocomplete/', include('tagging_autocomplete.urls')),
+    url(r'incidents/', include('incidents.urls')),
 )
 
 

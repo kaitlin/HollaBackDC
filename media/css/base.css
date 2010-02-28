@@ -25,6 +25,11 @@ ul#navigation li.right, ul#navigation li.left {font-weight:bold;}
 .content-body .post h2 a:hover {color: #013F73; }
 .metadata { font-size: .7em; margin-bottom:10px; }
 .metadata a:hover {color: #013F73;}
+.bookmarks { margin: 10px 0px; }
+.control-link, #comments {font-size:.9em;}
+#comment-form {margin: 10px 0px;}
+#comment-form h2 { font-size: 1.1em;}
+
 .sidebar {float:left; width: 210px; background: transparent;}
 
 .sidebar h4 {color: rgb(24, 31, 39); font-size: 1em; margin-top:10px; float:left; margin-bottom:0px;}

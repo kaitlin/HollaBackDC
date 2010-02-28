@@ -193,7 +193,8 @@ INSTALLED_APPS = (
     'wpimport',
     'textblocks',
     'django_extensions',
-    'util'
+    'util',
+    'incidents'
 )
 
 APPEND_SLASH = True

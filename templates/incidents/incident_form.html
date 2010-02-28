@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block extra_head %}
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAtGw1MDAVWMO6QjAEb2-w_hQCULP4XOMyhPd8d_NrQQEO8sT8XBR4nl1tfW8GUiQ2uIWU8ASwZR6mXA" type="text/javascript"></script>
+<script type="text/javascript">
+    var map = null;
+    var geocoder = null;
+    var marker = null;
+    
+    function setHiddenValues(point) {
+        $('#lon').val(point.x);
+        $('#lat').val(point.y);
+        geocoder.getLocations(point, function(response){
+            $('#id_place').val(response.Placemark[0].address);
+        });
+    }
+    
+    function showAddress(address) {
+        geocoder.getLatLng(
+            address,
+            function(point) {
+                if (!point) {
+                    alert(address + " not found");
+                } else {
+                    if(marker) marker.hide();
+                    map.setCenter(point, 15);
+                    marker = new GMarker(point, { draggable: true });
+                    
+                    GEvent.addListener(marker, "dragend", function(){
+                        setHiddenValues(marker.getLatLng());
+                    });
+                    
+                    map.addOverlay(marker);
+                    setHiddenValues(point);
+                }
+            }
+        );
+    }
+    
+    $(function(){
+        if (GBrowserIsCompatible()) {
+            $(document).bind('unload', GUnload);
+            
+            map = new GMap2(document.getElementById("map_canvas"));
+            map.setCenter(new GLatLng(38.890370, -77.031959), 10);
+            map.setUIToDefault();
+            geocoder = new GClientGeocoder();
+            
+            var placeInput = $('#id_place');
+            placeInput.bind('blur', function(e){
+                showAddress(placeInput.val());
+            });
+            if(placeInput.val().length > 0) showAddress(placeInput.val());
+            
+            $('#id_checkit').bind('click', function(e){
+                showAddress(placeInput.val());
+            });
+        }
+    });
+
+</script>
+{% endblock %}
+
+{% block content %}
+<h2>Submit Your Story to HollaBack DC</h2>
+<p>Please provide the following information on your experience. Don't worry, we won't publish any personal information!</p>
+
+<form action="{% url incident_form %}" method="POST">
+    {{ form.errors }}
+    <div class="span-22 last">
+        <div class="span-12">
+            <p>
+                <label for="id_place">{{ form.place.help_text }}</label><br />
+                {{ form.place }}<input type="button" name="checkit" value="Check" id="id_checkit" />
+            </p>
+
+            <p>
+                <label for="id_location_type">{{ form.location_type.help_text }}</label><br />
+                {{ form.location_type }}
+                OR
+                Other: {{ form.other_type }}
+            </p>
+
+            <p>
+                <label for="id_story">{{ form.story.help_text }}</label><br />
+                {{ form.story }}
+            </p>
+
+            <p>
+                <label for="id_signature">{{ form.signature.help_text }}</label><br />
+                {{ form.signature }}
+            </p>
+        </div>
+        <div class="span-7 last">
+            <input type="hidden" name="latitude" id="lat"/>
+            <input type="hidden" name="longitude" id="lon"/>
+            <div id="map_canvas" class="span-7 last"></div>
+        </div>
+    </div>
+
+    <input type="submit" value="Submit Your Story"/>
+</form>
+{% endblock %}
