@@ -1,7 +1,49 @@
 {% extends 'base.html' %}
 
-{% block extra_head %}
-<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAtGw1MDAVWMO6QjAEb2-w_hQCULP4XOMyhPd8d_NrQQEO8sT8XBR4nl1tfW8GUiQ2uIWU8ASwZR6mXA" type="text/javascript"></script>
+
+{% block content %}
+<h2>Submit Your Story to HollaBack DC</h2>
+<p>Please provide the following information on your experience. Don't worry, we won't publish any personal information!</p>
+
+<form id="incidents" action="{% url incident_form %}" method="POST">
+    {{ form.errors }}
+    <div class="span-22 last">
+        <div class="span-12">
+            <p>
+                <label for="id_place">{{ form.place.help_text }}</label><br />
+                {{ form.place }}<input type="button" name="checkit" value="Check" id="id_checkit" />
+            </p>
+
+            <p>
+                <label for="id_location_type">{{ form.location_type.help_text }}</label><br />
+                {{ form.location_type }}<br />
+               <!-- OR<br />
+                Other: {{ form.other_type }}-->
+            </p>
+
+            <p>
+                <label for="id_story">{{ form.story.help_text }}</label><br />
+                {{ form.story }}
+            </p>
+
+            <p>
+                <label for="id_signature">{{ form.signature.help_text }}</label><br />
+                {{ form.signature }}
+            </p>
+        </div>
+        <div class="span-7 last">
+            <input type="hidden" name="latitude" id="lat"/>
+            <input type="hidden" name="longitude" id="lon"/>
+            <div id="map_canvas" class="span-7 last"></div>
+        </div>
+    </div>
+
+    <input style="display:block; clear:both;" type="submit" value="Submit Your Story"/>
+</form>
+{% endblock %}
+
+{% block extra_footer %}
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key={{ google_maps_api_key }}" type="text/javascript"></script>
 <script type="text/javascript">
     var map = null;
     var geocoder = null;
@@ -59,45 +101,4 @@
     });
 
 </script>
-{% endblock %}
-
-{% block content %}
-<h2>Submit Your Story to HollaBack DC</h2>
-<p>Please provide the following information on your experience. Don't worry, we won't publish any personal information!</p>
-
-<form action="{% url incident_form %}" method="POST">
-    {{ form.errors }}
-    <div class="span-22 last">
-        <div class="span-12">
-            <p>
-                <label for="id_place">{{ form.place.help_text }}</label><br />
-                {{ form.place }}<input type="button" name="checkit" value="Check" id="id_checkit" />
-            </p>
-
-            <p>
-                <label for="id_location_type">{{ form.location_type.help_text }}</label><br />
-                {{ form.location_type }}
-                OR
-                Other: {{ form.other_type }}
-            </p>
-
-            <p>
-                <label for="id_story">{{ form.story.help_text }}</label><br />
-                {{ form.story }}
-            </p>
-
-            <p>
-                <label for="id_signature">{{ form.signature.help_text }}</label><br />
-                {{ form.signature }}
-            </p>
-        </div>
-        <div class="span-7 last">
-            <input type="hidden" name="latitude" id="lat"/>
-            <input type="hidden" name="longitude" id="lon"/>
-            <div id="map_canvas" class="span-7 last"></div>
-        </div>
-    </div>
-
-    <input type="submit" value="Submit Your Story"/>
-</form>
 {% endblock %}
