@@ -4,7 +4,13 @@
 <h2>{% blocktrans %}Comment on for &laquo;{{ object }}&raquo;{% endblocktrans %}</h2>
 <div class="metadata">You can use <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> here.</div>
 <form id="comment-form-itself" action="." method="post">
-  {{ form.as_p }}
+{#  {{ form.as_p }}  #}
+<p>{{form.body}}</p>
+<p><label>Subscribe to comments:</label>{{form.subscribe}}</p>
+{{form.reply_to}}
+<p><label>Name:</label>{{form.name}}</p>
+<p><label>Email:</label>{{form.email}}</p>
+<p><label>Site:</label>{{form.site}}</p>
 
   <p>
     <input id="id_reply_to" type="hidden" name="reply_to" />    
