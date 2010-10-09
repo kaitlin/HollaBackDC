@@ -30,11 +30,6 @@ DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
-EMAIL_HOST = 'smtp.webfaction.com'
-EMAIL_HOST_USER = 'kaitlin_hbdc'
-EMAIL_HOST_PASSWORD = 'ae5e80bd'
-DEFAULT_FROM_EMAIL = 'server@hollabackdc.kaitlinlee.com'
-SERVER_EMAIL = 'server@hollabackdc.kaitlinlee.com'
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
